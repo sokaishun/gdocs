@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/second-topic/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録"}},"markdownRemark":{"id":"38e4f9f5-5b71-5c4c-b296-19a4d38e15b0","excerpt":"Wsl windows の中に wsl2 を経由して、ubuntu をインストールする。 そして ubuntu の中に、ansible をインストールして、自動化の script 経由で windows の node パソコンに対して操作を行うことが可能。","html":"<h2>Wsl</h2>\n<p>windows の中に wsl2 を経由して、ubuntu をインストールする。</p>\n<p>そして ubuntu の中に、ansible をインストールして、自動化の script 経由で windows の node パソコンに対して操作を行うことが可能。</p>","frontmatter":{"title":"Windows Linux Subsystem","date":"February 05, 2022","description":"Windowsの中にLinuxを入れる。"}},"previous":{"fields":{"slug":"/test-topic/"},"frontmatter":{"title":"テストトピック"}},"next":null},"pageContext":{"id":"38e4f9f5-5b71-5c4c-b296-19a4d38e15b0","previousPostId":"2ffc3e1e-344d-5b22-9b89-ff2570a3214a","nextPostId":null}},
+    "staticQueryHashes": ["2841359383","3257411868"]}
