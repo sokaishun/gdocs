@@ -331,3 +331,15 @@ a:focus {
     list-style-position: inside;
   }
 }
+h2 > a , .header-link-home{
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+
+}
+
+h2 > a:hover ,.header-link-home:hover {
+  background-size: 100% 88%;
+}
