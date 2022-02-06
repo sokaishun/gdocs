@@ -96,6 +96,10 @@ body.dark {
   --hr: hsla(0, 0%, 100%, 0.2);
 }
 
+* {
+  color: var(--textNormal);
+}
+
 footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
@@ -127,9 +131,6 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--textNormal);
-}
-p,small,label,footer {
   color: var(--textNormal);
 }
 h1 {
