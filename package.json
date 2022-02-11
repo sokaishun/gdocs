@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.6.0",
     "gatsby": "^4.6.2",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^4.6.0",
@@ -19,14 +20,15 @@
     "gatsby-plugin-react-helmet": "^5.6.0",
     "gatsby-plugin-sharp": "^4.6.0",
     "gatsby-remark-copy-linked-files": "^5.6.0",
+    "gatsby-remark-highlight-code": "^3.2.0",
     "gatsby-remark-images": "^6.6.0",
-    "gatsby-remark-prismjs": "^6.6.0",
+    "gatsby-remark-prismjs": "^6.7.0",
     "gatsby-remark-responsive-iframe": "^5.6.0",
     "gatsby-remark-smartypants": "^5.6.0",
     "gatsby-source-filesystem": "^4.6.0",
-    "gatsby-transformer-remark": "^5.6.0",
+    "gatsby-transformer-remark": "^5.7.0",
     "gatsby-transformer-sharp": "^4.6.0",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -36,6 +38,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "gatsby-plugin-postcss": "^5.7.0",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-prismjs-title": "^1.0.0",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.21"

@@ -17,3 +17,12 @@ windowsの中にwsl2を経由して、ubuntuをインストールする。
 ソフトをインストールするための便利ツール。
 
 また、dockerで開発環境を定義すれば、deploy段階では簡単に環境再現できる。
+
+```javascript{1-3,6}:title=index.js
+const a = 0;
+const b = 0;
+const c = 0;
+console.log(a);
+console.log(b);
+console.log(c);
+```
