@@ -27,6 +27,7 @@ const Layout = ({ location, title, children }) => {
         {({ theme, toggleTheme }) => (
           <div className="flex items-center justify-center w-full mb-12">
             <label for="toogleA" className="flex items-center cursor-pointer">
+            <div class="mr-3 text-sm">Light</div>
             <div className="relative">
               <input id="toogleA" type="checkbox" className="sr-only" 
                             onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
@@ -35,8 +36,8 @@ const Layout = ({ location, title, children }) => {
               <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
               <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
             </div>
-          <div className="ml-3  font-medium">
-            DarkMode
+          <div className="ml-3  text-sm">
+            Dark
           </div>
           </label>
           </div>
