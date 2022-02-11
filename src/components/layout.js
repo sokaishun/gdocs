@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
+import NavBar from "./navbar";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -25,26 +26,8 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <ThemeToggler >
-        {({ theme, toggleTheme }) => (
-          <div className="flex items-center justify-center w-full mb-12">
-            <label for="toogleA" className="flex items-center cursor-pointer">
-            <div class="mr-3 text-sm">Light</div>
-            <div className="relative">
-              <input id="toogleA" type="checkbox" className="sr-only" 
-                            onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                            checked={theme === 'dark'}
-              />
-              <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-              <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
-            </div>
-          <div className="ml-3  text-sm">
-            Dark
-          </div>
-          </label>
-          </div>
-        )}
-      </ThemeToggler>
+      <NavBar />
+
       <header className="global-header">{header}</header>
 
       <main>{children}</main>

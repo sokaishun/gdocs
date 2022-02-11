@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import Layout from "../components/layout"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
