@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Layout from "../components/layout"
+import Layout from "../components/layout";
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
@@ -14,9 +14,10 @@ const TagsPage = ({
     site: {
       siteMetadata: { title },
     },
-  },
+  }, location 
 }) => (
   <div>
+    <Layout location={location} >
     <Helmet title={title} />
     <div>
       <h1>Tags</h1>
@@ -30,6 +31,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
+    </Layout>
   </div>
 )
 
