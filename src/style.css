@@ -364,3 +364,8 @@ h2 > a:hover ,.header-link-home:hover {
   display: inline;
   margin-right: 10px;
 }
+/* Toggle A */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
