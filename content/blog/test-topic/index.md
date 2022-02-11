@@ -2,6 +2,7 @@
 title: テストトピック
 date: "2022-02-05T21:00:00.000Z"
 description: "これははじめてのgithub actionによるGatsby blogトピック"
+tags: ["自己紹介"]
 ---
 
 ## 自己紹介

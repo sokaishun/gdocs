@@ -2,6 +2,7 @@
 title: Windows Linux Subsystem
 date: "2022-02-05T22:00:00.000Z"
 description: "Windowsの中にLinuxを入れる。"
+tags: ["WSL", "Ansible", "Docker"]
 ---
 
 ## Wsl

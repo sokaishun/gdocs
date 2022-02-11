@@ -359,3 +359,8 @@ h2 > a , .header-link-home{
 h2 > a:hover ,.header-link-home:hover {
   background-size: 100% 88%;
 }
+
+.taglist li {
+  display: inline;
+  margin-right: 10px;
+}
