@@ -5,24 +5,13 @@ description: "Windowsの中にLinuxを入れる。"
 tags: ["WSL", "Ansible", "Docker"]
 ---
 
-## Wsl
+## Windows Linux Subsystem
 
-windowsの中にwsl2を経由して、ubuntuをインストールする。
+Windows10のver2004以降、Windows Linux Subsystem(WSL2)が標準対応できるようなった。
+詳細の有効化手順やWSL中にいれるLinux OSのインストール方法はMicrosoft docsを参照ください。
 
-そしてubuntuの中に、ansibleをインストールして、
-自動化のscript経由でwindowsのnode パソコンに対して操作を行うことが可能。
+WSLを経由してLinuxを使えるようになるため、Linuxでしか使えないものを含めた多くのオーブンソースソフトウェアは使えるやすいようになる。
+とくに、Docker,Ansible,Nodejsなど。
 
-## docker
-
-ソフトをインストールするための便利ツール。
-
-また、dockerで開発環境を定義すれば、deploy段階では簡単に環境再現できる。
-
-```javascript{1-3,6}:title=index.js
-const a = 0;
-const b = 0;
-const c = 0;
-console.log(a);
-console.log(b);
-console.log(c);
-```
+また、WSL自体は仮想マシン技術でできて、複数のOSをインストールできる。WSLを使い慣れると仮想マシンのアクセス方法(SSH,xrdp)が理解できる。
+クラウドは仮想マシンを基本になっているため、WSLで分かった内容はクラウドサーバー管理に活かせる。
