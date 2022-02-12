@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/test-topic/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録"}},"markdownRemark":{"id":"2ffc3e1e-344d-5b22-9b89-ff2570a3214a","excerpt":"自己紹介 2010/3 大学院卒業 2010/4 製造業会社へ入社、以降設備の開発を従事 現在の仕事 エンジニアとして働いている。主に設備の開発を中心。","html":"<h2>自己紹介</h2>\n<ul>\n<li>2010/3 大学院卒業</li>\n<li>2010/4 製造業会社へ入社、以降設備の開発を従事</li>\n</ul>\n<h2>現在の仕事</h2>\n<p>エンジニアとして働いている。主に設備の開発を中心。</p>","frontmatter":{"title":"テストトピック","date":"February 05, 2022","description":"これははじめてのgithub actionによるGatsby blogトピック","tags":["自己紹介"]}},"previous":null,"next":{"fields":{"slug":"/second-topic/"},"frontmatter":{"title":"Windows Linux Subsystem"}}},"pageContext":{"id":"2ffc3e1e-344d-5b22-9b89-ff2570a3214a","previousPostId":null,"nextPostId":"38e4f9f5-5b71-5c4c-b296-19a4d38e15b0"}},
-    "staticQueryHashes": ["2841359383","3257411868"]}
