@@ -37,8 +37,8 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
-         width={16}
-         height={16}
+         width={50}
+         height={50}
          quality={95}
         alt="Profile picture"
       />
