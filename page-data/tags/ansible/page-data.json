@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/ansible/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/second-topic/"},"frontmatter":{"title":"Windows Linux Subsystem"}}}]}},"pageContext":{"tag":"Ansible"}},
-    "staticQueryHashes": []}
