@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-tags-js",
     "path": "/tags/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録"}},"allMarkdownRemark":{"group":[{"fieldValue":"Docker","totalCount":1},{"fieldValue":"WSL","totalCount":1}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Weblog"}},"allMarkdownRemark":{"group":[{"fieldValue":"Docker","totalCount":1},{"fieldValue":"WSL","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": []}

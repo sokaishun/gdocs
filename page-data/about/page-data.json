@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-about-js",
     "path": "/about/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録","author":{"name":"Kaishun So"}}}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Weblog","author":{"name":"Kaishun So"}}}},"pageContext":{}},
     "staticQueryHashes": ["2841359383"]}
