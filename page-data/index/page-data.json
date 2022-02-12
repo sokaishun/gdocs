@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Wsl windows の中に wsl2 を経由して、ubuntu をインストールする。 そして ubuntu の中に、ansible をインストールして、\n自動化の script 経由で windows の node パソコンに対して操作を行うことが可能。 docker…","fields":{"slug":"/second-topic/"},"frontmatter":{"date":"February 05, 2022","title":"Windows Linux Subsystem","description":"Windowsの中にLinuxを入れる。"}}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"ウェブ技術の記録"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Windows Linux Subsystem Windows10 の ver2004 以降、Windows Linux Subsystem(WSL2)が標準対応できるようなった。\n詳細の有効化手順や WSL 中にいれる Linux OS のインストール方法は Microsoft…","fields":{"slug":"/second-topic/"},"frontmatter":{"date":"February 05, 2022","title":"Windows Linux Subsystem","description":"Windowsの中にLinuxを入れる。"}}]}},"pageContext":{}},
     "staticQueryHashes": ["2841359383","3257411868"]}
