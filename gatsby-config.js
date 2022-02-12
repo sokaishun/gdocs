@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `ウェブ技術の記録`,
+    title: `Weblog`,
     author: {
       name: `Kaishun So`,
-      summary: `愛知県の製造業で働いているエンジニアの学習記録。`,
+      summary: `最新ウェブ技術を中心とした学習記録。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Web technology etc.`,
     siteUrl: `https://sokaishun.github.io/`,
   },
   plugins: [
