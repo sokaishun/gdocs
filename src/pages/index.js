@@ -51,7 +51,7 @@ const BlogIndex = ({ data, location }) => {
                 </header>
                 <section>
                 <div className="pb-2">
-                     <Image className="object-none h-48 w-96" fluid={thumbnail} alt="Thumbnail画像" />
+                     <Image className="object-none shadow rounded max-w-full h-auto align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
                 </div>
                 {post.frontmatter.tags ? (
                 <div className="tags-container pb-2">

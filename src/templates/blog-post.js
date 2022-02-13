@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
           <div className="pb-5">
-            <Image className="object-none h-48 w-96" fluid={thumbnail} alt="Thumbnail画像" />
+            <Image className="object-none shadow rounded max-w-full h-auto align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
           </div>
           {post.frontmatter.tags ? (
                 <div className="tags-container">
@@ -42,7 +42,9 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               ) : null}
         </header>
-        <section
+        <section className="first-line:uppercase first-line:tracking-widest
+  first-letter:text-7xl first-letter:font-bold first-letter:text-white
+  first-letter:mr-3 first-letter:float-left"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
