@@ -5,7 +5,7 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 const NavBar = () => {
     const [isOpen, toggleSidebar] = React.useState(false);
   return (
-    <nav className="flex items-center justify-between flex-wrap  p-6">
+    <nav className="flex items-center justify-between flex-wrap">
     <div className="hamMenu fixed block lg:hidden">
       <button 
       onClick={() => toggleSidebar(!isOpen)}
@@ -15,7 +15,7 @@ const NavBar = () => {
     </div>
     <div
         className={`NavBar 
-        fixed z-30 inset-y-0 left-0 px-8 py-4 bg-blue-500 border-r 
+        fixed z-30 inset-y-0 left-0 px-5 py-6 bg-blue-500 border-r 
         overflow-auto lg:static  lg:inset-auto lg:translate-x-0 
         transform ${
                   isOpen
@@ -26,9 +26,9 @@ const NavBar = () => {
     <div className="fixed block lg:hidden">
       <button 
           onClick={() => toggleSidebar(false)}
-          type="button" class="bg-white rounded-md px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Close menu</span>
-              <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20" stroke="currentColor" aria-hidden="true">
+          type="button" className="bg-white rounded-md px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span className="sr-only">Close menu</span>
+              <svg className="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20" stroke="black" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
         </button>
