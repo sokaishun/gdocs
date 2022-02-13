@@ -5,17 +5,18 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 const NavBar = () => {
     const [isOpen, toggleSidebar] = React.useState(false);
   return (
-    <nav className="flex items-center justify-between flex-wrap">
+    <nav className="flex items-center justify-between flex-wrap flex-row-reverse">
     <div className="hamMenu fixed block lg:hidden">
       <button 
       onClick={() => toggleSidebar(!isOpen)}
       className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
       </button>
     </div>
     <div
-        className={`NavBar 
-        fixed z-30 inset-y-0 left-0 px-5 py-6 bg-blue-500 border-r 
+        className={`NavBar
+        fixed z-30 inset-y-0 left-0 px-6 py-6 bg-blue-500 
         overflow-auto lg:static  lg:inset-auto lg:translate-x-0 
         transform ${
                   isOpen
@@ -29,7 +30,7 @@ const NavBar = () => {
           type="button" className="bg-white rounded-md px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Close menu</span>
               <svg className="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20" stroke="black" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <path  d="M6 18L18 6M6 6l12 12" />
               </svg>
         </button>
     </div>
@@ -49,8 +50,8 @@ const NavBar = () => {
       <ThemeToggler >
         {({ theme, toggleTheme }) => (
           <div className="mt-4 flex items-center  w-full mb-4">
-            <label for="toogleA" className="flex items-center cursor-pointer">
-            <div class="mr-3 text-sm">Light</div>
+            <label className="flex items-center cursor-pointer">
+            <div className="mr-3 text-sm">Light</div>
             <div className="relative">
               <input id="toogleA" type="checkbox" className="sr-only" 
                             onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
