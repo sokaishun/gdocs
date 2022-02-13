@@ -4,6 +4,9 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Image from "gatsby-image";
+// Utilities
+import kebabCase from "lodash/kebabCase"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -30,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
           return (
             <li key={post.fields.slug}>
               <article
@@ -47,6 +50,20 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
+                <div className="pb-2">
+                     <Image className="object-none h-48 w-96" fluid={thumbnail} alt="Thumbnail画像" />
+                </div>
+                {post.frontmatter.tags ? (
+                <div className="tags-container pb-2">
+                  <ul className="taglist">
+                    {post.frontmatter.tags.map(tag => (
+                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
@@ -82,6 +99,14 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
+          thumbnail {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

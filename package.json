@@ -10,6 +10,7 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
     "gatsby": "^4.6.2",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^4.6.0",
     "gatsby-plugin-gatsby-cloud": "^4.6.0",

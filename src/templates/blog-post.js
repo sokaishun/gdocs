@@ -6,12 +6,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 // Utilities
 import kebabCase from "lodash/kebabCase"
+import Image from "gatsby-image";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+  const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -26,6 +27,9 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <div className="pb-5">
+            <Image className="object-none h-48 w-96" fluid={thumbnail} alt="Thumbnail画像" />
+          </div>
           {post.frontmatter.tags ? (
                 <div className="tags-container">
                   <ul className="taglist">
@@ -99,6 +103,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 1280) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
