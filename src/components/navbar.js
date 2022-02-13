@@ -26,7 +26,7 @@ const NavBar = () => {
     <div className="fixed block lg:hidden">
       <button 
           onClick={() => toggleSidebar(false)}
-          type="button" class="bg-white rounded-md px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          type="button" class="rounded-md px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span class="sr-only">Close menu</span>
               <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
