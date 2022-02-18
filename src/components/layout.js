@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import NavBar from "./navbar";
+import Menu from "./Menu";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -25,16 +26,17 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <NavBar />
+    <div id="outer-container" className="global-wrapper" data-is-root-path={isRootPath}>
+      <Menu width={ '50%' }  pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right />
+      <div id="page-wrap">
       <header className="global-header">{header}</header>
-
-      <main>{children}</main>
+      <main >{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
+      </div>
     </div>
   )
 }

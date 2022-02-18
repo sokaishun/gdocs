@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import { slide as Menu } from "react-burger-menu";
 
 const NavBar = () => {
     const [isOpen, toggleSidebar] = React.useState(false);
