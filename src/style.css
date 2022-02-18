@@ -551,3 +551,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .tagPost{
   background-color: var(--bg);
 }
+.img-circle {
+display: block;
+height: 30px;
+width: 30px;
+background-image: url("images/profile
+pic.png");
+-webkit-border-radius: 30px;
+-moz-border-radius:30px;
+border-radius:30px;
+border: solid 2px var(--color-primary);
+}
