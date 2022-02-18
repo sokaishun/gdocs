@@ -34,7 +34,8 @@ const BlogPostTemplate = ({ data, location }) => {
                 <div className="tags-container">
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 
+                      text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
@@ -43,7 +44,7 @@ const BlogPostTemplate = ({ data, location }) => {
               ) : null}
         </header>
         <section className="first-line:uppercase first-line:tracking-widest
-  first-letter:text-7xl first-letter:font-bold first-letter:text-white
+  first-letter:text-7xl first-letter:font-bold 
   first-letter:mr-3 first-letter:float-left"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
