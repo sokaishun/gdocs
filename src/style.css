@@ -477,7 +477,7 @@ input:checked ~ .dot {
   width: 36px;
   height: 30px;
   right: 36px;
-  top: 88px;
+  top: 50px;
 }
 
 /* Color/shape of burger icon bars */

@@ -27,7 +27,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div id="outer-container" className="global-wrapper" data-is-root-path={isRootPath}>
-      <Menu width={ '50%' }  pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right />
+      <Menu width={ '320px' }  pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right />
       <div id="page-wrap">
       <header className="global-header">{header}</header>
       <main >{children}</main>

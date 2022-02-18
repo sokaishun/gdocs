@@ -5,7 +5,7 @@ import { push as Menu } from "react-burger-menu";
 
 export default props => {
   return (
-    <Menu {...props} className="NavBarItems mt-10 w-full block flex-grow lg:flex lg:items-center lg:w-auto ">
+    <Menu {...props} className="NavBarItems">
       <Link to="/" className="menu-item block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" >
       HOME
       </Link>
