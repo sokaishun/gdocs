@@ -35,7 +35,9 @@ const Bio = () => {
     bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl 
     hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
     dark:hover:bg-gray-700">
+      <div className="img-container">
       <div className="flex-none img-circle"/>
+      </div>
 
       <div class="flex flex-col justify-between pl-5">
         <h5 class="mt-3 mb-3 font-bold dark:text-white">{author?.name || null}

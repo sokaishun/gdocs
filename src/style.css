@@ -552,14 +552,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: var(--bg);
 }
 .img-circle {
-margin-left: 5px;
-display: block;
-height: 50px;
-width: 50px;
-background-image: url("images/profile-pic.png");
-background-size: 50px 50px;
--webkit-border-radius: 50px;
--moz-border-radius:50px;
-border-radius:50px;
-border: solid 2px var(--color-primary);
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-image: url("images/profile-pic.png");
+  background-size: 50px 50px;
+  border-radius:50px;
+}
+.img-container{
+  height: 56px;
+  width: 56px;
+  border-radius:56px;
+  background: linear-gradient(to right, #FF512F 0%, #9333EA 100%);
+  margin-left: 5px;
+  padding: 3px;
 }
