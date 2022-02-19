@@ -42,7 +42,7 @@ const Bio = () => {
           {` `}</h5>
         <p class="mb-3 dark:text-gray-400">{author?.summary || null}
           {` `}</p>
-    </div>
+      </div>
     </a>
   )
 }
