@@ -1,13 +1,13 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
+import { FaTag } from 'react-icons/fa';
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 import Image from "gatsby-image";
-import { FaTag } from 'react-icons/fa';
+
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -31,17 +31,19 @@ const BlogPostTemplate = ({ data, location }) => {
           <div className="pb-5">
             <Image className="object-none shadow rounded max-w-full h-auto align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
           </div>
+          
           {post.frontmatter.tags ? (
-                <div className="tags-container pb-2 flex flex-row justify-start  space-x-2">
-                  <FaTag/>
+            <div className=" flex flex-row">
+            <FaTag className="my-1 mx-2"/>
+                <div className="tags-container">
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 
-                      text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
+                </div>
                 </div>
               ) : null}
         </header>
