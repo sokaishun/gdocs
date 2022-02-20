@@ -43,9 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               ) : null}
         </header>
-        <section className="first-line:uppercase first-line:tracking-widest
-  first-letter:text-7xl first-letter:font-bold 
-  first-letter:mr-3 first-letter:float-left"
+        <section 
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />

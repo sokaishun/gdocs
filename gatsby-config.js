@@ -29,6 +29,18 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "目次",
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: "toc"
+                },
+            },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs-title`,
           {
             resolve: `gatsby-remark-prismjs`,
