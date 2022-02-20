@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 import Image from "gatsby-image";
+import { FaTag } from 'react-icons/fa';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -31,7 +32,8 @@ const BlogPostTemplate = ({ data, location }) => {
             <Image className="object-none shadow rounded max-w-full h-auto align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
           </div>
           {post.frontmatter.tags ? (
-                <div className="tags-container">
+                <div className="tags-container pb-2 flex flex-row justify-start  space-x-2">
+                  <FaTag/>
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
                       <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 
