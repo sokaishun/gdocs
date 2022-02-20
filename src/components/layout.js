@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import NavBar from "./navbar";
 import Menu from "./Menu";
+import { FaHome} from 'react-icons/fa';
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -14,7 +15,9 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+        <Link to="/">
+        <div className="flex flex-row justify-start items-center space-x-2"><FaHome/><div>{title}</div></div>
+        </Link>
       </h1>
     )
   } else {

@@ -7,7 +7,7 @@ import kebabCase from "lodash/kebabCase"
 // Components
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
-
+import { FaTags } from 'react-icons/fa';
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -20,7 +20,7 @@ const TagsPage = ({
     <Layout location={location} >
     <Helmet title={title} />
     <div>
-      <h1>Tags</h1>
+      <h1 className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>Tags</div></h1>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>

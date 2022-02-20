@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Image from "gatsby-image";
 // Utilities
 import kebabCase from "lodash/kebabCase"
+import { FaTag } from 'react-icons/fa';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -54,11 +55,12 @@ const BlogIndex = ({ data, location }) => {
                      <Image className="object-none shadow rounded max-w-full max-h-[20rem] align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
                 </div>
                 {post.frontmatter.tags ? (
-                <div className="tags-container pb-2">
+                <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
+                  <FaTag/>
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
                       <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                        <Link  to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
