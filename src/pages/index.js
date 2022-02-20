@@ -8,6 +8,7 @@ import Image from "gatsby-image";
 // Utilities
 import kebabCase from "lodash/kebabCase"
 import { FaTag } from 'react-icons/fa';
+import { FaTags } from 'react-icons/fa';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -78,6 +79,19 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <h2 className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>Tags</div></h2>
+      <ul className="flex flex-row justify-start items-center  space-x-2">
+        {data.allMarkdownRemark.group.map(tag => (
+          <li key={tag.fieldValue} type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center  bg-blue-200 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800">
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} 
+              <span class="inline-flex justify-center items-center ml-2 w-5 h-5 text-xs font-semibold dark:bg-blue-500 bg-yellow-500 rounded-full">
+              {tag.totalCount}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </Layout>
   )
 }
@@ -92,6 +106,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
       nodes {
         excerpt
         fields {
