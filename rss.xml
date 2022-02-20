@@ -1,30 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Feb 2022 00:44:00 GMT</lastBuildDate><item><title><![CDATA[Visionについて]]></title><description><![CDATA[画像処理&機械学習 Computer Vison Machine Vision 画像処理&機械学習 学生時代では画像処理の研究をした。
-また大学院入学した後、機械学習(Machine Learning)に興味があって、
-英文の教科書(800…]]></description><link>https://sokaishun.github.io/currentWork/</link><guid isPermaLink="false">https://sokaishun.github.io/currentWork/</guid><pubDate>Sat, 19 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Feb 2022 01:24:54 GMT</lastBuildDate><item><title><![CDATA[Visionについて]]></title><description><![CDATA[Image Processing Machine Learning Computer Vision Machine Vision まとめ Image Processing 学生時代では画像処理の研究をした。 画像処理は画素単位の処理から、エッジ抽出(Canny edge…]]></description><link>https://sokaishun.github.io/currentWork/</link><guid isPermaLink="false">https://sokaishun.github.io/currentWork/</guid><pubDate>Sat, 19 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&quot;&gt;画像処理&amp;#x26;機械学習&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#computer-vison&quot;&gt;Computer Vison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#image-processing&quot;&gt;Image Processing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#machine-learning&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#computer-vision&quot;&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#machine-vision&quot;&gt;Machine Vision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E3%81%BE%E3%81%A8%E3%82%81&quot;&gt;まとめ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id=&quot;画像処理機械学習&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&quot; aria-label=&quot;画像処理機械学習 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;画像処理&amp;#x26;機械学習&lt;/h2&gt;
-&lt;p&gt;学生時代では画像処理の研究をした。
-また大学院入学した後、機械学習(Machine Learning)に興味があって、
+&lt;h2 id=&quot;image-processing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#image-processing&quot; aria-label=&quot;image processing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Image Processing&lt;/h2&gt;
+&lt;p&gt;学生時代では画像処理の研究をした。&lt;/p&gt;
+&lt;p&gt;画像処理は画素単位の処理から、エッジ抽出(Canny edge detection)、Affine 変換などは基本。数学は必要が、Matrix 演算は中心の印象。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://opencv.org/&quot;&gt;OpenCV&lt;/a&gt;では主な画像処理の関数が実装されている。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 405px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 118.35443037974682%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADbklEQVQ4y5WUT2gdVRTGz3funUnS/DEkgdTweJLSoKFZ1EhIiDENsX1I4ltEhBDiwoYaEolWeIYSbN7CREyExE1CQWsTu0hAqHRhXCkoCIIgCG5aqKKI8Ch0YwWxtHwyd+68Ny3pHxkOczn33N853zl3RkSE+xm83evX+8SnbH9Ysn5awRkDvmbAp4CHwfYHRmZE+IkFaaVsd6xw1eD/ARNJm1ZjkKkAk/VZq+WkDwQmUg8r+E8AB/jJgn0KHlfwVxv7ShZs8vLxIGCS8UWtSB3RisRTRsvS+zxQHwV4IgV8M9Wz90zsv2XjYT0UmJTfqOCfXvKVAM7fDPC69/0cgHr/ifuFxpZkfCWqJgTnjJaDV6JBBYYnVFPVwVsaqKkMtUI85qWLshaVvRYoj2laTRqUJE4CngBxEcRvIEqg+QaUjD+QggqO3tU3oJWKQ2moEIdiiKQe/Agakxw07h3gdR6I2oiBMjDQjxjibyqyFcl6WWPMHSG+BPWiEs/46qyfJrKswl8MhAz1K+87whC3vO+SBx4QyjVf1aX9Jmfd2+pJhtHB6DbhpN8LGOByDESJwEGKNAvlFw98pwKM2qBfKPGtJUaFVt5iqBHwXyoOl+OsFn2iG4RE/lCIq3H/8DuIQRAHQXye9NQQL0SXPsfQxBUG+MxVozjGEH/4Cq8SCH0PT2tlHLeFcrMyHP1ay5MO9buy7FBuMpTbMSxqg55ODUWUwYcBDc3dk/4exOP+4iK6IhmG+IE1hs6qNTaLD6havuSpATwp1LNK+76ledlQVV0ymOhTs+4Q3F3LUaRAkTco0knoPZ/e0NAQzyycYf54/lH+yBwbe56Ft19lPt/P/v6jzjcw8BwzmQyltbWVOzs77O3t5fmt88yP5Zl/Kc++Z/tcwPj4ONvb2zk4OMhcLseRkVGeO/cxc7lRFovv8sKFT9nU1MytrS22tbVRurq6uL6+7rLMzs5yb2+PExMTXF5e5u7uLtfW1tx6ZWWF09PTLvnk5KSLr6qqYqFQ4OrqKovFov8X1NZye3ub8/Pz3NjY4NLSEhcWFlxAlCgCzc3NcWZmhj09PVxcXOTm5qaLi/Y6OztZKpU4PDxc6WFLS4uTE8GnpqYcoK6ujtXV1ezu7mZjY6Oz+vp61tTUMJvNOkBDQ4ODdHR0MAgCB/wPbyesjlSvNEkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;OpenCV&quot;
+        title=&quot;OpenCV&quot;
+        src=&quot;/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png&quot;
+        srcset=&quot;/static/970b2d9a21406ed6ddfa366ca8693975/c26ae/OpenCV.png 158w,
+/static/970b2d9a21406ed6ddfa366ca8693975/6bdcf/OpenCV.png 315w,
+/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png 405w&quot;
+        sizes=&quot;(max-width: 405px) 100vw, 405px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;machine-learning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#machine-learning&quot; aria-label=&quot;machine learning permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Machine Learning&lt;/h2&gt;
+&lt;p&gt;大学院入学した後、機械学習(Machine Learning)に興味があって、
 英文の教科書(8000 円?)を買って独学した。&lt;/p&gt;
-&lt;p&gt;画像処理は画素単位の処理から、エッジ抽出(Canny edge detection)、Affine 変換などは基本で、
-一方機械学習では統計学のモデル(Likelihood estimation,Baysian statistics)は中心で数式ばかり。&lt;/p&gt;
-&lt;h2 id=&quot;computer-vison&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#computer-vison&quot; aria-label=&quot;computer vison permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Computer Vison&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8f5e6ff87fb61755e9ab352652b4bc4e/7ab72/Springer-Cover-Image.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 136.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGS9iZWFBVivNDmAf/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhAREv/aAAgBAQABBQKU310yD1YZTtir/8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/AUY//8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAECAQE/AWI//8QAGRAAAgMBAAAAAAAAAAAAAAAAADEBECEw/9oACAEBAAY/Ap0Y6XD/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMRCBQdHx/9oACAEBAAE/IaJgXM8bnyiLcD1ALodQA+RX7hvmDj//2gAMAwEAAgADAAAAELzB8//EABkRAAIDAQAAAAAAAAAAAAAAAAABEBEhYf/aAAgBAwEBPxDoJOo0/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQIf/aAAgBAgEBPxCFM5f/xAAeEAEAAgMAAgMAAAAAAAAAAAABABEhMUFRgWGhsf/aAAgBAQABPxDNwEB4z9Ttd8fUd25KRlnRaL/JquHouAUAHxSKnK8seJja9YM5Iouphnxcpa7fuoLW2f/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;機械学習の教科書:PRML&quot;
+        title=&quot;機械学習の教科書:PRML&quot;
+        src=&quot;/static/8f5e6ff87fb61755e9ab352652b4bc4e/828fb/Springer-Cover-Image.jpg&quot;
+        srcset=&quot;/static/8f5e6ff87fb61755e9ab352652b4bc4e/ff44c/Springer-Cover-Image.jpg 158w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/a6688/Springer-Cover-Image.jpg 315w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/828fb/Springer-Cover-Image.jpg 630w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/7ab72/Springer-Cover-Image.jpg 827w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;機械学習では統計学のモデル(Likelihood estimation,Baysian statistics)は中心で数式ばかり。
+数学には自信がなければ、続けれない分野だと思う。&lt;/p&gt;
+&lt;p&gt;私が院生の時、Baysian モデルと Support Vector Machine がはやっていたが、現在では Neural Network である DeepLearning が盛んで、圧倒的なモデルになっている感じ。&lt;/p&gt;
+&lt;h2 id=&quot;computer-vision&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#computer-vision&quot; aria-label=&quot;computer vision permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Computer Vision&lt;/h2&gt;
 &lt;p&gt;画像処理と機械学習の融合としては、Computer Vision という学問がある。
-私は院生のときに、CVPR や ICCV は IEEE のトップ Conference は Computer Vison の関連。
-非常に注目されている分野。&lt;/p&gt;
-&lt;p&gt;そして、画像処理を製造業への応用として、Machine Vison がある。
-特に寸法計測と外観検査などを装置として作り上げること。&lt;/p&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Conference_on_Computer_Vision_and_Pattern_Recognition&quot;&gt;CVPR&lt;/a&gt;や&lt;a href=&quot;https://en.wikipedia.org/wiki/International_Conference_on_Computer_Vision&quot;&gt;ICCV&lt;/a&gt;は IEEE のトップ Conference は Computer Vison の関連。&lt;/p&gt;
+&lt;p&gt;学生の時、下記本を参考して勉強したが、難しかった。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 374px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABcvzLI10jPGJwjx2yJh//xAAdEAACAwACAwAAAAAAAAAAAAAAAQIDERATFDIz/9oACAEBAAEFAqPhvFd+R7meTIwSx4iMmWe5/8QAFREBAQAAAAAAAAAAAAAAAAAAEDH/2gAIAQMBAT8BKf/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwFw/8QAHhAAAgAGAwAAAAAAAAAAAAAAAAECEBESMpEhMUH/2gAIAQEABj8ChMZWJKi9K2LZgtjocy7HL//EACEQAQABAwIHAAAAAAAAAAAAAAEAESFBEJExUWFxgaHR/9oACAEBAAE/IaizW0G5bwLfY5pZDxh0DoLRS74gmJDF4833FvdNpAn/2gAMAwEAAgADAAAAEIjUvf/EABkRAQACAwAAAAAAAAAAAAAAABEAARBRYf/aAAgBAwEBPxA5C9RDj//EABgRAAMBAQAAAAAAAAAAAAAAAAABESFx/9oACAECAQE/EGtIRpw6P//EACAQAQACAgEEAwAAAAAAAAAAAAEAESExYUFRcYGxwdH/2gAIAQEAAT8QaxsXnlmgX0lZG15WyzCJdNvHM1+Rsy+IKfa/ILVfe8WICxt5gOpsvAgVVdT1MkttAJ0gVqf/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;CV&quot;
+        title=&quot;CV&quot;
+        src=&quot;/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg&quot;
+        srcset=&quot;/static/e834f4aa7b9ea41cf6e23e7fbb260511/ff44c/cv.jpg 158w,
+/static/e834f4aa7b9ea41cf6e23e7fbb260511/a6688/cv.jpg 315w,
+/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg 374w&quot;
+        sizes=&quot;(max-width: 374px) 100vw, 374px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;今でも Computer Vision は非常に注目されている分野。直近では企業もこの分野へ参入して注力している印象。&lt;/p&gt;
 &lt;h2 id=&quot;machine-vision&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#machine-vision&quot; aria-label=&quot;machine vision permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Machine Vision&lt;/h2&gt;
+&lt;p&gt;画像処理を製造業への応用として、Machine Vison がある。
+特に寸法計測と外観検査などを装置として作り上げること。&lt;/p&gt;
 &lt;p&gt;私の仕事は Machine Vision 関係で、
-装置化時重視される処理時間を強化された商業用の画像処理ライブラリを使うことがよくある。
-OpenCV のような OSS を利用する場合もある。&lt;/p&gt;
+装置化時重視される処理時間を強化された&lt;a href=&quot;https://www.mvtec.com/products/halcon&quot;&gt;商業用の画像処理ライブラリ&lt;/a&gt;を使うことがよくある。&lt;/p&gt;
 &lt;p&gt;Machine Vision は今までではそれほど高度の処理がいらなく、２値化や領域処理で物足りるが、
-最近では曖昧な外観検査を対処するために、機械学習のモデル(SVM,CNN)を利用できるライブラリも充実してきた。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows Linux Subsystem]]></title><description><![CDATA[Windows10 の ver2004 以降、Windows Linux Subsystem(WSL2)が標準対応できるようなった。
+最近では曖昧な外観検査を対処するために、機械学習のモデル(SVM,CNN)を利用できるライブラリも充実してきた。&lt;/p&gt;
+&lt;h2 id=&quot;まとめ&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%81%BE%E3%81%A8%E3%82%81&quot; aria-label=&quot;まとめ permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;各分野で共通しているのは数学の知識が最重要であること。行列演算はもちろん、幾何学の知識または数論(Group theory)も必要になる。&lt;/p&gt;
+&lt;p&gt;数学が好きまたは得意な人は挑戦してみるのは。最先端の分野であるから。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows Linux Subsystem]]></title><description><![CDATA[Windows10 の ver2004 以降、Windows Linux Subsystem(WSL2)が標準対応できるようなった。
 詳細の有効化手順や WSL 中にいれる Linux OS のインストール方法は Microsoft docs を参照ください。 WSL…]]></description><link>https://sokaishun.github.io/second-topic/</link><guid isPermaLink="false">https://sokaishun.github.io/second-topic/</guid><pubDate>Sat, 05 Feb 2022 22:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Windows10 の ver2004 以降、Windows Linux Subsystem(WSL2)が標準対応できるようなった。
 詳細の有効化手順や WSL 中にいれる Linux OS のインストール方法は Microsoft docs を参照ください。&lt;/p&gt;
 &lt;p&gt;WSL を経由して Linux を使えるようになるため、Linux でしか使えないものを含めた多くのオーブンソースソフトウェアは使えるやすいようになる。

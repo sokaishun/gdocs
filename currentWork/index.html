@@ -94,26 +94,126 @@ void function() {
 /static/8d6f82b5859db1bbbf93ba98a0a077a4/bc59e/1319229.png 512w" sizes="(max-width: 512px) 100vw, 512px" /><img loading="lazy" sizes="(max-width: 512px) 100vw, 512px" srcset="/static/8d6f82b5859db1bbbf93ba98a0a077a4/dd5bb/1319229.png 320w,
 /static/8d6f82b5859db1bbbf93ba98a0a077a4/bc59e/1319229.png 512w" src="/static/8d6f82b5859db1bbbf93ba98a0a077a4/bc59e/1319229.png" alt="Thumbnail画像" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><div class="tags-container"><ul class="taglist"><li class="bg-blue-100 hover:bg-blue-200 text-blue-800  text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"><a href="/tags/image-processing/">Image Processing</a></li></ul></div></header><section itemProp="articleBody"><div class="toc">
 <ul>
-<li><a href="#%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92">画像処理&#x26;機械学習</a></li>
-<li><a href="#computer-vison">Computer Vison</a></li>
+<li><a href="#image-processing">Image Processing</a></li>
+<li><a href="#machine-learning">Machine Learning</a></li>
+<li><a href="#computer-vision">Computer Vision</a></li>
 <li><a href="#machine-vision">Machine Vision</a></li>
+<li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
 </ul>
 </div>
-<h2 id="画像処理機械学習" style="position:relative;"><a href="#%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92" aria-label="画像処理機械学習 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>画像処理&#x26;機械学習</h2>
-<p>学生時代では画像処理の研究をした。
-また大学院入学した後、機械学習(Machine Learning)に興味があって、
+<h2 id="image-processing" style="position:relative;"><a href="#image-processing" aria-label="image processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image Processing</h2>
+<p>学生時代では画像処理の研究をした。</p>
+<p>画像処理は画素単位の処理から、エッジ抽出(Canny edge detection)、Affine 変換などは基本。数学は必要が、Matrix 演算は中心の印象。</p>
+<p><a href="https://opencv.org/">OpenCV</a>では主な画像処理の関数が実装されている。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 405px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 118.35443037974682%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADbklEQVQ4y5WUT2gdVRTGz3funUnS/DEkgdTweJLSoKFZ1EhIiDENsX1I4ltEhBDiwoYaEolWeIYSbN7CREyExE1CQWsTu0hAqHRhXCkoCIIgCG5aqKKI8Ch0YwWxtHwyd+68Ny3pHxkOczn33N853zl3RkSE+xm83evX+8SnbH9Ysn5awRkDvmbAp4CHwfYHRmZE+IkFaaVsd6xw1eD/ARNJm1ZjkKkAk/VZq+WkDwQmUg8r+E8AB/jJgn0KHlfwVxv7ShZs8vLxIGCS8UWtSB3RisRTRsvS+zxQHwV4IgV8M9Wz90zsv2XjYT0UmJTfqOCfXvKVAM7fDPC69/0cgHr/ifuFxpZkfCWqJgTnjJaDV6JBBYYnVFPVwVsaqKkMtUI85qWLshaVvRYoj2laTRqUJE4CngBxEcRvIEqg+QaUjD+QggqO3tU3oJWKQ2moEIdiiKQe/Agakxw07h3gdR6I2oiBMjDQjxjibyqyFcl6WWPMHSG+BPWiEs/46qyfJrKswl8MhAz1K+87whC3vO+SBx4QyjVf1aX9Jmfd2+pJhtHB6DbhpN8LGOByDESJwEGKNAvlFw98pwKM2qBfKPGtJUaFVt5iqBHwXyoOl+OsFn2iG4RE/lCIq3H/8DuIQRAHQXye9NQQL0SXPsfQxBUG+MxVozjGEH/4Cq8SCH0PT2tlHLeFcrMyHP1ay5MO9buy7FBuMpTbMSxqg55ODUWUwYcBDc3dk/4exOP+4iK6IhmG+IE1hs6qNTaLD6havuSpATwp1LNK+76ledlQVV0ymOhTs+4Q3F3LUaRAkTco0knoPZ/e0NAQzyycYf54/lH+yBwbe56Ft19lPt/P/v6jzjcw8BwzmQyltbWVOzs77O3t5fmt88yP5Zl/Kc++Z/tcwPj4ONvb2zk4OMhcLseRkVGeO/cxc7lRFovv8sKFT9nU1MytrS22tbVRurq6uL6+7rLMzs5yb2+PExMTXF5e5u7uLtfW1tx6ZWWF09PTLvnk5KSLr6qqYqFQ4OrqKovFov8X1NZye3ub8/Pz3NjY4NLSEhcWFlxAlCgCzc3NcWZmhj09PVxcXOTm5qaLi/Y6OztZKpU4PDxc6WFLS4uTE8GnpqYcoK6ujtXV1ezu7mZjY6Oz+vp61tTUMJvNOkBDQ4ODdHR0MAgCB/wPbyesjlSvNEkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="OpenCV"
+        title="OpenCV"
+        src="/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png"
+        srcset="/static/970b2d9a21406ed6ddfa366ca8693975/c26ae/OpenCV.png 158w,
+/static/970b2d9a21406ed6ddfa366ca8693975/6bdcf/OpenCV.png 315w,
+/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png 405w"
+        sizes="(max-width: 405px) 100vw, 405px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h2 id="machine-learning" style="position:relative;"><a href="#machine-learning" aria-label="machine learning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Machine Learning</h2>
+<p>大学院入学した後、機械学習(Machine Learning)に興味があって、
 英文の教科書(8000 円?)を買って独学した。</p>
-<p>画像処理は画素単位の処理から、エッジ抽出(Canny edge detection)、Affine 変換などは基本で、
-一方機械学習では統計学のモデル(Likelihood estimation,Baysian statistics)は中心で数式ばかり。</p>
-<h2 id="computer-vison" style="position:relative;"><a href="#computer-vison" aria-label="computer vison permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Computer Vison</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8f5e6ff87fb61755e9ab352652b4bc4e/7ab72/Springer-Cover-Image.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 136.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGS9iZWFBVivNDmAf/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhAREv/aAAgBAQABBQKU310yD1YZTtir/8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/AUY//8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAECAQE/AWI//8QAGRAAAgMBAAAAAAAAAAAAAAAAADEBECEw/9oACAEBAAY/Ap0Y6XD/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMRCBQdHx/9oACAEBAAE/IaJgXM8bnyiLcD1ALodQA+RX7hvmDj//2gAMAwEAAgADAAAAELzB8//EABkRAAIDAQAAAAAAAAAAAAAAAAABEBEhYf/aAAgBAwEBPxDoJOo0/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQIf/aAAgBAgEBPxCFM5f/xAAeEAEAAgMAAgMAAAAAAAAAAAABABEhMUFRgWGhsf/aAAgBAQABPxDNwEB4z9Ttd8fUd25KRlnRaL/JquHouAUAHxSKnK8seJja9YM5Iouphnxcpa7fuoLW2f/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="機械学習の教科書:PRML"
+        title="機械学習の教科書:PRML"
+        src="/static/8f5e6ff87fb61755e9ab352652b4bc4e/828fb/Springer-Cover-Image.jpg"
+        srcset="/static/8f5e6ff87fb61755e9ab352652b4bc4e/ff44c/Springer-Cover-Image.jpg 158w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/a6688/Springer-Cover-Image.jpg 315w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/828fb/Springer-Cover-Image.jpg 630w,
+/static/8f5e6ff87fb61755e9ab352652b4bc4e/7ab72/Springer-Cover-Image.jpg 827w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>機械学習では統計学のモデル(Likelihood estimation,Baysian statistics)は中心で数式ばかり。
+数学には自信がなければ、続けれない分野だと思う。</p>
+<p>私が院生の時、Baysian モデルと Support Vector Machine がはやっていたが、現在では Neural Network である DeepLearning が盛んで、圧倒的なモデルになっている感じ。</p>
+<h2 id="computer-vision" style="position:relative;"><a href="#computer-vision" aria-label="computer vision permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Computer Vision</h2>
 <p>画像処理と機械学習の融合としては、Computer Vision という学問がある。
-私は院生のときに、CVPR や ICCV は IEEE のトップ Conference は Computer Vison の関連。
-非常に注目されている分野。</p>
-<p>そして、画像処理を製造業への応用として、Machine Vison がある。
-特に寸法計測と外観検査などを装置として作り上げること。</p>
+<a href="https://en.wikipedia.org/wiki/Conference_on_Computer_Vision_and_Pattern_Recognition">CVPR</a>や<a href="https://en.wikipedia.org/wiki/International_Conference_on_Computer_Vision">ICCV</a>は IEEE のトップ Conference は Computer Vison の関連。</p>
+<p>学生の時、下記本を参考して勉強したが、難しかった。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 374px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABcvzLI10jPGJwjx2yJh//xAAdEAACAwACAwAAAAAAAAAAAAAAAQIDERATFDIz/9oACAEBAAEFAqPhvFd+R7meTIwSx4iMmWe5/8QAFREBAQAAAAAAAAAAAAAAAAAAEDH/2gAIAQMBAT8BKf/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwFw/8QAHhAAAgAGAwAAAAAAAAAAAAAAAAECEBESMpEhMUH/2gAIAQEABj8ChMZWJKi9K2LZgtjocy7HL//EACEQAQABAwIHAAAAAAAAAAAAAAEAESFBEJExUWFxgaHR/9oACAEBAAE/IaizW0G5bwLfY5pZDxh0DoLRS74gmJDF4833FvdNpAn/2gAMAwEAAgADAAAAEIjUvf/EABkRAQACAwAAAAAAAAAAAAAAABEAARBRYf/aAAgBAwEBPxA5C9RDj//EABgRAAMBAQAAAAAAAAAAAAAAAAABESFx/9oACAECAQE/EGtIRpw6P//EACAQAQACAgEEAwAAAAAAAAAAAAEAESExYUFRcYGxwdH/2gAIAQEAAT8QaxsXnlmgX0lZG15WyzCJdNvHM1+Rsy+IKfa/ILVfe8WICxt5gOpsvAgVVdT1MkttAJ0gVqf/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="CV"
+        title="CV"
+        src="/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg"
+        srcset="/static/e834f4aa7b9ea41cf6e23e7fbb260511/ff44c/cv.jpg 158w,
+/static/e834f4aa7b9ea41cf6e23e7fbb260511/a6688/cv.jpg 315w,
+/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg 374w"
+        sizes="(max-width: 374px) 100vw, 374px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>今でも Computer Vision は非常に注目されている分野。直近では企業もこの分野へ参入して注力している印象。</p>
 <h2 id="machine-vision" style="position:relative;"><a href="#machine-vision" aria-label="machine vision permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Machine Vision</h2>
+<p>画像処理を製造業への応用として、Machine Vison がある。
+特に寸法計測と外観検査などを装置として作り上げること。</p>
 <p>私の仕事は Machine Vision 関係で、
-装置化時重視される処理時間を強化された商業用の画像処理ライブラリを使うことがよくある。
-OpenCV のような OSS を利用する場合もある。</p>
+装置化時重視される処理時間を強化された<a href="https://www.mvtec.com/products/halcon">商業用の画像処理ライブラリ</a>を使うことがよくある。</p>
 <p>Machine Vision は今までではそれほど高度の処理がいらなく、２値化や領域処理で物足りるが、
-最近では曖昧な外観検査を対処するために、機械学習のモデル(SVM,CNN)を利用できるライブラリも充実してきた。</p></section><hr/><footer><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><h5 class="mt-3 mb-3 font-bold dark:text-white">Kaishun So<!-- --> </h5><p class="mb-3 dark:text-gray-400">最新ウェブ技術を中心とした学習記録。<!-- --> </p></div></a></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/second-topic/">← <!-- -->Windows Linux Subsystem</a></li><li></li></ul></nav></main><footer>© <!-- -->2022<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/currentWork/";window.___webpackCompilationHash="74016ac13820e158a55e";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-67664a8ccc6c9f02b880.js"],"app":["/app-c28dbaa9f37e9fb8dd75.js"],"component---src-pages-404-js":["/component---src-pages-404-js-58e08fa637634ce5af24.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8c70240c8cecc13bd1d2.js"],"component---src-pages-index-js":["/component---src-pages-index-js-24ea6ad6254116502af0.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b960cb60dbf683f289f6.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-06e9bd4775531e67267c.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-a5277cac4a46f806c629.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-519bbd4ebb2114cab6a9.js"]};/*]]>*/</script><script src="/polyfill-67664a8ccc6c9f02b880.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-a5277cac4a46f806c629.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-eef78c75bfcf1263b01a.js" async=""></script><script src="/dffd9eda1bde23af0ce146d568b45c289f422d0a-a84c247cc1659c4db0a2.js" async=""></script><script src="/8898d404f42c051a04e6d355569c09f07bfcb273-044e861ac360293cc0b3.js" async=""></script><script src="/commons-200ed5bba0575d2f4fa8.js" async=""></script><script src="/777cf710-5be2960e72945ec92859.js" async=""></script><script src="/app-c28dbaa9f37e9fb8dd75.js" async=""></script><script src="/framework-e413e527015be9a1bdfd.js" async=""></script><script src="/webpack-runtime-7dfbcd0dc234fe23264a.js" async=""></script></body></html>
+最近では曖昧な外観検査を対処するために、機械学習のモデル(SVM,CNN)を利用できるライブラリも充実してきた。</p>
+<h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
+<p>各分野で共通しているのは数学の知識が最重要であること。行列演算はもちろん、幾何学の知識または数論(Group theory)も必要になる。</p>
+<p>数学が好きまたは得意な人は挑戦してみるのは。最先端の分野であるから。</p></section><hr/><footer><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><h5 class="mt-3 mb-3 font-bold dark:text-white">Kaishun So<!-- --> </h5><p class="mb-3 dark:text-gray-400">最新ウェブ技術を中心とした学習記録。<!-- --> </p></div></a></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/second-topic/">← <!-- -->Windows Linux Subsystem</a></li><li></li></ul></nav></main><footer>© <!-- -->2022<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/currentWork/";window.___webpackCompilationHash="74016ac13820e158a55e";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-67664a8ccc6c9f02b880.js"],"app":["/app-c28dbaa9f37e9fb8dd75.js"],"component---src-pages-404-js":["/component---src-pages-404-js-58e08fa637634ce5af24.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8c70240c8cecc13bd1d2.js"],"component---src-pages-index-js":["/component---src-pages-index-js-24ea6ad6254116502af0.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b960cb60dbf683f289f6.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-06e9bd4775531e67267c.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-a5277cac4a46f806c629.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-519bbd4ebb2114cab6a9.js"]};/*]]>*/</script><script src="/polyfill-67664a8ccc6c9f02b880.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-a5277cac4a46f806c629.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-eef78c75bfcf1263b01a.js" async=""></script><script src="/dffd9eda1bde23af0ce146d568b45c289f422d0a-a84c247cc1659c4db0a2.js" async=""></script><script src="/8898d404f42c051a04e6d355569c09f07bfcb273-044e861ac360293cc0b3.js" async=""></script><script src="/commons-200ed5bba0575d2f4fa8.js" async=""></script><script src="/777cf710-5be2960e72945ec92859.js" async=""></script><script src="/app-c28dbaa9f37e9fb8dd75.js" async=""></script><script src="/framework-e413e527015be9a1bdfd.js" async=""></script><script src="/webpack-runtime-7dfbcd0dc234fe23264a.js" async=""></script></body></html>
