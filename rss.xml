@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 26 Feb 2022 12:14:16 GMT</lastBuildDate><item><title><![CDATA[Static site generator：Mkdocs]]></title><description><![CDATA[技術文書の作成 Markdown で文書作成 Static site generator : Mkdocs javascript の拡張性例 Python…]]></description><link>https://sokaishun.github.io/ssg/</link><guid isPermaLink="false">https://sokaishun.github.io/ssg/</guid><pubDate>Sat, 26 Feb 2022 20:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 26 Feb 2022 12:33:51 GMT</lastBuildDate><item><title><![CDATA[Static site generator：Mkdocs]]></title><description><![CDATA[技術文書の作成 Markdown で文書作成 Static site generator : Mkdocs javascript の拡張性例 Python…]]></description><link>https://sokaishun.github.io/ssg/</link><guid isPermaLink="false">https://sokaishun.github.io/ssg/</guid><pubDate>Sat, 26 Feb 2022 20:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#%E6%8A%80%E8%A1%93%E6%96%87%E6%9B%B8%E3%81%AE%E4%BD%9C%E6%88%90&quot;&gt;技術文書の作成&lt;/a&gt;&lt;/p&gt;
@@ -22,9 +22,68 @@
 &lt;p&gt;技術文書（仕様書、報告書）をどうやって残して、そして活用していくというのはどの業界においても重要な課題である。&lt;/p&gt;
 &lt;p&gt;仕事上でプログラムを設計しているとき、通信の仕様または処理の内容などを記録しつづ、指摘された内容を訂正し、フラッシュアップしてまとめていくことが日常な作業。&lt;/p&gt;
 &lt;p&gt;従来では、よく使われるツールだと Microsoft office の Word または Excel がある。しかし、複数人の編集または差分管理がしにくい。&lt;/p&gt;
-&lt;p&gt;仕様書を作成する際に、だれか/いつ/なの目的で仕様を訂正しているのかを記録しなければならない。案件を参考していた場合、このような訂正はノウハウまたはクリティカルポイントとして把握すべき。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 301px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/38d617efbdaa3aab3801a6e2ac07e0d5/fb933/git.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVElEQVQoz2P4jw7+/ccK/mERZ8Ci8R8O/RhSDGgSf799+ff3D0LR378g9O/v73ev/v3+hcNmiM4vn57WZXzYvhqqDcnctytm/nx87/u188iWM8B1/nx053F5wsfd6x9k+n/Yvgrsiq8fd6x5t2Lmp4Pb3q9f9H79wgeZft8unoRrYYBQv9+8eJDhe9vf4PWszk8Htz/MCvxy6sDPR3eed5S8mt76cde6N/P7P2xe9qKvGtnnUM1/v3991pJ/29/w7eLJzztKHpfF/bh99c+n949LYl5Na/nz4e3zjpIPW1c8qUn7fuMiks1wD//88byj+Hl70aOCiG9Xz/3////bhRNP6zKetRa8ntP1/fqFn4/vfbt2/sfda6ia4fq/fn4xoeb79QsQsd9vX3/YtvL9pqU/HtzCGoWoUQWRhjOQASjC/kGiDVci+ffvzx+ENFw1kgZkmwGhzV7iSLYF5gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git&quot;
+        title=&quot;git&quot;
+        src=&quot;/static/38d617efbdaa3aab3801a6e2ac07e0d5/fb933/git.png&quot;
+        srcset=&quot;/static/38d617efbdaa3aab3801a6e2ac07e0d5/c26ae/git.png 158w,
+/static/38d617efbdaa3aab3801a6e2ac07e0d5/fb933/git.png 301w&quot;
+        sizes=&quot;(max-width: 301px) 100vw, 301px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;差分管理は Git 使うこと。Git をよく理解できないとか、使い方についてなれない人もよくいるので、しかりとサポートする必要がある。&lt;/p&gt;
+&lt;p&gt;仕様書を作成する際に、だれ/いつ/なの目的で仕様を訂正しているのかを記録しなければならない。案件を参考していた場合、このような訂正はノウハウまたはクリティカルポイントとして把握すべき。&lt;/p&gt;
 &lt;p&gt;従来の仕様書作成ツールでの差分管理の欠点を認識し、使わないようにした。&lt;/p&gt;
 &lt;h2 id=&quot;markdown-で文書作成&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#markdown-%E3%81%A7%E6%96%87%E6%9B%B8%E4%BD%9C%E6%88%90&quot; aria-label=&quot;markdown で文書作成 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Markdown で文書作成&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 273px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/383720d38afcedd754592876fa904e10/0217c/markdown.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABe0lEQVQoz5WTv4rCQBDGV21EFAQFwUJTBAQ7UQsLGysLBZtUaZNYBBsLbX0GtfcN7ETBWsFONBaCDyAEQdHCP+B3OJJF79Y7bmHY5PtmfpnZsIwxBidcLhfFp/fvuSKdfUr+peCvYKhUKlitVhgMBgiHw9wsl8uYz+cYj8eIRCJcLxQK2Gw2aLfbYmCtVoOzRqMRGYlEAsfjkbT7/Q5JkniRqqqkT6dT0fgM1WqVEm63G+2dTgeTyYTD9vs94vH4W+ePNRwOxR06QMuyYNs273a5XOJwOOB8PiMajSIUCiGTyaDZbJI/m82Qy+WQSqXegbquU0Kv10OpVKLn9XqNbDaL3W6H6/VKQK/Xi8ViQf7lcuEfVhSFYG63+wnUNI2Mfr9PRqvVQj6fRzAYxOl0onBGjsVi2G63HFav119hT6BpmsIzkWWZFz5Ajp5Op0nrdrvin5JMJtFoNFAsFkn0eDy0BwIBOg7DMOD3+9+8B9Tn84mB/42X8X5cgC8AmZfFeoJGUwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;markdown&quot;
+        title=&quot;markdown&quot;
+        src=&quot;/static/383720d38afcedd754592876fa904e10/0217c/markdown.png&quot;
+        srcset=&quot;/static/383720d38afcedd754592876fa904e10/c26ae/markdown.png 158w,
+/static/383720d38afcedd754592876fa904e10/0217c/markdown.png 273w&quot;
+        sizes=&quot;(max-width: 273px) 100vw, 273px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;何で Markdown 使うの？という質問は必ず最初から飛び出してくる。仕様書を書くために新しい言語的なものを勉強しなきゃいけないのはいやだという声もよくある。&lt;/p&gt;
 &lt;p&gt;私の職場でも、Markdown をなれなくて文書作成するのを諦める人もいる。&lt;/p&gt;
 &lt;p&gt;なんで使うについては、確かに Markdown の方が自由度が低く、好きなように文字の大きさなどのスタイル変更できないし、表を作成したり、フローチャートも苦手である。&lt;/p&gt;
@@ -37,7 +96,39 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
 &lt;p&gt;Mkdocs を採用した１番理由は、&lt;a href=&quot;https://squidfunk.github.io/mkdocs-material/&quot;&gt;Mkdocs-Material&lt;/a&gt;というパッケージがあったから。Mkdocs-Material ではメニューや目次また注意文書のような機能が事前に備えていて、非常に便利。&lt;/p&gt;
 &lt;p&gt;２番理由は拡張性。javascript の拡張や&lt;a href=&quot;https://python-markdown.github.io/&quot;&gt;Python-Markdown&lt;/a&gt;の中に Python コードを追加したような拡張ができるので、初心者が拡張しやすいツールと感じている。&lt;/p&gt;
 &lt;h3 id=&quot;javascript-の拡張性例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#javascript-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B&quot; aria-label=&quot;javascript の拡張性例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;javascript の拡張性例&lt;/h3&gt;
-&lt;p&gt;mermaidjs を使って、フローチャートを記述できたこと。仕様書の場合、フローチャートで信号のシーケンスを記録する場面が必要で、実装した。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/de9d5a47e0c93b19bffe2efd7246d591/105d8/mermaid.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.405063291139236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcUlEQVQY022RSW+cMACF+f+/pNceo1aqlChV08mEaUggGRjCMniwAa9gY+OlSnOpqn7Xtxzei8JfYDrCEZxR9VTFj/U+6R4em11c/RSKhf8RMTm18K2GRQ7jrPvx/fXrdfolaeO0vC+KfQ5eq/5IF1SjA6JtT45SE7ZAqfF7eOAXhJth7CYIJlTNDIS33B+PIX1CL/tDFTfNNzJer1oywfuhFYpAWpH54pyLjNmss8bqSVzaIdvlt4fi7j6/jeu7I8yaodysclZ47533yyKD9yEE773SKuKSdaRCojuTAnKQVL/SKknL5+dTun/ZgaH7sIYQnLNwPDNOKefOB6lVZDajVvWu2c1o6jbtbXDWrAuym1PScFasK5VyVasUki9KTTgHzWdMT9GfShdCEAKVp6u2PUxYMAYBuMGYNfW5PH1CwwMXMxp6TLHetnkhaEjEgqJ/1jfGGuMY6xHKlJzN5rXWZO5mPV5wNvKaCEDn/uOq39sqvQGyYQ5nAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Mermaid&quot;
+        title=&quot;Mermaid&quot;
+        src=&quot;/static/de9d5a47e0c93b19bffe2efd7246d591/f058b/mermaid.png&quot;
+        srcset=&quot;/static/de9d5a47e0c93b19bffe2efd7246d591/c26ae/mermaid.png 158w,
+/static/de9d5a47e0c93b19bffe2efd7246d591/6bdcf/mermaid.png 315w,
+/static/de9d5a47e0c93b19bffe2efd7246d591/f058b/mermaid.png 630w,
+/static/de9d5a47e0c93b19bffe2efd7246d591/40601/mermaid.png 945w,
+/static/de9d5a47e0c93b19bffe2efd7246d591/105d8/mermaid.png 1170w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mermaid-js.github.io/mermaid/#/&quot;&gt;Mermaidjs&lt;/a&gt;を使って、フローチャートを記述できたこと。仕様書の場合、フローチャートで信号のシーケンスを記録する場面が必要で、実装した。&lt;/p&gt;
 &lt;h3 id=&quot;python-の拡張性例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#python-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B&quot; aria-label=&quot;python の拡張性例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Python の拡張性例&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/jreese/markdown-pp&quot;&gt;Markdown-pp&lt;/a&gt;を拡張して、&lt;a href=&quot;https://github.com/miurahr/pykakasi&quot;&gt;Pykakasi&lt;/a&gt;を利用して、日本語の Heading をローマ字に変換して ahref リンクに反映するような拡張していた。&lt;/p&gt;
 &lt;p&gt;ちなみに Markdown-pp は複数の Markdown 文書を一つにまとめるパッケージで、TOC と Heading のナンバリングもしてくれるもの。１つの Markdown の文書を複数の文書に合体したい場合使えるツール。&lt;/p&gt;
@@ -185,12 +276,12 @@ Docker コンテナ内の Github 認証、Docker 認証で苦労した。&lt;/p&
 &lt;h2 id=&quot;コードテスト例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%86%E3%82%B9%E3%83%88%E4%BE%8B&quot; aria-label=&quot;コードテスト例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;コードテスト例&lt;/h2&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;35964652245291684000&quot;
+              data-toaster-id=&quot;16677063351912546000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `35964652245291684000`)&quot;
+              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `16677063351912546000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
