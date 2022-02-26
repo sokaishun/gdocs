@@ -32,7 +32,7 @@ const Bio = () => {
 
   return (
     <a href="/about" className="flex items-center 
-    bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl 
+    bg-white rounded-lg border shadow-md md:flex-row 
     hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
     dark:hover:bg-gray-700">
       <div className="img-container">
