@@ -57,10 +57,10 @@ const BlogIndex = ({ data, location }) => {
                 </div>
                 {post.frontmatter.tags ? (
                 <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
-                  <FaTag/>
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                        <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500"/>
                         <Link  to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}
@@ -80,12 +80,13 @@ const BlogIndex = ({ data, location }) => {
         })}
       </ol>
       <h2 className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>Tags</div></h2>
-      <ul className="flex flex-wrap justify-start items-center  space-x-2">
+      <ul className="flex flex-wrap justify-start items-center">
         {data.allMarkdownRemark.group.map(tag => (
-          <li key={tag.fieldValue} class="flex flex-col items-center px-3 py-2 text-sm font-medium text-center  bg-blue-200 rounded hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800">
+          <li key={tag.fieldValue} className="flex flex-col items-center text-sm font-medium mr-2 px-1.5 py-1 rounded text-center  bg-blue-200 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800">
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <FaTag className="inline-flex mr-1 w-4 h-4 dark:fill-blue-500 fill-yellow-500"/>
               {tag.fieldValue} 
-              <span class="inline-flex justify-center items-center ml-2 w-5 h-5 text-xs font-semibold dark:bg-blue-500 bg-yellow-500 rounded-full">
+              <span className="inline-flex justify-center items-center ml-2 w-5 h-5 text-xs font-semibold dark:bg-blue-500 bg-yellow-500 rounded-full">
               {tag.totalCount}
               </span>
             </Link>

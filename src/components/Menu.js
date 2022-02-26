@@ -10,10 +10,6 @@ export default props => {
       <Link to="/" className="menu-item  block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" >
       <div className="flex flex-row justify-start items-center space-x-2"><FaHome/><div>HOME</div></div>
       </Link>
-      <Link to="/tags" className="menu-item block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" >
-      <div className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>TAGS</div></div>
-        </Link>
-
         <Link to="/about" className="menu-item block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" >
         <div className="flex flex-row justify-start items-center  space-x-2"><FaUser/><div>ABOUT</div></div>
         </Link>
