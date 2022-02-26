@@ -47,6 +47,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "gatsby-plugin-postcss": "^5.7.0",
+    "gatsby-remark-code-buttons": "^2.0.7",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-prismjs-title": "^1.0.0",
     "postcss": "^8.4.6",

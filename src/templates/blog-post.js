@@ -34,11 +34,11 @@ const BlogPostTemplate = ({ data, location }) => {
           
           {post.frontmatter.tags ? (
             <div className=" flex flex-row">
-            <FaTag className="my-1 mx-2"/>
                 <div className="tags-container">
                   <ul className="taglist">
                     {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+                        <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500"/>
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                       </li>
                     ))}

@@ -76,6 +76,7 @@ html {
 
 body {
   --bg: #E4E6EB;
+  --bg-highlight-bg:#aeafb3;
   --textNormal: hsl(210,50%,20%);
   --textTitle: #222;
   --textLink: blue;
@@ -87,6 +88,7 @@ body.dark {
   -webkit-font-smoothing: antialiased;
   --color-primary: #2965dd;
   --bg: #18191A;
+  --bg-highlight-bg:#535455;
   --textNormal: #E4E6EB;
   --textTitle: #B0B3B8;
   --textLink: yellow;
@@ -456,17 +458,13 @@ input:checked ~ .dot {
   content: attr(data-prompt);
 }
 .gatsby-code-title {
-  border-radius: 0.3em;
-  background: #444;
-  margin: 20px 0px -24px;
-  padding: 8px 12px 20px;
-  font-size: 0.8em;
-  line-height: 1;
-  display: table;
-}
-
-.gatsby-code-title > span{
-  color: #fff;
+  border-top-left-radius:0.3em;
+  border-top-right-radius:0.3em;
+  background: var(--bg);
+  padding-left: 10px;
+  line-height: 2;
+  background-color: var(--bg-highlight-bg);
+  margin-bottom: -10px;
 }
 
 /* Position and sizing of burger button */
@@ -599,4 +597,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .toc li {
       padding:0 10px;
   }
+}
+.gatsby-code-button-icon {
+  fill:var(--textNormal);
+  padding-right: 5px;
 }
