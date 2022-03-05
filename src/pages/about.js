@@ -26,7 +26,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiDotnet size={50} className="m-2 fill-blue-500"/>
+            <SiDotnet size={50} className="w-20 m-2 fill-blue-500"/>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
               <p >設備使うパソコンのアプリケーションの開発</p>
@@ -36,7 +36,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiAzuredevops size={50} className="m-2 fill-blue-500"/>
+            <SiAzuredevops size={50} className="w-20 m-2 fill-blue-500"/>
             <div className="flex flex-col justify-between pl-5">
               <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2013年より</p>
               <p >アプリケーションのソースコード管理、CIパイプライン</p>
@@ -46,17 +46,17 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <div className="m-2">Mkdocs</div>
+            <div className="w-20 m-2 text-center">Mkdocs</div>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
               <p >Markdown文書をウェブページ化</p>
             </div>
           </li>
-          <li  className="techSkill flex items-center 
+          <li  className="techSkill flex items-center
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiVisualstudio size={50} className="m-2 fill-purple-600"/>
+            <SiVisualstudio size={50} className="w-20 m-2 fill-purple-600"/>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
               <p >Visual Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成</p>
@@ -66,7 +66,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <FaGit size={50}  className="m-2"/>
+            <FaGit size={50}  className="w-20 m-2"/>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
               <p >ソースコードまたはMarkdown文書のバージョン管理</p>
@@ -76,7 +76,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <FaMarkdown size={50} className="m-2"/>
+            <FaMarkdown size={50} className="w-20 m-2"/>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
               <p >ソフトウェアの仕様書作成用</p>
@@ -86,7 +86,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiAnsible size={50} className="m-2 fill-stone-400"/>
+            <SiAnsible size={50} className="w-20 m-2 fill-stone-400"/>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2022年より</p>
               <p >パソコンのセットアップやソフトウェアの配布の自動化</p>
@@ -96,7 +96,7 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <div className="m-2">Halcon</div>
+            <div className="w-20 m-2 text-center">Halcon</div>
             <div className="flex flex-col justify-between pl-5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
               <p >画像処理アプリケーション開発用のライブラリ</p>
