@@ -301,13 +301,12 @@ a:focus {
   font-size: var(--fontSize-2);
 }
 
-.bio {
+.bio,.techSkill {
   display: flex;
-  margin-bottom: var(--spacing-16);
   background-color: var(--bg);
 }
 
-.bio p {
+.bio p,.techSkill p {
   margin-bottom: var(--spacing-0);
 }
 .bio-avatar {

@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import image from "../images/profile-pic.png";
-import { FaSchool,FaTools,FaDev,FaGit,FaMarkdown} from 'react-icons/fa';
+import { FaSchool,FaTools,FaDev,FaGit,FaMarkdown,FaCalendarAlt} from 'react-icons/fa';
 import { SiDotnet,SiAzuredevops,SiVisualstudio,SiAnsible} from 'react-icons/si';
 
 const Aboutpage = ({ data, location }) => {
@@ -22,22 +22,86 @@ const Aboutpage = ({ data, location }) => {
 
         <h2 className="flex flex-row justify-start items-center space-x-2"><FaTools/><div>仕事で使っている技術</div></h2>
          <ul>
-          <li  className="flex items-center 
+          <li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiDotnet size={70} className="fill-blue-500"/>
+            <SiDotnet size={50} className="m-2 fill-blue-500"/>
             <div className="flex flex-col justify-between pl-5">
-              <p className="mt-0 mb-0">2010年から</p>
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
               <p >設備使うパソコンのアプリケーションの開発</p>
             </div>
             </li>
-          <li><SiAzuredevops size={50} className="fill-blue-500"/>アプリケーションのソースコード管理、CIパイプライン（2013年から）</li>
-          <li>Mkdocs：Markdown文書をウェブページ化（2020年から）</li>
-          <li><SiVisualstudio size={50} className="fill-purple-600"/>Markdown文書の作成用、またはJavascriptのコード作成（2020年から）</li>
-          <li><FaGit size={50} />ソースコードまたはMarkdown文書のバージョン管理（2020年から）</li>
-          <li><FaMarkdown size={50} />ソフトウェアの仕様書作成用（2020年から）</li>
-          <li><SiAnsible size={50} className="fill-stone-400"/>パソコンのセットアップやソフトウェアの配布の自動化（2022年から）</li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <SiAzuredevops size={50} className="m-2 fill-blue-500"/>
+            <div className="flex flex-col justify-between pl-5">
+              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2013年より</p>
+              <p >アプリケーションのソースコード管理、CIパイプライン</p>
+            </div>
+            </li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <div className="m-2">Mkdocs</div>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
+              <p >Markdown文書をウェブページ化</p>
+            </div>
+          </li>
+          <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <SiVisualstudio size={50} className="m-2 fill-purple-600"/>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
+              <p >Visual Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成</p>
+            </div>
+            </li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <FaGit size={50}  className="m-2"/>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
+              <p >ソースコードまたはMarkdown文書のバージョン管理</p>
+            </div>
+            </li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <FaMarkdown size={50} className="m-2"/>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
+              <p >ソフトウェアの仕様書作成用</p>
+            </div>
+            </li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <SiAnsible size={50} className="m-2 fill-stone-400"/>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2022年より</p>
+              <p >パソコンのセットアップやソフトウェアの配布の自動化</p>
+            </div>
+            </li>
+            <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <div className="m-2">Halcon</div>
+            <div className="flex flex-col justify-between pl-5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
+              <p >画像処理アプリケーション開発用のライブラリ</p>
+            </div>
+            </li>
         </ul>
 
         <h2 className="flex flex-row justify-start items-center space-x-2"><FaDev/><div>興味ある技術</div></h2>
