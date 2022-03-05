@@ -32,7 +32,7 @@ const Aboutpage = ({ data, location }) => {
               <p >設備使うパソコンのアプリケーションの開発</p>
             </div>
             </li>
-          <li><SiAzuredevops size={50} className="fill-blue-500"/>アプリケーションのソースコード管理（2013年から）</li>
+          <li><SiAzuredevops size={50} className="fill-blue-500"/>アプリケーションのソースコード管理、CIパイプライン（2013年から）</li>
           <li>Mkdocs：Markdown文書をウェブページ化（2020年から）</li>
           <li><SiVisualstudio size={50} className="fill-purple-600"/>Markdown文書の作成用、またはJavascriptのコード作成（2020年から）</li>
           <li><FaGit size={50} />ソースコードまたはMarkdown文書のバージョン管理（2020年から）</li>
