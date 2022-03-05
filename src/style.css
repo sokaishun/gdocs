@@ -304,6 +304,7 @@ a:focus {
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
+  background-color: var(--bg);
 }
 
 .bio p {

@@ -31,7 +31,7 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <a href="/about" className="flex items-center 
+    <a href="/about" className="bio flex items-center 
     bg-white rounded-lg border shadow-md md:flex-row 
     hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
     dark:hover:bg-gray-700">
@@ -40,9 +40,9 @@ const Bio = () => {
       </div>
 
       <div class="flex flex-col justify-between pl-5">
-        <h5 class="mt-3 mb-3 font-bold dark:text-white">{author?.name || null}
+        <h5 class="mt-3 mb-3 font-bold">{author?.name || null}
           {` `}</h5>
-        <p class="mb-3 dark:text-gray-400">{author?.summary || null}
+        <p class="mb-3">{author?.summary || null}
           {` `}</p>
       </div>
     </a>
