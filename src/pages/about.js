@@ -21,13 +21,13 @@ const Aboutpage = ({ data, location }) => {
 
         <h2 className="flex flex-row justify-start items-center space-x-2"><FaTools/><div>仕事で使っている技術</div></h2>
          <ul>
-          <li>.net</li>
-          <li>Azure devops server</li>
-          <li>Mkdocs</li>
-          <li>Visual Studio/VSCode</li>
-          <li>git</li>
-          <li>Markdown</li>
-          <li>Ansible</li>
+          <li>.net：設備使うパソコンのアプリケーションの開発（2010年から）</li>
+          <li>Azure devops server：アプリケーションのソースコード管理（2013年から）</li>
+          <li>Mkdocs：Markdown文書をウェブページ化（2020年から）</li>
+          <li>Visual Studio/VSCode：Markdown文書の作成用、またはJavascriptのコード作成（2020年から）</li>
+          <li>git：ソースコードまたはMarkdown文書のバージョン管理（2020年から）</li>
+          <li>Markdown：ソフトウェアの仕様書作成用（2020年から）</li>
+          <li>Ansible：パソコンのセットアップやソフトウェアの配布の自動化（2022年から）</li>
         </ul>
 
         <h2 className="flex flex-row justify-start items-center space-x-2"><FaDev/><div>興味ある技術</div></h2>
