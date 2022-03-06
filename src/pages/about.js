@@ -22,6 +22,16 @@ const Aboutpage = ({ data, location }) => {
 
         <h2 className="flex flex-row justify-start items-center space-x-2"><FaTools/><div>仕事で使っている技術</div></h2>
          <ul>
+　　　　　　 <li  className="techSkill flex items-center
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <SiVisualstudio size={50} className="w-20 m-2 fill-purple-600"/>
+            <div className="flex flex-col justify-between pl-5 w-4/5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
+              <p >Visual Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成</p>
+            </div>
+            </li>
           <li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
@@ -40,6 +50,16 @@ const Aboutpage = ({ data, location }) => {
             <div className="flex flex-col justify-between pl-5 w-4/5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2010年より</p>
               <p >画像処理アプリケーション開発用のライブラリ</p>
+            </div>
+            </li>
+　　　　　　　　 <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <SiAzuredevops size={50} className="w-20 m-2 fill-blue-500"/>
+            <div className="flex flex-col justify-between pl-5 w-4/5">
+              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2013年より</p>
+              <p >アプリケーションのソースコード管理、CIパイプライン</p>
             </div>
             </li>
            <li  className="techSkill flex items-center 
@@ -66,32 +86,12 @@ const Aboutpage = ({ data, location }) => {
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
-            <SiAzuredevops size={50} className="w-20 m-2 fill-blue-500"/>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2013年より</p>
-              <p >アプリケーションのソースコード管理、CIパイプライン</p>
-            </div>
-            </li>
-            <li  className="techSkill flex items-center 
-          bg-white rounded-lg border shadow-md md:flex-row 
-          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
-          dark:hover:bg-gray-700">
             <div className="w-20 m-2 text-center">Mkdocs</div>
             <div className="flex flex-col justify-between pl-5 w-4/5">
              <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
               <p >Markdown文書をウェブページ化</p>
             </div>
           </li>
-          <li  className="techSkill flex items-center
-          bg-white rounded-lg border shadow-md md:flex-row 
-          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
-          dark:hover:bg-gray-700">
-            <SiVisualstudio size={50} className="w-20 m-2 fill-purple-600"/>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2020年より</p>
-              <p >Visual Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成</p>
-            </div>
-            </li>
             <li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
