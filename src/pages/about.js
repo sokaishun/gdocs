@@ -42,6 +42,26 @@ const Aboutpage = ({ data, location }) => {
               <p >画像処理アプリケーション開発用のライブラリ</p>
             </div>
             </li>
+           <li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <div className="w-20 m-2 text-center">WiX Toolset</div>
+            <div className="flex flex-col justify-between pl-5 w-4/5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2019年より</p>
+              <p >.NET アプリケーションのインストーラー作成</p>
+            </div>
+            </li>
+　　　　　　　<li  className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700">
+            <div className="w-20 m-2 text-center">RestApi</div>
+            <div className="flex flex-col justify-between pl-5 w-4/5">
+             <p className="flex flex-row items-center mt-0 mb-0"><FaCalendarAlt className="mr-1"/>2019年より</p>
+              <p >Azure Devops server wiki api操作</p>
+            </div>
+            </li>
             <li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
