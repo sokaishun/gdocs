@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import image from "../images/profile-pic.png";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import {
   FaSchool,
   FaTools,
@@ -12,6 +12,9 @@ import {
   FaGit,
   FaMarkdown,
   FaCalendarAlt,
+  FaRocket,
+  FaBook,
+  FaQuestion,
 } from "react-icons/fa";
 import {
   SiDotnet,
@@ -54,8 +57,8 @@ const Aboutpage = ({ data, location }) => {
               2002/10
             </time>
             <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              愛知県名古屋市の日本語学校に入学。
-              一年間半の日本語を勉強をした。<br/>
+              愛知県名古屋市の日本語学校に入学。 一年間半の日本語を勉強をした。
+              <br />
               生活費を稼ぐために、アルバイトをしていた。
             </p>
           </li>
@@ -82,7 +85,8 @@ const Aboutpage = ({ data, location }) => {
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
               愛知県の大学　情報工学科入学。
-              念願のコンピューターサイエンスの勉強を始めた。<br/>
+              念願のコンピューターサイエンスの勉強を始めた。
+              <br />
               入学テスト時の面接で、自動駐車システムの話をしていたのも覚えているぐらい。
             </p>
           </li>
@@ -108,7 +112,8 @@ const Aboutpage = ({ data, location }) => {
               2010/3
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              情報工学科研究科卒業　画像処理関係の研究。大学院の研究は苦労した。<br/>
+              情報工学科研究科卒業　画像処理関係の研究。大学院の研究は苦労した。
+              <br />
               最後のところの3ヶ月は必死であったのも覚えている。
               Matlabのプログラムもいっぱい書いて、論文をまとめたところの一連の経験がよかったと今も感じている。
             </p>
@@ -139,8 +144,10 @@ const Aboutpage = ({ data, location }) => {
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
               就職活動は経済危機の時期と重なって苦労した。自分の準備不足もあったと思う。
-              入社後の仕事内容は自動検査設備の開発。<br/>
-              プログラム作成をはじめ、仕様検討を行い、実機の立ち上げなど一連の仕事を何回も経験した。<br/>
+              入社後の仕事内容は自動検査設備の開発。
+              <br />
+              プログラム作成をはじめ、仕様検討を行い、実機の立ち上げなど一連の仕事を何回も経験した。
+              <br />
               同じような仕事をやり続いているが、新しい技術を取り入れて工夫しながら効率をはかることが心がけているところ。
             </p>
           </li>
@@ -152,170 +159,207 @@ const Aboutpage = ({ data, location }) => {
         <ul>
           　　　　　　{" "}
           <Fade left cascade>
-          <li
-            className="techSkill flex items-center
+            <li
+              className="techSkill flex items-center
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <SiVisualstudio size={50} className="w-20 m-2 fill-purple-600" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2010年～
-              </p>
-              <p>
-                Visual
-                Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成
-              </p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <SiVisualstudio size={50} className="w-20 m-2 fill-purple-600" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2010年～
+                </p>
+                <p>
+                  Visual
+                  Basicアプリケーション開発IDE、Markdown文書の作成用、またはJavascriptのコード作成
+                </p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <SiDotnet size={50} className="w-20 m-2 fill-blue-500" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2010年～
-              </p>
-              <p>設備使うパソコンのアプリケーションの開発</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <SiDotnet size={50} className="w-20 m-2 fill-blue-500" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2010年～
+                </p>
+                <p>設備使うパソコンのアプリケーションの開発</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <div className="w-20 m-2 text-center">Halcon</div>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2010年～
-              </p>
-              <p>画像処理アプリケーション開発用のライブラリ</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <div className="w-20 m-2 text-center">Halcon</div>
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2010年～
+                </p>
+                <p>画像処理アプリケーション開発用のライブラリ</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <SiAzuredevops size={50} className="w-20 m-2 fill-blue-500" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2013年～
-              </p>
-              <p>アプリケーションのソースコード管理、CIパイプライン</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <SiAzuredevops size={50} className="w-20 m-2 fill-blue-500" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2013年～
+                </p>
+                <p>アプリケーションのソースコード管理、CIパイプライン</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <div className="w-20 m-2 text-center">WiX Toolset</div>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2019年～
-              </p>
-              <p>.NET アプリケーションのインストーラー作成</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <div className="w-20 m-2 text-center">WiX Toolset</div>
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2019年～
+                </p>
+                <p>.NET アプリケーションのインストーラー作成</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <div className="w-20 m-2 text-center">RestApi</div>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2020年～
-              </p>
-              <p>Azure Devops server wiki api操作</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <div className="w-20 m-2 text-center">RestApi</div>
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2020年～
+                </p>
+                <p>Azure Devops server wiki api操作</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <div className="w-20 m-2 text-center">Mkdocs</div>
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2020年～
-              </p>
-              <p>Markdown文書をウェブページ化</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <div className="w-20 m-2 text-center">Mkdocs</div>
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2020年～
+                </p>
+                <p>Markdown文書をウェブページ化</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <FaGit size={50} className="w-20 m-2" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2020年～
-              </p>
-              <p>ソースコードまたはMarkdown文書のバージョン管理</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <FaGit size={50} className="w-20 m-2" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2020年～
+                </p>
+                <p>ソースコードまたはMarkdown文書のバージョン管理</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <FaMarkdown size={50} className="w-20 m-2" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2020年～
-              </p>
-              <p>ソフトウェアの仕様書作成用</p>
-            </div>
-          </li>
-          <li
-            className="techSkill flex items-center 
+            >
+              <FaMarkdown size={50} className="w-20 m-2" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2020年～
+                </p>
+                <p>ソフトウェアの仕様書作成用</p>
+              </div>
+            </li>
+            <li
+              className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700"
-          >
-            <SiAnsible size={50} className="w-20 m-2 fill-stone-400" />
-            <div className="flex flex-col justify-between pl-5 w-4/5">
-              <p className="flex flex-row items-center mt-0 mb-0">
-                <FaCalendarAlt className="mr-1" />
-                2022年～
-              </p>
-              <p>パソコンのセットアップやソフトウェアの配布の自動化</p>
-            </div>
-          </li>
+            >
+              <SiAnsible size={50} className="w-20 m-2 fill-stone-400" />
+              <div className="flex flex-col justify-between pl-5 w-4/5">
+                <p className="flex flex-row items-center mt-0 mb-0">
+                  <FaCalendarAlt className="mr-1" />
+                  2022年～
+                </p>
+                <p>パソコンのセットアップやソフトウェアの配布の自動化</p>
+              </div>
+            </li>
           </Fade>
         </ul>
 
         <h2 className="flex flex-row justify-start items-center space-x-2">
           <FaDev />
-          <div>興味ある技術</div>
+          <div>やっていきたい技術</div>
         </h2>
         <ul>
-          <li>Devops</li>
-          <li>CMS</li>
-          <li>自動化</li>
+          <li class="block p-6  bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="flex flex-row justify-start items-center space-x-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <FaRocket />
+              <div>Devops</div>
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              CI/CD関係。
+              <br />
+              特にCD関係について、アプリケーションの自動配布を製造現場で実現できる仕組みをかんがえていきたい。
+              <br />
+              工場の自動化にもつながることを実現したい。
+            </p>
+          </li>
+          <li class="block p-6  bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="flex flex-row justify-start items-center space-x-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <FaBook />
+              <div>Content Management System(CMS)</div>
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              設計文書の管理を実現できるシステム。
+              <br />
+              いかに定着性がある文書のフォーマットと図面のようなPlainTextではないデータを含めて考えていきたい。
+              <br />
+              誰でも簡単に使えるシステムをどのデバイスでも使えるようにしていくことを重心に考える。
+            </p>
+          </li>
+          <li class="block p-6  bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="flex flex-row justify-start items-center space-x-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <FaQuestion />
+              <div>自動化</div>
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              CI/CDも自動化の一つ。
+              <br />
+              それ以外、業務の自動化、例えばGoogle
+              Apiを使用したメールの自動記録やFAQシステムの自動返答のためのChatbotシステムなどを考えていきたい。
+              <br />
+              さまざまな記録を残すための自動化と再利用するための自動化を全面的に推進していきたい。
+            </p>
+          </li>
         </ul>
       </Layout>
     </div>
