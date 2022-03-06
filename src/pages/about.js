@@ -52,7 +52,7 @@ const Aboutpage = ({ data, location }) => {
               <p >画像処理アプリケーション開発用のライブラリ</p>
             </div>
             </li>
-　　　　　　　　 <li  className="techSkill flex items-center 
+<li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
@@ -72,7 +72,7 @@ const Aboutpage = ({ data, location }) => {
               <p >.NET アプリケーションのインストーラー作成</p>
             </div>
             </li>
-　　　　　　　<li  className="techSkill flex items-center 
+<li  className="techSkill flex items-center 
           bg-white rounded-lg border shadow-md md:flex-row 
           hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
           dark:hover:bg-gray-700">
