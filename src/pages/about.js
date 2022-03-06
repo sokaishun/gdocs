@@ -31,9 +31,9 @@ const Aboutpage = ({ data, location }) => {
           <div>自己紹介</div>
         </h2>
 
-        <ol class="relative border-l border-gray-200 dark:border-gray-700">
+        <ol class="relative border-l border-white dark:border-gray-700">
           <li class="mb-10 ml-6">
-            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-gray-200 dark:ring-gray-900 dark:bg-blue-900">
               <svg
                 class="w-3 h-3 text-blue-600 dark:text-blue-400"
                 fill="currentColor"
@@ -55,12 +55,12 @@ const Aboutpage = ({ data, location }) => {
             </time>
             <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               愛知県名古屋市の日本語学校に入学。
-              一年間半の日本語勉強をした。<br/>
+              一年間半の日本語を勉強をした。<br/>
               生活費を稼ぐために、アルバイトをしていた。
             </p>
           </li>
           <li class="mb-10 ml-6">
-            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-gray-200 dark:ring-gray-900 dark:bg-blue-900">
               <svg
                 class="w-3 h-3 text-blue-600 dark:text-blue-400"
                 fill="currentColor"
@@ -87,7 +87,7 @@ const Aboutpage = ({ data, location }) => {
             </p>
           </li>
           <li class="mb-10 ml-6">
-            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-gray-200 dark:ring-gray-900 dark:bg-blue-900">
               <svg
                 class="w-3 h-3 text-blue-600 dark:text-blue-400"
                 fill="currentColor"
@@ -114,7 +114,7 @@ const Aboutpage = ({ data, location }) => {
             </p>
           </li>
           <li class="mb-10 ml-6">
-            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-gray-200 dark:ring-gray-900 dark:bg-blue-900">
               <svg
                 class="w-3 h-3 text-blue-600 dark:text-blue-400"
                 fill="currentColor"
