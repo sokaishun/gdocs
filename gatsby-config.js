@@ -37,11 +37,11 @@ module.exports = {
               ordered: false,
               fromHeading: 1,
               toHeading: 6,
-              className: "toc"
-                },
+              className: "toc",
             },
+          },
           {
-            resolve: 'gatsby-remark-code-buttons',
+            resolve: "gatsby-remark-code-buttons",
             options: {
               // Optional button container class name. Defaults
               // to 'gatsby-code-button-container'.
@@ -62,10 +62,10 @@ module.exports = {
               // Optional toaster text class name. Defaults to ''.
               toasterTextClass: `customToasterTextClass`,
               // Optional toaster text. Defaults to ''.
-              toasterText: 'コピー完了',
+              toasterText: "コピー完了",
               // Optional toaster duration. Defaults to 3500.
-              toasterDuration: 3500
-            }
+              toasterDuration: 3500,
+            },
           },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs-title`,
@@ -178,15 +178,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -231,6 +231,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    'gatsby-plugin-dark-mode',
+    "gatsby-plugin-dark-mode",
   ],
-}
+};

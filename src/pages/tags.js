@@ -1,39 +1,43 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import Layout from "../components/layout";
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase";
 
 // Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
-import { FaTags } from 'react-icons/fa';
+import { Helmet } from "react-helmet";
+import { Link, graphql } from "gatsby";
+import { FaTags } from "react-icons/fa";
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
       siteMetadata: { title },
     },
-  }, location 
+  },
+  location,
 }) => (
   <div>
-    <Layout location={location} >
-    <Helmet title={title} />
-    <div>
-      <h1 className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>Tags</div></h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout location={location}>
+      <Helmet title={title} />
+      <div>
+        <h1 className="flex flex-row justify-start items-center  space-x-2">
+          <FaTags />
+          <div>Tags</div>
+        </h1>
+        <ul>
+          {group.map((tag) => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Layout>
   </div>
-)
+);
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
@@ -51,9 +55,9 @@ TagsPage.propTypes = {
       }),
     }),
   }),
-}
+};
 
-export default TagsPage
+export default TagsPage;
 
 export const pageQuery = graphql`
   query {
@@ -69,4 +73,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

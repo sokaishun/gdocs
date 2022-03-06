@@ -1,18 +1,17 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { FaTag } from 'react-icons/fa';
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
+import { FaTag } from "react-icons/fa";
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase";
 import Image from "gatsby-image";
 
-
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
   const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
   return (
     <Layout location={location} title={siteTitle}>
@@ -29,25 +28,32 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
           <div className="pb-5">
-            <Image className="object-none shadow rounded max-w-full h-auto align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
+            <Image
+              className="object-none shadow rounded max-w-full h-auto align-middle border-none"
+              fluid={thumbnail}
+              alt="Thumbnail画像"
+            />
           </div>
-          
+
           {post.frontmatter.tags ? (
             <div className=" flex flex-row">
-                <div className="tags-container">
-                  <ul className="taglist">
-                    {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
-                        <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500"/>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                </div>
-              ) : null}
+              <div className="tags-container">
+                <ul className="taglist">
+                  {post.frontmatter.tags.map((tag) => (
+                    <li
+                      key={tag + `tag`}
+                      className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"
+                    >
+                      <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500" />
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ) : null}
         </header>
-        <section 
+        <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -83,10 +89,10 @@ const BlogPostTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -134,4 +140,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

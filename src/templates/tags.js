@@ -1,57 +1,60 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import Layout from "../components/layout";
 import Image from "gatsby-image";
 // Components
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby";
 
-const Tags = ({ pageContext, data, location  }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+const Tags = ({ pageContext, data, location }) => {
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} node${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with "${tag}"`;
 
   return (
     <div>
-    <Layout  location={location}>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const thumbnail = node.frontmatter.thumbnail?.childImageSharp.fluid;
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug} className="rounded-xl  mx-auto  mt-10 bg-gradient-to-r p-[4px] from-[#FF512F] via-[#DD2476] to-[#9333EA]">
-              <Link to={slug}>
-              <div className="tagPost flex flex-col justify-between h-full rounded-lg p-2">
-              <header >
-              <h4>{title}</h4>
-              <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-                </div>
+      <Layout location={location}>
+        <h1>{tagHeader}</h1>
+        <ul>
+          {edges.map(({ node }) => {
+            const thumbnail = node.frontmatter.thumbnail?.childImageSharp.fluid;
+            const { slug } = node.fields;
+            const { title } = node.frontmatter;
+            return (
+              <li
+                key={slug}
+                className="rounded-xl  mx-auto  mt-10 bg-gradient-to-r p-[4px] from-[#FF512F] via-[#DD2476] to-[#9333EA]"
+              >
+                <Link to={slug}>
+                  <div className="tagPost flex flex-col justify-between h-full rounded-lg p-2">
+                    <header>
+                      <h4>{title}</h4>
+                      <small>{node.frontmatter.date}</small>
+                    </header>
+                    <section>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.frontmatter.description || node.excerpt,
+                        }}
+                        itemProp="description"
+                      />
+                    </section>
+                  </div>
                 </Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
+              </li>
+            );
+          })}
+        </ul>
+        {/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
+        <Link to="/tags">All tags</Link>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
 Tags.propTypes = {
   pageContext: PropTypes.shape({
@@ -74,12 +77,12 @@ Tags.propTypes = {
       ),
     }),
   }),
-}
+};
 
-export default Tags
+export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -107,4 +110,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

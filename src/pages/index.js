@@ -1,18 +1,18 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import Image from "gatsby-image";
 // Utilities
-import kebabCase from "lodash/kebabCase"
-import { FaTag } from 'react-icons/fa';
-import { FaTags } from 'react-icons/fa';
+import kebabCase from "lodash/kebabCase";
+import { FaTag } from "react-icons/fa";
+import { FaTags } from "react-icons/fa";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
           gatsby-config.js).
         </p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -33,8 +33,8 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {posts.map((post) => {
+          const title = post.frontmatter.title || post.fields.slug;
           const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
           return (
             <li key={post.fields.slug}>
@@ -52,21 +52,28 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
-                <div className="pb-2">
-                     <Image className="object-none shadow rounded max-w-full max-h-[20rem] align-middle border-none" fluid={thumbnail} alt="Thumbnail画像" />
-                </div>
-                {post.frontmatter.tags ? (
-                <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
-                  <ul className="taglist">
-                    {post.frontmatter.tags.map(tag => (
-                      <li key={tag + `tag`} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
-                        <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500"/>
-                        <Link  to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
+                  <div className="pb-2">
+                    <Image
+                      className="object-none shadow rounded max-w-full max-h-[20rem] align-middle border-none"
+                      fluid={thumbnail}
+                      alt="Thumbnail画像"
+                    />
+                  </div>
+                  {post.frontmatter.tags ? (
+                    <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
+                      <ul className="taglist">
+                        {post.frontmatter.tags.map((tag) => (
+                          <li
+                            key={tag + `tag`}
+                            className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"
+                          >
+                            <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500" />
+                            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
@@ -76,28 +83,34 @@ const BlogIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
-      <h2 className="flex flex-row justify-start items-center  space-x-2"><FaTags/><div>Tags</div></h2>
+      <h2 className="flex flex-row justify-start items-center  space-x-2">
+        <FaTags />
+        <div>Tags</div>
+      </h2>
       <ul className="flex flex-wrap justify-start items-center">
-        {data.allMarkdownRemark.group.map(tag => (
-          <li key={tag.fieldValue} className="flex flex-col items-center text-sm font-medium mr-2 px-1.5 py-1 rounded text-center  bg-blue-200 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800">
+        {data.allMarkdownRemark.group.map((tag) => (
+          <li
+            key={tag.fieldValue}
+            className="flex flex-col items-center text-sm font-medium mr-2 px-1.5 py-1 rounded text-center  bg-blue-200 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800"
+          >
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              <FaTag className="inline-flex mr-1 w-4 h-4 dark:fill-blue-500 fill-yellow-500"/>
-              {tag.fieldValue} 
+              <FaTag className="inline-flex mr-1 w-4 h-4 dark:fill-blue-500 fill-yellow-500" />
+              {tag.fieldValue}
               <span className="inline-flex justify-center items-center ml-2 w-5 h-5 text-xs font-semibold dark:bg-blue-500 bg-yellow-500 rounded-full">
-              {tag.totalCount}
+                {tag.totalCount}
               </span>
             </Link>
           </li>
         ))}
       </ul>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -132,4 +145,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
