@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import image from "../images/profile-pic.png";
+import Fade from 'react-reveal/Fade';
 import {
   FaSchool,
   FaTools,
@@ -30,7 +31,6 @@ const Aboutpage = ({ data, location }) => {
           <FaSchool />
           <div>自己紹介</div>
         </h2>
-
         <ol class="relative border-l border-white dark:border-gray-700">
           <li class="mb-10 ml-6">
             <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-gray-200 dark:ring-gray-900 dark:bg-blue-900">
@@ -145,13 +145,13 @@ const Aboutpage = ({ data, location }) => {
             </p>
           </li>
         </ol>
-
         <h2 className="flex flex-row justify-start items-center space-x-2">
           <FaTools />
           <div>仕事で使っている技術</div>
         </h2>
         <ul>
           　　　　　　{" "}
+          <Fade left cascade>
           <li
             className="techSkill flex items-center
           bg-white rounded-lg border shadow-md md:flex-row 
@@ -305,6 +305,7 @@ const Aboutpage = ({ data, location }) => {
               <p>パソコンのセットアップやソフトウェアの配布の自動化</p>
             </div>
           </li>
+          </Fade>
         </ul>
 
         <h2 className="flex flex-row justify-start items-center space-x-2">

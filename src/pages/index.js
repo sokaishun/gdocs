@@ -9,6 +9,7 @@ import Image from "gatsby-image";
 import kebabCase from "lodash/kebabCase";
 import { FaTag } from "react-icons/fa";
 import { FaTags } from "react-icons/fa";
+import Fade from 'react-reveal/Fade';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -37,6 +38,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug;
           const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
           return (
+            <Fade left cascade>
             <li key={post.fields.slug}>
               <article
                 className="post-list-item"
@@ -52,6 +54,7 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
+              
                   <div className="pb-2">
                     <Image
                       className="object-none shadow rounded max-w-full max-h-[20rem] align-middle border-none"
@@ -83,6 +86,7 @@ const BlogIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
+            </Fade>
           );
         })}
       </ol>
