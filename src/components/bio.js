@@ -53,14 +53,14 @@ const Bio = () => {
             </h5>
             <div className="flex flex-row ">
               <a data-tip="Github" href="https://github.com/sokaishun">
-                <FaGithub />
+                <FaGithub size={25}/>
                 <ReactTooltip effect="float" type="info" place="top" />
               </a>
               <a data-tip="linkedin" 
-                className="pl-2"
+                className="pl-3"
                 href="https://www.linkedin.com/in/songhaijun"
               >
-                <FaLinkedin />
+                <FaLinkedin size={25}/>
                 <ReactTooltip effect="float" type="info" place="top" />
               </a>
             </div>
