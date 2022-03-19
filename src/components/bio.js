@@ -8,6 +8,8 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import "flowbite";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -31,28 +33,43 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social;
 
   return (
-    <a
-      href="/about"
-      className="bio flex items-center 
+    <div>
+      <a
+        href="/about"
+        className="bio flex items-center 
     bg-white rounded-lg border shadow-md md:flex-row 
     hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
     dark:hover:bg-gray-700"
-    >
-      <div className="img-container">
-        <div className="flex-none img-circle" />
-      </div>
+      >
+        <div className="img-container">
+          <div className="flex-none img-circle" />
+        </div>
 
-      <div class="flex flex-col justify-between pl-5">
-        <h5 class="mt-3 mb-3 font-bold">
-          {author?.name || null}
-          {` `}
-        </h5>
-        <p class="mb-3">
-          {author?.summary || null}
-          {` `}
-        </p>
-      </div>
-    </a>
+        <div className="flex flex-col justify-between pl-5  mb-2">
+          <div >
+            <h5 className="mt-3 font-bold ">
+              {author?.name || null}
+              {` `}
+            </h5>
+            <div className="flex flex-row ">
+              <a href="https://github.com/sokaishun">
+                <FaGithub />
+              </a>
+              <a
+                className="pl-2"
+                href="https://www.linkedin.com/in/song-haijun-54b89914/"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+          <p className="mt-3">
+            {author?.summary || null}
+            {` `}
+          </p>
+        </div>
+      </a>
+    </div>
   );
 };
 
