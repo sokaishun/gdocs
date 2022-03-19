@@ -56,7 +56,7 @@ const Bio = () => {
               </a>
               <a
                 className="pl-2"
-                href="www.linkedin.com/in/songhaijun"
+                href="https://www.linkedin.com/in/songhaijun"
               >
                 <FaLinkedin />
               </a>
