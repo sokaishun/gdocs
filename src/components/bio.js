@@ -9,6 +9,7 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import ReactTooltip from 'react-tooltip'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -51,14 +52,16 @@ const Bio = () => {
               {` `}
             </h5>
             <div className="flex flex-row ">
-              <a href="https://github.com/sokaishun">
+              <a data-tip="Github" href="https://github.com/sokaishun">
                 <FaGithub />
+                <ReactTooltip effect="float" type="info" place="top" />
               </a>
-              <a
+              <a data-tip="linkedin" 
                 className="pl-2"
                 href="https://www.linkedin.com/in/songhaijun"
               >
                 <FaLinkedin />
+                <ReactTooltip effect="float" type="info" place="top" />
               </a>
             </div>
           </div>
