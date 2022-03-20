@@ -26,13 +26,13 @@ thumbnail: "puppeteer.png"
 
 1. [Express](https://expressjs.com/ja/)のルーティングによってPdf生成時のサーバサイドの関数を呼び出す
 1. [puppeteer](https://github.com/puppeteer/puppeteer)を使って中間Pdfを生成する
-1. 生成したPdfを解析し、目次に当たる内容とそのページ番号を抽出する
+1. [pdf-parse](https://www.npmjs.com/package/pdf-parse)を使って生成したPdfを解析し、目次に当たる内容とそのページ番号を抽出する
 1. バッファーのhtmlのTOC部にページ番号を追記する
 1. バッファーのhtmlに対して、最終のPdfを生成する
 
 ## Expressのルーティング
 
-ウェブサイトに対して、`/Pdf/`をつけたルートの場合、`ssr.js`を呼び出して、Pdfを生成後に、クライアントサイドにPdf文書としてダウンロードさせる。
+各ウェブサイトのurlに`/Pdf/`をつけたことで、`ssr.js`が呼び出され、Pdfを生成する。そして、クライアントサイドにPdf文書としてダウンロードされる。
 
 ```javascript:title=server.js {numberLines: 12}
 app.get(/Pdf/, async (req, res, next) => {
@@ -58,7 +58,7 @@ app.get(/Pdf/, async (req, res, next) => {
 
 ### 共通のHeaderとFooter
 
-`headerTemplate`の`src`については、ロゴの画像のRawデータを入れることで、会社のロゴが各Pdfのページの左上に印刷される。
+`headerTemplate`の`src`に、ロゴの画像のRawデータを入れることで、ロゴが各Pdfのページの左上に印刷される。
 
 ```javascript:title=ssr.js {numberLines: 16}
   const currentDatatime = new Date().toLocaleString({ timeZone: "Asia/Tokyo" });
@@ -143,12 +143,12 @@ app.get(/Pdf/, async (req, res, next) => {
 
 ## Pdfのパーサー
 
-[Pdf-parse](https://www.npmjs.com/package/pdf-parse)を使って、Pdf文書の中に、TOCの各項目に当たる文字列を抽出して、`tocFilterdArray`の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を`pageNumbers`に格納する。
+Pdf文書の中に、TOCの各項目に当たる文字列を抽出して、`tocFilterdArray`の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を`pageNumbers`に格納する。
 
-最後に、htmlのページ番号に当たる部分にPdfの解析した`pageNumbers`を格納する。
+最後に、htmlのTOCの部分のページ番号に当たる箇所に、Pdfの解析結果`pageNumbers`を挿入する。
 
 ```javascript:title=ssr.js {numberLines: 105}
-  var Pdf2 = require("Pdf-parse");
+  var Pdf2 = require("pdf-parse");
 
   await Pdf2(PdfInter)
     .then(function (data) {
@@ -194,3 +194,11 @@ app.get(/Pdf/, async (req, res, next) => {
       console.log(err);
     });
 ```
+
+上記最終に生成されたhtmlを再度puppeteerを使ってPdfを生成させることで、目次付きのPdfの作成が可能。
+
+## まとめ
+
+Headless chrome puppeteerを使うことで、pdf文書を簡単に生成できる。また、生成したPdfの文書をメモリ上で解析することで、目次に必要なページ番号を抽出可能。抽出したページ番号をhtmlに挿入し、Pdfを再作成すると、目次付きの文書が作れる。
+
+この事例を通じて、サーバーサイドでPdfデータまたhtmlデータを解析また操作する方法を覚えていただき、是非活用してください。
