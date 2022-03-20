@@ -139,7 +139,14 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              linkImagesToOriginal: false // Important!
             },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // Important!
+            options: {
+              background: '#18191a',
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
