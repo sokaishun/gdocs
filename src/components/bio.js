@@ -36,7 +36,7 @@ const Bio = () => {
     <div>
       <a
         href="/about"
-        className="bio flex items-center 
+        className="flex items-center 
     bg-white rounded-lg border shadow-md md:flex-row 
     hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
     dark:hover:bg-gray-700"
@@ -45,7 +45,7 @@ const Bio = () => {
           <div className="flex-none img-circle" />
         </div>
 
-        <div className="flex flex-col justify-between pl-5  mb-2">
+        <div className="flex flex-col justify-between pl-5">
           <div>
             <h5 className="font-bold">
               {author?.name || null}
@@ -65,7 +65,7 @@ const Bio = () => {
               </a>
             </div>
           </div>
-          <p className="mt-3">
+          <p className="mt-3 mb-0">
             {author?.summary || null}
             {` `}
           </p>
