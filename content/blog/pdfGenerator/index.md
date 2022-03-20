@@ -105,7 +105,9 @@ app.get(/Pdf/, async (req, res, next) => {
 
 ## 目次部分のCSS
 
-目次の部分については、`ul>li`の構造で、Leaderを追加するために、CSSの中で下記のように記述すること。
+目次の部分については、`ul>li`の構造で、Leadersを追加するために、CSSの中で下記のように記述すること。
+
+LeadersのCSS記述について、[W3C DOT LEADERS](https://www.w3.org/Style/Examples/007/leaders.en.html)を参考してください。
 
 ```css:title=print.css {numberLines: 1}
 @media print {
