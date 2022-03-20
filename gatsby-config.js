@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://sokaishun.github.io/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     {
