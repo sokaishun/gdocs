@@ -1,7 +1,7 @@
 ---
-title: ウェブページのpdf生成
+title: ウェブページのPdf生成
 date: "2022-03-20T11:35:00.000Z"
-description: "Headless Chrome Puppeteerを使って、ウェブページのpdf文書を自動生成する"
+description: "Headless Chrome Puppeteerを使って、ウェブページのPdf文書を自動生成する"
 tags: ["puppeteer", "Table of Contents"]
 thumbnail: "puppeteer.png"
 ---
@@ -10,33 +10,35 @@ thumbnail: "puppeteer.png"
 # This code block gets replaced with the TOC
 ```
 
-## なんでpdf文書が必要か？
+## Pdf文書の必要性
 
-ウェブページで作成した取説について、関係者へ配布するときに、印刷またはオフラインで確認しやすいように、pdfのようなフォーマットは望ましい。
+ウェブページで作成した取説について、関係者へ配布するときに、印刷またはオフラインで確認しやすいように、Pdfのようなフォーマットは望ましい。
 
-また、文書だけのレイアウトを整うだけではなく、目次（Table of Contents）の部分も自動生成させて、長い文書の内容が一目瞭然になる。
+## 生成したPdfの例
 
-## 基本な流れ
+生成したPdfの１ページ目の例。
 
-1. expressのルーティングによってpdf生成時のサーバサイドの関数を呼び出す
+特徴は、目次（Table of Contents）の部分も自動生成させて、長い文書の内容が一目瞭然になっていること。
 
-2. puppeteerを使って中間pdfを生成する
+![Pdf画像例](pdfsample.png)
 
-3. 生成したpdfをパーサーし、目次に当たる内容とそのページ番号を抽出する
+## Pdf自動生成の流れ
 
-4. バッファーのhtmlのTOC部にページ番号を追記する
-
-5. バッファーのhtmlに対して、最終のpdfを生成する
+1. [Express](https://expressjs.com/ja/)のルーティングによってPdf生成時のサーバサイドの関数を呼び出す
+1. [puppeteer](https://github.com/puppeteer/puppeteer)を使って中間Pdfを生成する
+1. 生成したPdfをパーサーし、目次に当たる内容とそのページ番号を抽出する
+1. バッファーのhtmlのTOC部にページ番号を追記する
+1. バッファーのhtmlに対して、最終のPdfを生成する
 
 ## Expressのルーティング
 
-ウェブサイトに対して、`/pdf/`をつけたルートの場合、`ssr.js`を呼び出して、pdfを変化した後に、クライアントサイドにpdf文書としてダウンロードされる。
+ウェブサイトに対して、`/Pdf/`をつけたルートの場合、`ssr.js`を呼び出して、Pdfを変化した後に、クライアントサイドにPdf文書としてダウンロードされる。
 
 ```javascript:title=server.js {numberLines: 12}
-app.get(/pdf/, async (req, res, next) => {
+app.get(/Pdf/, async (req, res, next) => {
   var oriUrl = req.originalUrl;
-  oriUrl = oriUrl.replace("pdf", "");
-  const { pdf, ttRenderMs } = await ssr(
+  oriUrl = oriUrl.replace("Pdf", "");
+  const { Pdf, ttRenderMs } = await ssr(
     `${req.protocol}://${req.get("host")}${oriUrl}`
   );
   res.set(
@@ -44,11 +46,11 @@ app.get(/pdf/, async (req, res, next) => {
     `Prerender;dur=${ttRenderMs};desc="Headless render time (ms)"`
   );
   console.log(oriUrl);
-  var pdfTitle = oriUrl.replace(/\//g, " ").trim().replace(/ /g, "-");
-  console.log(pdfTitle);
-  res.setHeader("content-type", "application/pdf");
-  res.setHeader("content-Disposition", `attachment;filename=${pdfTitle}.pdf`);
-  return res.status(200).send(pdf); // Serve prerendered page as response.
+  var PdfTitle = oriUrl.replace(/\//g, " ").trim().replace(/ /g, "-");
+  console.log(PdfTitle);
+  res.setHeader("content-type", "application/Pdf");
+  res.setHeader("content-Disposition", `attachment;filename=${PdfTitle}.Pdf`);
+  return res.status(200).send(Pdf); // Serve prerendered page as response.
 });
 ```
 
@@ -56,7 +58,7 @@ app.get(/pdf/, async (req, res, next) => {
 
 ### 共通のHeaderとFooter
 
-headerTemplateのsrcについては、ロゴの画像のRawデータを入れることで、会社のロゴが各pdfのページの左上に印刷される。
+headerTemplateのsrcについては、ロゴの画像のRawデータを入れることで、会社のロゴが各Pdfのページの左上に印刷される。
 
 ```javascript:title=ssr.js {numberLines: 16}
   const currentDatatime = new Date().toLocaleString({ timeZone: "Asia/Tokyo" });
@@ -86,7 +88,7 @@ executablePathは実際のHeadless Chromeのexeのパスに書き換えてくだ
   });
   const page = await browser.newPage();
 
-  const pdfInter = await page.pdf({
+  const PdfInter = await page.Pdf({
     format: "A4",
     displayHeaderFooter: true,
     headerTemplate: headerTemplate, // indicate html template for header
@@ -101,16 +103,54 @@ executablePathは実際のHeadless Chromeのexeのパスに書き換えてくだ
   });
 ```
 
+## 目次部分のCSS
+
+目次の部分については、`ul>li`の構造で、Leaderを追加するために、CSSの中で下記のように記述すること。
+
+```css:title=print.css {numberLines: 1}
+@media print {
+    ul li {
+        position:relative
+    }
+    ul li .toc-page-number {
+        float:right
+    }
+    ul li{
+        padding: 0;
+        overflow-x: hidden;
+        margin:0 0 24pt;
+        list-style: none;
+        list-style-type:none;
+    }
+    ul li,
+    ul li a,
+    .toc-page-number{
+        background:white;
+    }
+    ul li a:before {
+        float:left;
+        width:0;
+        white-space:nowrap;
+        content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . ";
+    }
+}
+```
+
 ## Pdfのパーサー
 
-pdf-parseを使って、pdf文書の中に、TOCの各項目に当たる文字列を抽出して、`tocFilterdArray`の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を`pageNumbers`に格納する。
+[Pdf-parse](https://www.npmjs.com/package/pdf-parse)を使って、Pdf文書の中に、TOCの各項目に当たる文字列を抽出して、`tocFilterdArray`の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を`pageNumbers`に格納する。
 
-最後に、htmlのページ番号に当たる部分にpdfの解析した`pageNumbers`を格納する。
+最後に、htmlのページ番号に当たる部分にPdfの解析した`pageNumbers`を格納する。
 
 ```javascript:title=ssr.js {numberLines: 105}
-  var pdf2 = require("pdf-parse");
+  var Pdf2 = require("Pdf-parse");
 
-  await pdf2(pdfInter)
+  await Pdf2(PdfInter)
     .then(function (data) {
       var text = data.text;
       var stringArray = text.split("\n");
