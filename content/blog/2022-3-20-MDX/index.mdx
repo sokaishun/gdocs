@@ -1,0 +1,20 @@
+---
+title: MDX & 画像スライドテスト
+date: "2022-03-20T21:07:00.000Z"
+description: "MDXへの拡張そして画像スライドのテスト表示。"
+images:
+    - ./geronimo-giqueaux-O_GgZvy2_PQ-unsplash.jpg
+    - ./kristaps-ungurs-AY27rP4n4d8-unsplash.jpg
+    - ./marek-piwnicki-nxA_qr4Yy9s-unsplash.jpg
+---
+
+## 画像スライド例
+
+import SlideShow from '../../../src/components/SlideShow'
+
+<SlideShow images={props.frontmatter.images} interval={1000} autoPlay={true} infiniteLoop={false} />
+
+## 参考サイト
+
+- [MDXへの拡張](https://ryzca.com/blog/gatsby-starter-blog-mdx/)
+- [画像スライド](https://knowledge-swimmer.com/gatsby-slideshow)

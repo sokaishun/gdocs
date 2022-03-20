@@ -7,9 +7,10 @@ import Seo from "../components/seo";
 // Utilities
 import kebabCase from "lodash/kebabCase";
 import Image from "gatsby-image";
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
   const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
@@ -52,10 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
             </div>
           ) : null}
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <MDXRenderer frontmatter={post.frontmatter} itemProp="articleBody">{post.body}</MDXRenderer>
         <hr />
         <footer>
           <Bio />
@@ -104,15 +102,24 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        images {
+          childImageSharp {
+            gatsbyImageData(
+              width: 600
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1280) {
@@ -122,7 +129,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: mdx(id: { eq: $previousPostId }) {
       fields {
         slug
       }
@@ -130,7 +137,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: mdx(id: { eq: $nextPostId }) {
       fields {
         slug
       }

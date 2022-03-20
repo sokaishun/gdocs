@@ -13,7 +13,7 @@ import Fade from "react-reveal/Fade";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMarkdownRemark.nodes;
+  const posts = data.allMdx.nodes;
 
   if (posts.length === 0) {
     return (
@@ -102,7 +102,7 @@ const BlogIndex = ({ data, location }) => {
         <div>Tags</div>
       </h2>
       <ul className="flex flex-wrap justify-start items-center">
-        {data.allMarkdownRemark.group.map((tag) => (
+        {data.allMdx.group.map((tag) => (
           <li
             key={tag.fieldValue}
             className="flex flex-col items-center text-sm font-medium mr-2 px-1.5 py-1 rounded text-center  bg-blue-200 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-black-200 dark:hover:bg-black-800 dark:focus:ring-blue-800"
@@ -130,7 +130,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
