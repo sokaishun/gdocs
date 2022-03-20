@@ -25,8 +25,6 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
           <div className="pb-5">
             <Image
               className="object-none shadow rounded max-w-full h-auto align-middle border-none"
@@ -34,7 +32,8 @@ const BlogPostTemplate = ({ data, location }) => {
               alt="Thumbnail画像"
             />
           </div>
-
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
           {post.frontmatter.tags ? (
             <div className=" flex flex-row">
               <div className="tags-container">

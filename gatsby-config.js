@@ -3,7 +3,7 @@ module.exports = {
     title: `Weblog`,
     author: {
       name: `Kaishun So`,
-      summary: `最新ウェブ技術を中心とした学習記録。`,
+      summary: `ウェブ技術、画像処理、機械学習、コンピュータビジョン、など。`,
     },
     description: `Web technology etc.`,
     siteUrl: `https://sokaishun.github.io/`,

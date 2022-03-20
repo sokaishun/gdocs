@@ -9,7 +9,7 @@ import Image from "gatsby-image";
 import kebabCase from "lodash/kebabCase";
 import { FaTag } from "react-icons/fa";
 import { FaTags } from "react-icons/fa";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -39,53 +39,60 @@ const BlogIndex = ({ data, location }) => {
           const thumbnail = post.frontmatter.thumbnail?.childImageSharp.fluid;
           return (
             <Fade left cascade>
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-              
-                  <div className="pb-2">
-                    <Image
-                      className="object-none shadow rounded max-w-full max-h-[20rem] align-middle border-none"
-                      fluid={thumbnail}
-                      alt="Thumbnail画像"
-                    />
-                  </div>
-                  {post.frontmatter.tags ? (
-                    <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
-                      <ul className="taglist">
-                        {post.frontmatter.tags.map((tag) => (
-                          <li
-                            key={tag + `tag`}
-                            className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"
-                          >
-                            <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500" />
-                            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+              <li key={post.fields.slug}>
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <Link to={post.fields.slug} itemProp="url">
+                    <section className="bg-white rounded-lg border 
+                    shadow-md md:flex-row hover:bg-gray-100 
+                    dark:border-gray-700 dark:bg-gray-800 
+                    dark:hover:bg-gray-700">
+                      <div className="pb-2">
+                        <Image
+                          className="object-none shadow rounded-t-lg max-w-full max-h-[20rem] align-middle border-none"
+                          fluid={thumbnail}
+                          alt="Thumbnail画像"
+                        />
+                      </div>
+                      <div className="mx-2">
+                        <header>
+                          <h2>
+                            <span itemProp="headline">{title}</span>
+                          </h2>
+                          <small>{post.frontmatter.date}</small>
+                        </header>
+                        {post.frontmatter.tags ? (
+                          <div className="tags-container pb-2 flex flex-row justify-start items-center  space-x-2">
+                            <ul className="taglist">
+                              {post.frontmatter.tags.map((tag) => (
+                                <li
+                                  key={tag + `tag`}
+                                  className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"
+                                >
+                                  <FaTag className="inline-flex mr-1 w-3 h-3 fill-blue-500" />
+                                  <Link to={`/tags/${kebabCase(tag)}/`}>
+                                    {tag}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : null}
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              post.frontmatter.description || post.excerpt,
+                          }}
+                          itemProp="description"
+                        />
+                      </div>
+                    </section>
+                  </Link>
+                </article>
+              </li>
             </Fade>
           );
         })}
