@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 01:45:41 GMT</lastBuildDate><item><title><![CDATA[Static site generator：Mkdocs]]></title><description><![CDATA[技術文書の作成 Markdown で文書作成 Static site generator : Mkdocs javascript の拡張性例 Python…]]></description><link>https://sokaishun.github.io/ssg/</link><guid isPermaLink="false">https://sokaishun.github.io/ssg/</guid><pubDate>Sat, 26 Feb 2022 20:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 02:12:57 GMT</lastBuildDate><item><title><![CDATA[Static site generator：Mkdocs]]></title><description><![CDATA[技術文書の作成 Markdown で文書作成 Static site generator : Mkdocs javascript の拡張性例 Python…]]></description><link>https://sokaishun.github.io/ssg/</link><guid isPermaLink="false">https://sokaishun.github.io/ssg/</guid><pubDate>Sat, 26 Feb 2022 20:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#%E6%8A%80%E8%A1%93%E6%96%87%E6%9B%B8%E3%81%AE%E4%BD%9C%E6%88%90&quot;&gt;技術文書の作成&lt;/a&gt;&lt;/p&gt;
@@ -26,14 +26,7 @@
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 301px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/38d617efbdaa3aab3801a6e2ac07e0d5/fb933/git.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVElEQVQoz2P4jw7+/ccK/mERZ8Ci8R8O/RhSDGgSf799+ff3D0LR378g9O/v73ev/v3+hcNmiM4vn57WZXzYvhqqDcnctytm/nx87/u188iWM8B1/nx053F5wsfd6x9k+n/Yvgrsiq8fd6x5t2Lmp4Pb3q9f9H79wgeZft8unoRrYYBQv9+8eJDhe9vf4PWszk8Htz/MCvxy6sDPR3eed5S8mt76cde6N/P7P2xe9qKvGtnnUM1/v3991pJ/29/w7eLJzztKHpfF/bh99c+n949LYl5Na/nz4e3zjpIPW1c8qUn7fuMiks1wD//88byj+Hl70aOCiG9Xz/3////bhRNP6zKetRa8ntP1/fqFn4/vfbt2/sfda6ia4fq/fn4xoeb79QsQsd9vX3/YtvL9pqU/HtzCGoWoUQWRhjOQASjC/kGiDVci+ffvzx+ENFw1kgZkmwGhzV7iSLYF5gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -49,7 +42,6 @@
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;差分管理は Git 使うこと。Git をよく理解できないとか、使い方についてなれない人もよくいるので、しかりとサポートする必要がある。&lt;/p&gt;
 &lt;p&gt;仕様書を作成する際に、だれ/いつ/なの目的で仕様を訂正しているのかを記録しなければならない。案件を参考していた場合、このような訂正はノウハウまたはクリティカルポイントとして把握すべき。&lt;/p&gt;
@@ -59,14 +51,7 @@
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 273px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/383720d38afcedd754592876fa904e10/0217c/markdown.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABe0lEQVQoz5WTv4rCQBDGV21EFAQFwUJTBAQ7UQsLGysLBZtUaZNYBBsLbX0GtfcN7ETBWsFONBaCDyAEQdHCP+B3OJJF79Y7bmHY5PtmfpnZsIwxBidcLhfFp/fvuSKdfUr+peCvYKhUKlitVhgMBgiHw9wsl8uYz+cYj8eIRCJcLxQK2Gw2aLfbYmCtVoOzRqMRGYlEAsfjkbT7/Q5JkniRqqqkT6dT0fgM1WqVEm63G+2dTgeTyYTD9vs94vH4W+ePNRwOxR06QMuyYNs273a5XOJwOOB8PiMajSIUCiGTyaDZbJI/m82Qy+WQSqXegbquU0Kv10OpVKLn9XqNbDaL3W6H6/VKQK/Xi8ViQf7lcuEfVhSFYG63+wnUNI2Mfr9PRqvVQj6fRzAYxOl0onBGjsVi2G63HFav119hT6BpmsIzkWWZFz5Ajp5Op0nrdrvin5JMJtFoNFAsFkn0eDy0BwIBOg7DMOD3+9+8B9Tn84mB/42X8X5cgC8AmZfFeoJGUwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -82,7 +67,6 @@
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;何で Markdown 使うの？という質問は必ず最初から飛び出してくる。仕様書を書くために新しい言語的なものを勉強しなきゃいけないのはいやだという声もよくある。&lt;/p&gt;
 &lt;p&gt;私の職場でも、Markdown をなれなくて文書作成するのを諦める人もいる。&lt;/p&gt;
@@ -100,14 +84,7 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/de9d5a47e0c93b19bffe2efd7246d591/105d8/mermaid.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 42.405063291139236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcUlEQVQY022RSW+cMACF+f+/pNceo1aqlChV08mEaUggGRjCMniwAa9gY+OlSnOpqn7Xtxzei8JfYDrCEZxR9VTFj/U+6R4em11c/RSKhf8RMTm18K2GRQ7jrPvx/fXrdfolaeO0vC+KfQ5eq/5IF1SjA6JtT45SE7ZAqfF7eOAXhJth7CYIJlTNDIS33B+PIX1CL/tDFTfNNzJer1oywfuhFYpAWpH54pyLjNmss8bqSVzaIdvlt4fi7j6/jeu7I8yaodysclZ47533yyKD9yEE773SKuKSdaRCojuTAnKQVL/SKknL5+dTun/ZgaH7sIYQnLNwPDNOKefOB6lVZDajVvWu2c1o6jbtbXDWrAuym1PScFasK5VyVasUki9KTTgHzWdMT9GfShdCEAKVp6u2PUxYMAYBuMGYNfW5PH1CwwMXMxp6TLHetnkhaEjEgqJ/1jfGGuMY6xHKlJzN5rXWZO5mPV5wNvKaCEDn/uOq39sqvQGyYQ5nAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -126,7 +103,6 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://mermaid-js.github.io/mermaid/#/&quot;&gt;Mermaidjs&lt;/a&gt;を使って、フローチャートを記述できたこと。仕様書の場合、フローチャートで信号のシーケンスを記録する場面が必要で、実装した。&lt;/p&gt;
 &lt;h3 id=&quot;python-の拡張性例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#python-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B&quot; aria-label=&quot;python の拡張性例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Python の拡張性例&lt;/h3&gt;
@@ -151,14 +127,7 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 405px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/970b2d9a21406ed6ddfa366ca8693975/1d180/OpenCV.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 118.35443037974682%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADbklEQVQ4y5WUT2gdVRTGz3funUnS/DEkgdTweJLSoKFZ1EhIiDENsX1I4ltEhBDiwoYaEolWeIYSbN7CREyExE1CQWsTu0hAqHRhXCkoCIIgCG5aqKKI8Ch0YwWxtHwyd+68Ny3pHxkOczn33N853zl3RkSE+xm83evX+8SnbH9Ysn5awRkDvmbAp4CHwfYHRmZE+IkFaaVsd6xw1eD/ARNJm1ZjkKkAk/VZq+WkDwQmUg8r+E8AB/jJgn0KHlfwVxv7ShZs8vLxIGCS8UWtSB3RisRTRsvS+zxQHwV4IgV8M9Wz90zsv2XjYT0UmJTfqOCfXvKVAM7fDPC69/0cgHr/ifuFxpZkfCWqJgTnjJaDV6JBBYYnVFPVwVsaqKkMtUI85qWLshaVvRYoj2laTRqUJE4CngBxEcRvIEqg+QaUjD+QggqO3tU3oJWKQ2moEIdiiKQe/Agakxw07h3gdR6I2oiBMjDQjxjibyqyFcl6WWPMHSG+BPWiEs/46qyfJrKswl8MhAz1K+87whC3vO+SBx4QyjVf1aX9Jmfd2+pJhtHB6DbhpN8LGOByDESJwEGKNAvlFw98pwKM2qBfKPGtJUaFVt5iqBHwXyoOl+OsFn2iG4RE/lCIq3H/8DuIQRAHQXye9NQQL0SXPsfQxBUG+MxVozjGEH/4Cq8SCH0PT2tlHLeFcrMyHP1ay5MO9buy7FBuMpTbMSxqg55ODUWUwYcBDc3dk/4exOP+4iK6IhmG+IE1hs6qNTaLD6havuSpATwp1LNK+76ledlQVV0ymOhTs+4Q3F3LUaRAkTco0knoPZ/e0NAQzyycYf54/lH+yBwbe56Ft19lPt/P/v6jzjcw8BwzmQyltbWVOzs77O3t5fmt88yP5Zl/Kc++Z/tcwPj4ONvb2zk4OMhcLseRkVGeO/cxc7lRFovv8sKFT9nU1MytrS22tbVRurq6uL6+7rLMzs5yb2+PExMTXF5e5u7uLtfW1tx6ZWWF09PTLvnk5KSLr6qqYqFQ4OrqKovFov8X1NZye3ub8/Pz3NjY4NLSEhcWFlxAlCgCzc3NcWZmhj09PVxcXOTm5qaLi/Y6OztZKpU4PDxc6WFLS4uTE8GnpqYcoK6ujtXV1ezu7mZjY6Oz+vp61tTUMJvNOkBDQ4ODdHR0MAgCB/wPbyesjlSvNEkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -175,7 +144,6 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;machine-learning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#machine-learning&quot; aria-label=&quot;machine learning permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Machine Learning&lt;/h2&gt;
 &lt;p&gt;大学院入学した後、機械学習(Machine Learning)に興味があって、
@@ -184,14 +152,7 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8f5e6ff87fb61755e9ab352652b4bc4e/7ab72/Springer-Cover-Image.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 136.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGS9iZWFBVivNDmAf/EABkQAAIDAQAAAAAAAAAAAAAAAAABAhAREv/aAAgBAQABBQKU310yD1YZTtir/8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/AUY//8QAFhEAAwAAAAAAAAAAAAAAAAAAAREg/9oACAECAQE/AWI//8QAGRAAAgMBAAAAAAAAAAAAAAAAADEBECEw/9oACAEBAAY/Ap0Y6XD/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMRCBQdHx/9oACAEBAAE/IaJgXM8bnyiLcD1ALodQA+RX7hvmDj//2gAMAwEAAgADAAAAELzB8//EABkRAAIDAQAAAAAAAAAAAAAAAAABEBEhYf/aAAgBAwEBPxDoJOo0/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQIf/aAAgBAgEBPxCFM5f/xAAeEAEAAgMAAgMAAAAAAAAAAAABABEhMUFRgWGhsf/aAAgBAQABPxDNwEB4z9Ttd8fUd25KRlnRaL/JquHouAUAHxSKnK8seJja9YM5Iouphnxcpa7fuoLW2f/Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -209,7 +170,6 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;機械学習では統計学のモデル(Likelihood estimation,Baysian statistics)は中心で数式ばかり。
 数学には自信がなければ、続けれない分野だと思う。&lt;/p&gt;
@@ -222,14 +182,7 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 374px; &quot;
     &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e834f4aa7b9ea41cf6e23e7fbb260511/bf505/cv.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
+      &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
     style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABcvzLI10jPGJwjx2yJh//xAAdEAACAwACAwAAAAAAAAAAAAAAAQIDERATFDIz/9oACAEBAAEFAqPhvFd+R7meTIwSx4iMmWe5/8QAFREBAQAAAAAAAAAAAAAAAAAAEDH/2gAIAQMBAT8BKf/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwFw/8QAHhAAAgAGAwAAAAAAAAAAAAAAAAECEBESMpEhMUH/2gAIAQEABj8ChMZWJKi9K2LZgtjocy7HL//EACEQAQABAwIHAAAAAAAAAAAAAAEAESFBEJExUWFxgaHR/9oACAEBAAE/IaizW0G5bwLfY5pZDxh0DoLRS74gmJDF4833FvdNpAn/2gAMAwEAAgADAAAAEIjUvf/EABkRAQACAwAAAAAAAAAAAAAAABEAARBRYf/aAAgBAwEBPxA5C9RDj//EABgRAAMBAQAAAAAAAAAAAAAAAAABESFx/9oACAECAQE/EGtIRpw6P//EACAQAQACAgEEAwAAAAAAAAAAAAEAESExYUFRcYGxwdH/2gAIAQEAAT8QaxsXnlmgX0lZG15WyzCJdNvHM1+Rsy+IKfa/ILVfe8WICxt5gOpsvAgVVdT1MkttAJ0gVqf/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
@@ -246,7 +199,6 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-  &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;今でも Computer Vision は非常に注目されている分野。直近では企業もこの分野へ参入して注力している印象。&lt;/p&gt;
 &lt;h2 id=&quot;machine-vision&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#machine-vision&quot; aria-label=&quot;machine vision permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Machine Vision&lt;/h2&gt;
@@ -276,12 +228,12 @@ Docker コンテナ内の Github 認証、Docker 認証で苦労した。&lt;/p&
 &lt;h2 id=&quot;コードテスト例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%86%E3%82%B9%E3%83%88%E4%BE%8B&quot; aria-label=&quot;コードテスト例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;コードテスト例&lt;/h2&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;91303233187481170000&quot;
+              data-toaster-id=&quot;90190667853921320000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `91303233187481170000`)&quot;
+              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `90190667853921320000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
