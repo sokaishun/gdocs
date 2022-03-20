@@ -26,13 +26,13 @@ thumbnail: "puppeteer.png"
 
 1. [Express](https://expressjs.com/ja/)のルーティングによってPdf生成時のサーバサイドの関数を呼び出す
 1. [puppeteer](https://github.com/puppeteer/puppeteer)を使って中間Pdfを生成する
-1. 生成したPdfをパーサーし、目次に当たる内容とそのページ番号を抽出する
+1. 生成したPdfを解析し、目次に当たる内容とそのページ番号を抽出する
 1. バッファーのhtmlのTOC部にページ番号を追記する
 1. バッファーのhtmlに対して、最終のPdfを生成する
 
 ## Expressのルーティング
 
-ウェブサイトに対して、`/Pdf/`をつけたルートの場合、`ssr.js`を呼び出して、Pdfを変化した後に、クライアントサイドにPdf文書としてダウンロードされる。
+ウェブサイトに対して、`/Pdf/`をつけたルートの場合、`ssr.js`を呼び出して、Pdfを生成後に、クライアントサイドにPdf文書としてダウンロードさせる。
 
 ```javascript:title=server.js {numberLines: 12}
 app.get(/Pdf/, async (req, res, next) => {
@@ -58,7 +58,7 @@ app.get(/Pdf/, async (req, res, next) => {
 
 ### 共通のHeaderとFooter
 
-headerTemplateのsrcについては、ロゴの画像のRawデータを入れることで、会社のロゴが各Pdfのページの左上に印刷される。
+`headerTemplate`の`src`については、ロゴの画像のRawデータを入れることで、会社のロゴが各Pdfのページの左上に印刷される。
 
 ```javascript:title=ssr.js {numberLines: 16}
   const currentDatatime = new Date().toLocaleString({ timeZone: "Asia/Tokyo" });
@@ -79,7 +79,7 @@ headerTemplateのsrcについては、ロゴの画像のRawデータを入れる
 
 ### Pdf作成
 
-executablePathは実際のHeadless Chromeのexeのパスに書き換えてください。
+`executablePath`は実際のHeadless Chromeのexeのパスに書き換えてください。
 
 ```javascript:title=ssr.js {numberLines: 81}
   const browser = await puppeteer.launch({
