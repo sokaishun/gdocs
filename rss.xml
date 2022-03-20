@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 03:51:50 GMT</lastBuildDate><item><title><![CDATA[ウェブページのpdf生成]]></title><description><![CDATA[なんで pdf 文書が必要か？ 基本な流れ Express のルーティング Pdf 生成 共通の Header と Footer Pdf 作成 Pdf のパーサー なんで pdf…]]></description><link>https://sokaishun.github.io/pdfGenerator/</link><guid isPermaLink="false">https://sokaishun.github.io/pdfGenerator/</guid><pubDate>Sun, 20 Mar 2022 11:35:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 05:43:50 GMT</lastBuildDate><item><title><![CDATA[ウェブページのPdf生成]]></title><description><![CDATA[Pdf 文書の必要性 生成した Pdf の例 Pdf 自動生成の流れ Express のルーティング Pdf 生成 共通の Header と Footer Pdf 作成 目次部分の CSS Pdf のパーサー Pdf…]]></description><link>https://sokaishun.github.io/pdfGenerator/</link><guid isPermaLink="false">https://sokaishun.github.io/pdfGenerator/</guid><pubDate>Sun, 20 Mar 2022 11:35:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;#%E3%81%AA%E3%82%93%E3%81%A7-pdf-%E6%96%87%E6%9B%B8%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%8B&quot;&gt;なんで pdf 文書が必要か？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#pdf-%E6%96%87%E6%9B%B8%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7&quot;&gt;Pdf 文書の必要性&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;#%E5%9F%BA%E6%9C%AC%E3%81%AA%E6%B5%81%E3%82%8C&quot;&gt;基本な流れ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#%E7%94%9F%E6%88%90%E3%81%97%E3%81%9F-pdf-%E3%81%AE%E4%BE%8B&quot;&gt;生成した Pdf の例&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#pdf-%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E3%81%AE%E6%B5%81%E3%82%8C&quot;&gt;Pdf 自動生成の流れ&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#express-%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&quot;&gt;Express のルーティング&lt;/a&gt;&lt;/p&gt;
@@ -17,44 +20,40 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#%E7%9B%AE%E6%AC%A1%E9%83%A8%E5%88%86%E3%81%AE-css&quot;&gt;目次部分の CSS&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#pdf-%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B5%E3%83%BC&quot;&gt;Pdf のパーサー&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id=&quot;なんで-pdf-文書が必要か&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%81%AA%E3%82%93%E3%81%A7-pdf-%E6%96%87%E6%9B%B8%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%8B&quot; aria-label=&quot;なんで pdf 文書が必要か permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;なんで pdf 文書が必要か？&lt;/h2&gt;
-&lt;p&gt;ウェブページで作成した取説について、関係者へ配布するときに、印刷またはオフラインで確認しやすいように、pdf のようなフォーマットは望ましい。&lt;/p&gt;
-&lt;p&gt;また、文書だけのレイアウトを整うだけではなく、目次（Table of Contents）の部分も自動生成させて、長い文書の内容が一目瞭然になる。&lt;/p&gt;
-&lt;h2 id=&quot;基本な流れ&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9F%BA%E6%9C%AC%E3%81%AA%E6%B5%81%E3%82%8C&quot; aria-label=&quot;基本な流れ permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;基本な流れ&lt;/h2&gt;
+&lt;h2 id=&quot;pdf-文書の必要性&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E6%96%87%E6%9B%B8%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7&quot; aria-label=&quot;pdf 文書の必要性 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf 文書の必要性&lt;/h2&gt;
+&lt;p&gt;ウェブページで作成した取説について、関係者へ配布するときに、印刷またはオフラインで確認しやすいように、Pdf のようなフォーマットは望ましい。&lt;/p&gt;
+&lt;h2 id=&quot;生成した-pdf-の例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%94%9F%E6%88%90%E3%81%97%E3%81%9F-pdf-%E3%81%AE%E4%BE%8B&quot; aria-label=&quot;生成した pdf の例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;生成した Pdf の例&lt;/h2&gt;
+&lt;p&gt;生成した Pdf の１ページ目の例。&lt;/p&gt;
+&lt;p&gt;特徴は、目次（Table of Contents）の部分も自動生成させて、長い文書の内容が一目瞭然になっていること。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;pdfsample.png&quot; alt=&quot;Pdf画像例&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pdf-自動生成の流れ&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E3%81%AE%E6%B5%81%E3%82%8C&quot; aria-label=&quot;pdf 自動生成の流れ permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf 自動生成の流れ&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;express のルーティングによって pdf 生成時のサーバサイドの関数を呼び出す&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;puppeteer を使って中間 pdf を生成する&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;生成した pdf をパーサーし、目次に当たる内容とそのページ番号を抽出する&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;バッファーの html の TOC 部にページ番号を追記する&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;バッファーの html に対して、最終の pdf を生成する&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://expressjs.com/ja/&quot;&gt;Express&lt;/a&gt;のルーティングによって Pdf 生成時のサーバサイドの関数を呼び出す&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/puppeteer/puppeteer&quot;&gt;puppeteer&lt;/a&gt;を使って中間 Pdf を生成する&lt;/li&gt;
+&lt;li&gt;生成した Pdf をパーサーし、目次に当たる内容とそのページ番号を抽出する&lt;/li&gt;
+&lt;li&gt;バッファーの html の TOC 部にページ番号を追記する&lt;/li&gt;
+&lt;li&gt;バッファーの html に対して、最終の Pdf を生成する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;express-のルーティング&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#express-%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&quot; aria-label=&quot;express のルーティング permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Express のルーティング&lt;/h2&gt;
-&lt;p&gt;ウェブサイトに対して、&lt;code class=&quot;language-text&quot;&gt;/pdf/&lt;/code&gt;をつけたルートの場合、&lt;code class=&quot;language-text&quot;&gt;ssr.js&lt;/code&gt;を呼び出して、pdf を変化した後に、クライアントサイドに pdf 文書としてダウンロードされる。&lt;/p&gt;
+&lt;p&gt;ウェブサイトに対して、&lt;code class=&quot;language-text&quot;&gt;/Pdf/&lt;/code&gt;をつけたルートの場合、&lt;code class=&quot;language-text&quot;&gt;ssr.js&lt;/code&gt;を呼び出して、Pdf を変化した後に、クライアントサイドに Pdf 文書としてダウンロードされる。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;80692060556944310000&quot;
+              data-toaster-id=&quot;15524067894108652000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`app.get(/pdf/, async (req, res, next) =&gt; {
+              onClick=&quot;copyToClipboard(`app.get(/Pdf/, async (req, res, next) =&gt; {
   var oriUrl = req.originalUrl;
-  oriUrl = oriUrl.replace(&amp;quot;pdf&amp;quot;, &amp;quot;&amp;quot;);
-  const { pdf, ttRenderMs } = await ssr(
+  oriUrl = oriUrl.replace(&amp;quot;Pdf&amp;quot;, &amp;quot;&amp;quot;);
+  const { Pdf, ttRenderMs } = await ssr(
     \`\${req.protocol}://\${req.get(&amp;quot;host&amp;quot;)}\${oriUrl}\`
   );
   res.set(
@@ -62,12 +61,12 @@
     \`Prerender;dur=\${ttRenderMs};desc=&amp;quot;Headless render time (ms)&amp;quot;\`
   );
   console.log(oriUrl);
-  var pdfTitle = oriUrl.replace(/\//g, &amp;quot; &amp;quot;).trim().replace(/ /g, &amp;quot;-&amp;quot;);
-  console.log(pdfTitle);
-  res.setHeader(&amp;quot;content-type&amp;quot;, &amp;quot;application/pdf&amp;quot;);
-  res.setHeader(&amp;quot;content-Disposition&amp;quot;, \`attachment;filename=\${pdfTitle}.pdf\`);
-  return res.status(200).send(pdf); // Serve prerendered page as response.
-});`, `80692060556944310000`)&quot;
+  var PdfTitle = oriUrl.replace(/\//g, &amp;quot; &amp;quot;).trim().replace(/ /g, &amp;quot;-&amp;quot;);
+  console.log(PdfTitle);
+  res.setHeader(&amp;quot;content-type&amp;quot;, &amp;quot;application/Pdf&amp;quot;);
+  res.setHeader(&amp;quot;content-Disposition&amp;quot;, \`attachment;filename=\${PdfTitle}.Pdf\`);
+  return res.status(200).send(Pdf); // Serve prerendered page as response.
+});`, `15524067894108652000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -81,10 +80,10 @@
           &lt;span&gt;server.js&lt;/span&gt;
         &lt;/div&gt;
        
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 11&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 11&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;Pdf&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; oriUrl &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;originalUrl&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  oriUrl &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; oriUrl&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;pdf&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; pdf&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ttRenderMs &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ssr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  oriUrl &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; oriUrl&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Pdf&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Pdf&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ttRenderMs &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ssr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;protocol&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;host&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;oriUrl&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -92,18 +91,18 @@
     &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Prerender;dur=&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;ttRenderMs&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;;desc=&quot;Headless render time (ms)&quot;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;oriUrl&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; pdfTitle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; oriUrl&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pdfTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;content-type&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;application/pdf&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;content-Disposition&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;attachment;filename=&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;pdfTitle&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;.pdf&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pdf&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Serve prerendered page as response.&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; PdfTitle &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; oriUrl&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;\/&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;PdfTitle&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;content-type&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;application/Pdf&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;content-Disposition&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;attachment;filename=&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;PdfTitle&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;.Pdf&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Pdf&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Serve prerendered page as response.&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;pdf-生成&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E7%94%9F%E6%88%90&quot; aria-label=&quot;pdf 生成 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf 生成&lt;/h2&gt;
 &lt;h3 id=&quot;共通の-header-と-footer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B1%E9%80%9A%E3%81%AE-header-%E3%81%A8-footer&quot; aria-label=&quot;共通の header と footer permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;共通の Header と Footer&lt;/h3&gt;
-&lt;p&gt;headerTemplate の src については、ロゴの画像の Raw データを入れることで、会社のロゴが各 pdf のページの左上に印刷される。&lt;/p&gt;
+&lt;p&gt;headerTemplate の src については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;10001512772588028000&quot;
+              data-toaster-id=&quot;14093443753230406000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -121,7 +120,7 @@
   &lt;span class=&amp;quot;title&amp;quot;&gt;&lt;/span&gt;&lt;/div&gt;
   &lt;div style=&amp;quot;position: absolute; top: 5px; width: 100%; text-align: center;&amp;quot;&gt;
   &lt;span class=&amp;quot;pageNumber&amp;quot;&gt;&lt;/span&gt; / &lt;span class=&amp;quot;totalPages&amp;quot;&gt;&lt;/span&gt;&lt;/div&gt;
-  &lt;div style=&amp;quot;position: absolute; top: 5px; right: 0px; text-align: right;&amp;quot;&gt;\${currentDatatime}&lt;/div&gt;&lt;/div&gt;\`;`, `10001512772588028000`)&quot;
+  &lt;div style=&amp;quot;position: absolute; top: 5px; right: 0px; text-align: right;&amp;quot;&gt;\${currentDatatime}&lt;/div&gt;&lt;/div&gt;\`;`, `14093443753230406000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -153,7 +152,7 @@
 &lt;p&gt;executablePath は実際の Headless Chrome の exe のパスに書き換えてください。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;54443757068821030000&quot;
+              data-toaster-id=&quot;62533910747087495000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -164,7 +163,7 @@
   });
   const page = await browser.newPage();
 
-  const pdfInter = await page.pdf({
+  const PdfInter = await page.Pdf({
     format: &amp;quot;A4&amp;quot;,
     displayHeaderFooter: true,
     headerTemplate: headerTemplate, // indicate html template for header
@@ -176,7 +175,7 @@
       left: 30,
       right: 30,
     },
-  });`, `54443757068821030000`)&quot;
+  });`, `62533910747087495000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -196,7 +195,7 @@
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; page &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; browser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;newPage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; pdfInter &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; page&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; PdfInter &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; page&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Pdf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token literal-property property&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;A4&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token literal-property property&quot;&gt;displayHeaderFooter&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token literal-property property&quot;&gt;headerTemplate&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; headerTemplate&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// indicate html template for header&lt;/span&gt;
@@ -209,19 +208,103 @@
       &lt;span class=&quot;token literal-property property&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;pdf-のパーサー&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B5%E3%83%BC&quot; aria-label=&quot;pdf のパーサー permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf のパーサー&lt;/h2&gt;
-&lt;p&gt;pdf-parse を使って、pdf 文書の中に、TOC の各項目に当たる文字列を抽出して、&lt;code class=&quot;language-text&quot;&gt;tocFilterdArray&lt;/code&gt;の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を&lt;code class=&quot;language-text&quot;&gt;pageNumbers&lt;/code&gt;に格納する。&lt;/p&gt;
-&lt;p&gt;最後に、html のページ番号に当たる部分に pdf の解析した&lt;code class=&quot;language-text&quot;&gt;pageNumbers&lt;/code&gt;を格納する。&lt;/p&gt;
+&lt;h2 id=&quot;目次部分の-css&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%9B%AE%E6%AC%A1%E9%83%A8%E5%88%86%E3%81%AE-css&quot; aria-label=&quot;目次部分の css permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;目次部分の CSS&lt;/h2&gt;
+&lt;p&gt;目次の部分については、&lt;code class=&quot;language-text&quot;&gt;ul&gt;li&lt;/code&gt;の構造で、Leader を追加するために、CSS の中で下記のように記述すること。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;56470668428302770000&quot;
+              data-toaster-id=&quot;72312632068669240000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`  var pdf2 = require(&amp;quot;pdf-parse&amp;quot;);
+              onClick=&quot;copyToClipboard(`@media print {
+    ul li {
+        position:relative
+    }
+    ul li .toc-page-number {
+        float:right
+    }
+    ul li{
+        padding: 0;
+        overflow-x: hidden;
+        margin:0 0 24pt;
+        list-style: none;
+        list-style-type:none;
+    }
+    ul li,
+    ul li a,
+    .toc-page-number{
+        background:white;
+    }
+    ul li a:before {
+        float:left;
+        width:0;
+        white-space:nowrap;
+        content:
+    &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;
+    &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;
+    &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;
+    &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;
+    &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;;
+    }
+}`, `72312632068669240000`)&quot;
+            &gt;
+              &lt;div
+                class=&quot;gatsby-code-button customButtonClass&quot;
+                data-tooltip=&quot;コピー&quot;
+              &gt;
+                &lt;svg class=&quot;gatsby-code-button-icon customSvgIconClass&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path fill=&quot;none&quot; d=&quot;M0 0h24v24H0V0z&quot;/&gt;&lt;path d=&quot;M16 1H2v16h2V3h12V1zm-1 4l6 6v12H6V5h9zm-1 7h5.5L14 6.5V12z&quot;/&gt;&lt;/svg&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
 
-  await pdf2(pdfInter)
+        &lt;div class=&quot;gatsby-code-title&quot;&gt;
+          &lt;span&gt;print.css&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-css line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; print&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token selector&quot;&gt;ul li&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;relative
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token selector&quot;&gt;ul li .toc-page-number&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;right
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token selector&quot;&gt;ul li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;overflow-x&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hidden&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;0 0 24pt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;list-style-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token selector&quot;&gt;ul li,
+    ul li a,
+    .toc-page-number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;white&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token selector&quot;&gt;ul li a:before&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;left&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;white-space&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;nowrap&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;. . . . . . . . . . . . . . . . . . . . &quot;&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;. . . . . . . . . . . . . . . . . . . . &quot;&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;. . . . . . . . . . . . . . . . . . . . &quot;&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;. . . . . . . . . . . . . . . . . . . . &quot;&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;. . . . . . . . . . . . . . . . . . . . &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;pdf-のパーサー&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B5%E3%83%BC&quot; aria-label=&quot;pdf のパーサー permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf のパーサー&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/pdf-parse&quot;&gt;Pdf-parse&lt;/a&gt;を使って、Pdf 文書の中に、TOC の各項目に当たる文字列を抽出して、&lt;code class=&quot;language-text&quot;&gt;tocFilterdArray&lt;/code&gt;の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を&lt;code class=&quot;language-text&quot;&gt;pageNumbers&lt;/code&gt;に格納する。&lt;/p&gt;
+&lt;p&gt;最後に、html のページ番号に当たる部分に Pdf の解析した&lt;code class=&quot;language-text&quot;&gt;pageNumbers&lt;/code&gt;を格納する。&lt;/p&gt;
+&lt;div
+              class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
+              data-toaster-id=&quot;18158819873573839000&quot;
+              data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
+              data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
+              data-toaster-text=&quot;コピー完了&quot;
+              data-toaster-duration=&quot;3500&quot;
+              onClick=&quot;copyToClipboard(`  var Pdf2 = require(&amp;quot;Pdf-parse&amp;quot;);
+
+  await Pdf2(PdfInter)
     .then(function (data) {
       var text = data.text;
       var stringArray = text.split(&amp;quot;\n&amp;quot;);
@@ -263,7 +346,7 @@
     })
     .catch(function (err) {
       console.log(err);
-    });`, `56470668428302770000`)&quot;
+    });`, `18158819873573839000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -277,9 +360,9 @@
           &lt;span&gt;ssr.js&lt;/span&gt;
         &lt;/div&gt;
        
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 104&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; pdf2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;pdf-parse&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 104&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; Pdf2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Pdf-parse&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pdf2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pdfInter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Pdf2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;PdfInter&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; stringArray &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -551,12 +634,12 @@ Docker コンテナ内の Github 認証、Docker 認証で苦労した。&lt;/p&
 &lt;h2 id=&quot;コードテスト例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%86%E3%82%B9%E3%83%88%E4%BE%8B&quot; aria-label=&quot;コードテスト例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;コードテスト例&lt;/h2&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;39185469034852870000&quot;
+              data-toaster-id=&quot;76421384442289200000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `39185469034852870000`)&quot;
+              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `76421384442289200000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
