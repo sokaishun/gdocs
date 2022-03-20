@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 05:43:50 GMT</lastBuildDate><item><title><![CDATA[ウェブページのPdf生成]]></title><description><![CDATA[Pdf 文書の必要性 生成した Pdf の例 Pdf 自動生成の流れ Express のルーティング Pdf 生成 共通の Header と Footer Pdf 作成 目次部分の CSS Pdf のパーサー Pdf…]]></description><link>https://sokaishun.github.io/pdfGenerator/</link><guid isPermaLink="false">https://sokaishun.github.io/pdfGenerator/</guid><pubDate>Sun, 20 Mar 2022 11:35:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web technology etc.]]></description><link>https://sokaishun.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Mar 2022 05:48:12 GMT</lastBuildDate><item><title><![CDATA[ウェブページのPdf生成]]></title><description><![CDATA[Pdf 文書の必要性 生成した Pdf の例 Pdf 自動生成の流れ Express のルーティング Pdf 生成 共通の Header と Footer Pdf 作成 目次部分の CSS Pdf のパーサー Pdf…]]></description><link>https://sokaishun.github.io/pdfGenerator/</link><guid isPermaLink="false">https://sokaishun.github.io/pdfGenerator/</guid><pubDate>Sun, 20 Mar 2022 11:35:00 GMT</pubDate><content:encoded>&lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#pdf-%E6%96%87%E6%9B%B8%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7&quot;&gt;Pdf 文書の必要性&lt;/a&gt;&lt;/p&gt;
@@ -37,15 +37,15 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://expressjs.com/ja/&quot;&gt;Express&lt;/a&gt;のルーティングによって Pdf 生成時のサーバサイドの関数を呼び出す&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/puppeteer/puppeteer&quot;&gt;puppeteer&lt;/a&gt;を使って中間 Pdf を生成する&lt;/li&gt;
-&lt;li&gt;生成した Pdf をパーサーし、目次に当たる内容とそのページ番号を抽出する&lt;/li&gt;
+&lt;li&gt;生成した Pdf を解析し、目次に当たる内容とそのページ番号を抽出する&lt;/li&gt;
 &lt;li&gt;バッファーの html の TOC 部にページ番号を追記する&lt;/li&gt;
 &lt;li&gt;バッファーの html に対して、最終の Pdf を生成する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;express-のルーティング&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#express-%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&quot; aria-label=&quot;express のルーティング permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Express のルーティング&lt;/h2&gt;
-&lt;p&gt;ウェブサイトに対して、&lt;code class=&quot;language-text&quot;&gt;/Pdf/&lt;/code&gt;をつけたルートの場合、&lt;code class=&quot;language-text&quot;&gt;ssr.js&lt;/code&gt;を呼び出して、Pdf を変化した後に、クライアントサイドに Pdf 文書としてダウンロードされる。&lt;/p&gt;
+&lt;p&gt;ウェブサイトに対して、&lt;code class=&quot;language-text&quot;&gt;/Pdf/&lt;/code&gt;をつけたルートの場合、&lt;code class=&quot;language-text&quot;&gt;ssr.js&lt;/code&gt;を呼び出して、Pdf を生成後に、クライアントサイドに Pdf 文書としてダウンロードさせる。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;15524067894108652000&quot;
+              data-toaster-id=&quot;58420106398455680000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -66,7 +66,7 @@
   res.setHeader(&amp;quot;content-type&amp;quot;, &amp;quot;application/Pdf&amp;quot;);
   res.setHeader(&amp;quot;content-Disposition&amp;quot;, \`attachment;filename=\${PdfTitle}.Pdf\`);
   return res.status(200).send(Pdf); // Serve prerendered page as response.
-});`, `15524067894108652000`)&quot;
+});`, `58420106398455680000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -99,10 +99,10 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;pdf-生成&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E7%94%9F%E6%88%90&quot; aria-label=&quot;pdf 生成 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf 生成&lt;/h2&gt;
 &lt;h3 id=&quot;共通の-header-と-footer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B1%E9%80%9A%E3%81%AE-header-%E3%81%A8-footer&quot; aria-label=&quot;共通の header と footer permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;共通の Header と Footer&lt;/h3&gt;
-&lt;p&gt;headerTemplate の src については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;headerTemplate&lt;/code&gt;の&lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt;については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;14093443753230406000&quot;
+              data-toaster-id=&quot;89707565264183430000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -120,7 +120,7 @@
   &lt;span class=&amp;quot;title&amp;quot;&gt;&lt;/span&gt;&lt;/div&gt;
   &lt;div style=&amp;quot;position: absolute; top: 5px; width: 100%; text-align: center;&amp;quot;&gt;
   &lt;span class=&amp;quot;pageNumber&amp;quot;&gt;&lt;/span&gt; / &lt;span class=&amp;quot;totalPages&amp;quot;&gt;&lt;/span&gt;&lt;/div&gt;
-  &lt;div style=&amp;quot;position: absolute; top: 5px; right: 0px; text-align: right;&amp;quot;&gt;\${currentDatatime}&lt;/div&gt;&lt;/div&gt;\`;`, `14093443753230406000`)&quot;
+  &lt;div style=&amp;quot;position: absolute; top: 5px; right: 0px; text-align: right;&amp;quot;&gt;\${currentDatatime}&lt;/div&gt;&lt;/div&gt;\`;`, `89707565264183430000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -149,10 +149,10 @@
   &amp;lt;span class=&quot;pageNumber&quot;&gt;&amp;lt;/span&gt; / &amp;lt;span class=&quot;totalPages&quot;&gt;&amp;lt;/span&gt;&amp;lt;/div&gt;
   &amp;lt;div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;currentDatatime&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/div&gt;&amp;lt;/div&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;pdf-作成&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pdf-%E4%BD%9C%E6%88%90&quot; aria-label=&quot;pdf 作成 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pdf 作成&lt;/h3&gt;
-&lt;p&gt;executablePath は実際の Headless Chrome の exe のパスに書き換えてください。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;executablePath&lt;/code&gt;は実際の Headless Chrome の exe のパスに書き換えてください。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;62533910747087495000&quot;
+              data-toaster-id=&quot;93652172367609120000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -175,7 +175,7 @@
       left: 30,
       right: 30,
     },
-  });`, `62533910747087495000`)&quot;
+  });`, `93652172367609120000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -212,7 +212,7 @@
 &lt;p&gt;目次の部分については、&lt;code class=&quot;language-text&quot;&gt;ul&gt;li&lt;/code&gt;の構造で、Leader を追加するために、CSS の中で下記のように記述すること。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;72312632068669240000&quot;
+              data-toaster-id=&quot;95303678227979570000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -247,7 +247,7 @@
     &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;
     &amp;quot;. . . . . . . . . . . . . . . . . . . . &amp;quot;;
     }
-}`, `72312632068669240000`)&quot;
+}`, `95303678227979570000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -297,7 +297,7 @@
 &lt;p&gt;最後に、html のページ番号に当たる部分に Pdf の解析した&lt;code class=&quot;language-text&quot;&gt;pageNumbers&lt;/code&gt;を格納する。&lt;/p&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;18158819873573839000&quot;
+              data-toaster-id=&quot;60010630166888640000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
@@ -346,7 +346,7 @@
     })
     .catch(function (err) {
       console.log(err);
-    });`, `18158819873573839000`)&quot;
+    });`, `60010630166888640000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;
@@ -634,12 +634,12 @@ Docker コンテナ内の Github 認証、Docker 認証で苦労した。&lt;/p&
 &lt;h2 id=&quot;コードテスト例&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%86%E3%82%B9%E3%83%88%E4%BE%8B&quot; aria-label=&quot;コードテスト例 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;コードテスト例&lt;/h2&gt;
 &lt;div
               class=&quot;gatsby-code-button-container customButtonContainerClass&quot;
-              data-toaster-id=&quot;76421384442289200000&quot;
+              data-toaster-id=&quot;55947456442534470000&quot;
               data-toaster-class=&quot;gatsby-code-button-toaster customToasterClass&quot;
               data-toaster-text-class=&quot;gatsby-code-button-toaster-text customToasterTextClass&quot;
               data-toaster-text=&quot;コピー完了&quot;
               data-toaster-duration=&quot;3500&quot;
-              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `76421384442289200000`)&quot;
+              onClick=&quot;copyToClipboard(`alert(&apos;click to copy 💾&apos;);`, `55947456442534470000`)&quot;
             &gt;
               &lt;div
                 class=&quot;gatsby-code-button customButtonClass&quot;

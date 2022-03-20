@@ -133,15 +133,15 @@ void function() {
 <ol>
 <li><a href="https://expressjs.com/ja/">Express</a>のルーティングによって Pdf 生成時のサーバサイドの関数を呼び出す</li>
 <li><a href="https://github.com/puppeteer/puppeteer">puppeteer</a>を使って中間 Pdf を生成する</li>
-<li>生成した Pdf をパーサーし、目次に当たる内容とそのページ番号を抽出する</li>
+<li>生成した Pdf を解析し、目次に当たる内容とそのページ番号を抽出する</li>
 <li>バッファーの html の TOC 部にページ番号を追記する</li>
 <li>バッファーの html に対して、最終の Pdf を生成する</li>
 </ol>
 <h2 id="express-のルーティング" style="position:relative;"><a href="#express-%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" aria-label="express のルーティング permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Express のルーティング</h2>
-<p>ウェブサイトに対して、<code class="language-text">/Pdf/</code>をつけたルートの場合、<code class="language-text">ssr.js</code>を呼び出して、Pdf を変化した後に、クライアントサイドに Pdf 文書としてダウンロードされる。</p>
+<p>ウェブサイトに対して、<code class="language-text">/Pdf/</code>をつけたルートの場合、<code class="language-text">ssr.js</code>を呼び出して、Pdf を生成後に、クライアントサイドに Pdf 文書としてダウンロードさせる。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="15524067894108652000"
+              data-toaster-id="58420106398455680000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -162,7 +162,7 @@ void function() {
   res.setHeader(&quot;content-type&quot;, &quot;application/Pdf&quot;);
   res.setHeader(&quot;content-Disposition&quot;, \`attachment;filename=\${PdfTitle}.Pdf\`);
   return res.status(200).send(Pdf); // Serve prerendered page as response.
-});`, `15524067894108652000`)"
+});`, `58420106398455680000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -195,10 +195,10 @@ void function() {
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2 id="pdf-生成" style="position:relative;"><a href="#pdf-%E7%94%9F%E6%88%90" aria-label="pdf 生成 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pdf 生成</h2>
 <h3 id="共通の-header-と-footer" style="position:relative;"><a href="#%E5%85%B1%E9%80%9A%E3%81%AE-header-%E3%81%A8-footer" aria-label="共通の header と footer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>共通の Header と Footer</h3>
-<p>headerTemplate の src については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。</p>
+<p><code class="language-text">headerTemplate</code>の<code class="language-text">src</code>については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="14093443753230406000"
+              data-toaster-id="89707565264183430000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -216,7 +216,7 @@ void function() {
   <span class=&quot;title&quot;></span></div>
   <div style=&quot;position: absolute; top: 5px; width: 100%; text-align: center;&quot;>
   <span class=&quot;pageNumber&quot;></span> / <span class=&quot;totalPages&quot;></span></div>
-  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `14093443753230406000`)"
+  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `89707565264183430000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -245,10 +245,10 @@ void function() {
   &lt;span class="pageNumber">&lt;/span> / &lt;span class="totalPages">&lt;/span>&lt;/div>
   &lt;div style="position: absolute; top: 5px; right: 0px; text-align: right;"></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentDatatime<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/div>&lt;/div></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3 id="pdf-作成" style="position:relative;"><a href="#pdf-%E4%BD%9C%E6%88%90" aria-label="pdf 作成 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pdf 作成</h3>
-<p>executablePath は実際の Headless Chrome の exe のパスに書き換えてください。</p>
+<p><code class="language-text">executablePath</code>は実際の Headless Chrome の exe のパスに書き換えてください。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="62533910747087495000"
+              data-toaster-id="93652172367609120000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -271,7 +271,7 @@ void function() {
       left: 30,
       right: 30,
     },
-  });`, `62533910747087495000`)"
+  });`, `93652172367609120000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -308,7 +308,7 @@ void function() {
 <p>目次の部分については、<code class="language-text">ul>li</code>の構造で、Leader を追加するために、CSS の中で下記のように記述すること。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="72312632068669240000"
+              data-toaster-id="95303678227979570000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -343,7 +343,7 @@ void function() {
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;;
     }
-}`, `72312632068669240000`)"
+}`, `95303678227979570000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -393,7 +393,7 @@ void function() {
 <p>最後に、html のページ番号に当たる部分に Pdf の解析した<code class="language-text">pageNumbers</code>を格納する。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="18158819873573839000"
+              data-toaster-id="60010630166888640000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -442,7 +442,7 @@ void function() {
     })
     .catch(function (err) {
       console.log(err);
-    });`, `18158819873573839000`)"
+    });`, `60010630166888640000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -500,20 +500,20 @@ void function() {
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t05f7d745-3c39-43e4-8cfa-628a8d98f927 place-top type-dark" id="t05f7d745-3c39-43e4-8cfa-628a8d98f927" data-id="tooltip"><style aria-hidden="true">
-  	.t05f7d745-3c39-43e4-8cfa-628a8d98f927 {
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc place-top type-dark" id="t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc" data-id="tooltip"><style aria-hidden="true">
+  	.t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-top {
+  	.t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-top {
         margin-top: -10px;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-top::before {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-top::after {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -524,13 +524,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-bottom {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-bottom {
         margin-top: 10px;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-bottom::before {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-bottom::after {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -541,13 +541,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-left {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-left {
         margin-left: -10px;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-left::before {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-left::after {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -558,13 +558,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-right {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-right {
         margin-left: 10px;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-right::before {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t05f7d745-3c39-43e4-8cfa-628a8d98f927.place-right::after {
+    .t5fd4468f-0496-46e7-b1bb-8dfaa5dc56bc.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -574,20 +574,20 @@ void function() {
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t72dabaea-33ec-4064-9e95-95f1d9e316cc place-top type-dark" id="t72dabaea-33ec-4064-9e95-95f1d9e316cc" data-id="tooltip"><style aria-hidden="true">
-  	.t72dabaea-33ec-4064-9e95-95f1d9e316cc {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t0640196d-ece8-4a54-a22e-536d92a895b1 place-top type-dark" id="t0640196d-ece8-4a54-a22e-536d92a895b1" data-id="tooltip"><style aria-hidden="true">
+  	.t0640196d-ece8-4a54-a22e-536d92a895b1 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-top {
+  	.t0640196d-ece8-4a54-a22e-536d92a895b1.place-top {
         margin-top: -10px;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-top::before {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-top::after {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -598,13 +598,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-bottom {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-bottom {
         margin-top: 10px;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-bottom::before {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-bottom::after {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -615,13 +615,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-left {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-left {
         margin-left: -10px;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-left::before {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-left::after {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -632,13 +632,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-right {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-right {
         margin-left: 10px;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-right::before {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t72dabaea-33ec-4064-9e95-95f1d9e316cc.place-right::after {
+    .t0640196d-ece8-4a54-a22e-536d92a895b1.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
