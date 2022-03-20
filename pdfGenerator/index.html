@@ -121,6 +121,9 @@ void function() {
 <li>
 <p><a href="#pdf-%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B5%E3%83%BC">Pdf のパーサー</a></p>
 </li>
+<li>
+<p><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></p>
+</li>
 </ul>
 </div>
 <h2 id="pdf-文書の必要性" style="position:relative;"><a href="#pdf-%E6%96%87%E6%9B%B8%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7" aria-label="pdf 文書の必要性 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pdf 文書の必要性</h2>
@@ -154,15 +157,15 @@ void function() {
 <ol>
 <li><a href="https://expressjs.com/ja/">Express</a>のルーティングによって Pdf 生成時のサーバサイドの関数を呼び出す</li>
 <li><a href="https://github.com/puppeteer/puppeteer">puppeteer</a>を使って中間 Pdf を生成する</li>
-<li>生成した Pdf を解析し、目次に当たる内容とそのページ番号を抽出する</li>
+<li><a href="https://www.npmjs.com/package/pdf-parse">pdf-parse</a>を使って生成した Pdf を解析し、目次に当たる内容とそのページ番号を抽出する</li>
 <li>バッファーの html の TOC 部にページ番号を追記する</li>
 <li>バッファーの html に対して、最終の Pdf を生成する</li>
 </ol>
 <h2 id="express-のルーティング" style="position:relative;"><a href="#express-%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" aria-label="express のルーティング permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Express のルーティング</h2>
-<p>ウェブサイトに対して、<code class="language-text">/Pdf/</code>をつけたルートの場合、<code class="language-text">ssr.js</code>を呼び出して、Pdf を生成後に、クライアントサイドに Pdf 文書としてダウンロードさせる。</p>
+<p>各ウェブサイトの url に<code class="language-text">/Pdf/</code>をつけたことで、<code class="language-text">ssr.js</code>が呼び出され、Pdf を生成する。そして、クライアントサイドに Pdf 文書としてダウンロードされる。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="29551312120190108000"
+              data-toaster-id="47740888395269330000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -183,7 +186,7 @@ void function() {
   res.setHeader(&quot;content-type&quot;, &quot;application/Pdf&quot;);
   res.setHeader(&quot;content-Disposition&quot;, \`attachment;filename=\${PdfTitle}.Pdf\`);
   return res.status(200).send(Pdf); // Serve prerendered page as response.
-});`, `29551312120190108000`)"
+});`, `47740888395269330000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -216,10 +219,10 @@ void function() {
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2 id="pdf-生成" style="position:relative;"><a href="#pdf-%E7%94%9F%E6%88%90" aria-label="pdf 生成 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pdf 生成</h2>
 <h3 id="共通の-header-と-footer" style="position:relative;"><a href="#%E5%85%B1%E9%80%9A%E3%81%AE-header-%E3%81%A8-footer" aria-label="共通の header と footer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>共通の Header と Footer</h3>
-<p><code class="language-text">headerTemplate</code>の<code class="language-text">src</code>については、ロゴの画像の Raw データを入れることで、会社のロゴが各 Pdf のページの左上に印刷される。</p>
+<p><code class="language-text">headerTemplate</code>の<code class="language-text">src</code>に、ロゴの画像の Raw データを入れることで、ロゴが各 Pdf のページの左上に印刷される。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="2570273856095006700"
+              data-toaster-id="21007650944107550000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -237,7 +240,7 @@ void function() {
   <span class=&quot;title&quot;></span></div>
   <div style=&quot;position: absolute; top: 5px; width: 100%; text-align: center;&quot;>
   <span class=&quot;pageNumber&quot;></span> / <span class=&quot;totalPages&quot;></span></div>
-  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `2570273856095006700`)"
+  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `21007650944107550000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -269,7 +272,7 @@ void function() {
 <p><code class="language-text">executablePath</code>は実際の Headless Chrome の exe のパスに書き換えてください。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="99915453185254600000"
+              data-toaster-id="89941879068019870000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -292,7 +295,7 @@ void function() {
       left: 30,
       right: 30,
     },
-  });`, `99915453185254600000`)"
+  });`, `89941879068019870000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -329,7 +332,7 @@ void function() {
 <p>目次の部分については、<code class="language-text">ul>li</code>の構造で、Leader を追加するために、CSS の中で下記のように記述すること。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="92184699449482600000"
+              data-toaster-id="38371869257542240000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -364,7 +367,7 @@ void function() {
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;;
     }
-}`, `92184699449482600000`)"
+}`, `38371869257542240000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -410,16 +413,16 @@ void function() {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2 id="pdf-のパーサー" style="position:relative;"><a href="#pdf-%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B5%E3%83%BC" aria-label="pdf のパーサー permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pdf のパーサー</h2>
-<p><a href="https://www.npmjs.com/package/pdf-parse">Pdf-parse</a>を使って、Pdf 文書の中に、TOC の各項目に当たる文字列を抽出して、<code class="language-text">tocFilterdArray</code>の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を<code class="language-text">pageNumbers</code>に格納する。</p>
-<p>最後に、html のページ番号に当たる部分に Pdf の解析した<code class="language-text">pageNumbers</code>を格納する。</p>
+<p>Pdf 文書の中に、TOC の各項目に当たる文字列を抽出して、<code class="language-text">tocFilterdArray</code>の中に格納する。そして、各ページに当文字列があった場合、そのページの番号を<code class="language-text">pageNumbers</code>に格納する。</p>
+<p>最後に、html の TOC の部分のページ番号に当たる箇所に、Pdf の解析結果<code class="language-text">pageNumbers</code>を挿入する。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="53817589485574290000"
+              data-toaster-id="31768594177392886000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`  var Pdf2 = require(&quot;Pdf-parse&quot;);
+              onClick="copyToClipboard(`  var Pdf2 = require(&quot;pdf-parse&quot;);
 
   await Pdf2(PdfInter)
     .then(function (data) {
@@ -463,7 +466,7 @@ void function() {
     })
     .catch(function (err) {
       console.log(err);
-    });`, `53817589485574290000`)"
+    });`, `31768594177392886000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -477,7 +480,7 @@ void function() {
           <span>ssr.js</span>
         </div>
        
-<div class="gatsby-highlight" data-language="javascript"><pre style="counter-reset: linenumber 104" class="language-javascript line-numbers"><code class="language-javascript">  <span class="token keyword">var</span> Pdf2 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"Pdf-parse"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="javascript"><pre style="counter-reset: linenumber 104" class="language-javascript line-numbers"><code class="language-javascript">  <span class="token keyword">var</span> Pdf2 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pdf-parse"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">await</span> <span class="token function">Pdf2</span><span class="token punctuation">(</span>PdfInter<span class="token punctuation">)</span>
     <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -521,20 +524,24 @@ void function() {
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip tafe36bb3-04cc-4bde-80d6-222764d49ed4 place-top type-dark" id="tafe36bb3-04cc-4bde-80d6-222764d49ed4" data-id="tooltip"><style aria-hidden="true">
-  	.tafe36bb3-04cc-4bde-80d6-222764d49ed4 {
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>上記最終に生成された html を再度 puppeteer を使って Pdf を生成させることで、目次付きの Pdf の作成が可能。</p>
+<h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
+<p>Headless chrome puppeteer を使うことで、pdf 文書を簡単に生成できる。また、生成した Pdf の文書をメモリ上で解析することで、目次に必要なページ番号を抽出可能。抽出したページ番号を html に挿入し、Pdf を再作成すると、目次付きの文書が作れる。</p>
+<p>この事例を通じて、サーバーサイドで Pdf データまた html データを解析また操作する方法を覚えていただき、是非活用してください。</p></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t80b9b180-e767-4407-b3b0-587406e38367 place-top type-dark" id="t80b9b180-e767-4407-b3b0-587406e38367" data-id="tooltip"><style aria-hidden="true">
+  	.t80b9b180-e767-4407-b3b0-587406e38367 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-top {
+  	.t80b9b180-e767-4407-b3b0-587406e38367.place-top {
         margin-top: -10px;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-top::before {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-top::after {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -545,13 +552,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-bottom {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-bottom {
         margin-top: 10px;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-bottom::before {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-bottom::after {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -562,13 +569,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-left {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-left {
         margin-left: -10px;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-left::before {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-left::after {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -579,13 +586,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-right {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-right {
         margin-left: 10px;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-right::before {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tafe36bb3-04cc-4bde-80d6-222764d49ed4.place-right::after {
+    .t80b9b180-e767-4407-b3b0-587406e38367.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -595,20 +602,20 @@ void function() {
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip ta9003233-8389-4a49-8f61-4ab05c06cad9 place-top type-dark" id="ta9003233-8389-4a49-8f61-4ab05c06cad9" data-id="tooltip"><style aria-hidden="true">
-  	.ta9003233-8389-4a49-8f61-4ab05c06cad9 {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t62840580-1635-4050-ad92-118c4cd6d15c place-top type-dark" id="t62840580-1635-4050-ad92-118c4cd6d15c" data-id="tooltip"><style aria-hidden="true">
+  	.t62840580-1635-4050-ad92-118c4cd6d15c {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.ta9003233-8389-4a49-8f61-4ab05c06cad9.place-top {
+  	.t62840580-1635-4050-ad92-118c4cd6d15c.place-top {
         margin-top: -10px;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-top::before {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-top::before {
         border-top: 8px solid transparent;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-top::after {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -619,13 +626,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-bottom {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-bottom {
         margin-top: 10px;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-bottom::before {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-bottom::after {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -636,13 +643,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-left {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-left {
         margin-left: -10px;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-left::before {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-left::before {
         border-left: 8px solid transparent;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-left::after {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -653,13 +660,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-right {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-right {
         margin-left: 10px;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-right::before {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-right::before {
         border-right: 8px solid transparent;
     }
-    .ta9003233-8389-4a49-8f61-4ab05c06cad9.place-right::after {
+    .t62840580-1635-4050-ad92-118c4cd6d15c.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
