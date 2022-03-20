@@ -175,7 +175,7 @@ void function() {
 <p>各ウェブサイトの url に<code class="language-text">/Pdf/</code>をつけたことで、<code class="language-text">ssr.js</code>が呼び出され、Pdf を生成する。そして、クライアントサイドに Pdf 文書としてダウンロードされる。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="77218038648553370000"
+              data-toaster-id="78481082865013030000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -196,7 +196,7 @@ void function() {
   res.setHeader(&quot;content-type&quot;, &quot;application/Pdf&quot;);
   res.setHeader(&quot;content-Disposition&quot;, \`attachment;filename=\${PdfTitle}.Pdf\`);
   return res.status(200).send(Pdf); // Serve prerendered page as response.
-});`, `77218038648553370000`)"
+});`, `78481082865013030000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -232,7 +232,7 @@ void function() {
 <p><code class="language-text">headerTemplate</code>の<code class="language-text">src</code>に、ロゴの画像の Raw データを入れることで、ロゴが各 Pdf のページの左上に印刷される。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="83171348507922990000"
+              data-toaster-id="91949743215348420000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -250,7 +250,7 @@ void function() {
   <span class=&quot;title&quot;></span></div>
   <div style=&quot;position: absolute; top: 5px; width: 100%; text-align: center;&quot;>
   <span class=&quot;pageNumber&quot;></span> / <span class=&quot;totalPages&quot;></span></div>
-  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `83171348507922990000`)"
+  <div style=&quot;position: absolute; top: 5px; right: 0px; text-align: right;&quot;>\${currentDatatime}</div></div>\`;`, `91949743215348420000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -282,7 +282,7 @@ void function() {
 <p><code class="language-text">executablePath</code>は実際の Headless Chrome の exe のパスに書き換えてください。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="20102192563460063000"
+              data-toaster-id="8784427770584347000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -305,7 +305,7 @@ void function() {
       left: 30,
       right: 30,
     },
-  });`, `20102192563460063000`)"
+  });`, `8784427770584347000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -339,10 +339,11 @@ void function() {
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2 id="目次部分の-css" style="position:relative;"><a href="#%E7%9B%AE%E6%AC%A1%E9%83%A8%E5%88%86%E3%81%AE-css" aria-label="目次部分の css permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目次部分の CSS</h2>
-<p>目次の部分については、<code class="language-text">ul>li</code>の構造で、Leader を追加するために、CSS の中で下記のように記述すること。</p>
+<p>目次の部分については、<code class="language-text">ul>li</code>の構造で、Leaders を追加するために、CSS の中で下記のように記述すること。</p>
+<p>Leaders の CSS 記述について、<a href="https://www.w3.org/Style/Examples/007/leaders.en.html">W3C DOT LEADERS</a>を参考してください。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="17054626914177229000"
+              data-toaster-id="52799051729883970000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -377,7 +378,7 @@ void function() {
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;
     &quot;. . . . . . . . . . . . . . . . . . . . &quot;;
     }
-}`, `17054626914177229000`)"
+}`, `52799051729883970000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -427,7 +428,7 @@ void function() {
 <p>最後に、html の TOC の部分のページ番号に当たる箇所に、Pdf の解析結果<code class="language-text">pageNumbers</code>を挿入する。</p>
 <div
               class="gatsby-code-button-container customButtonContainerClass"
-              data-toaster-id="72792370735259460000"
+              data-toaster-id="70867182511819030000"
               data-toaster-class="gatsby-code-button-toaster customToasterClass"
               data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass"
               data-toaster-text="コピー完了"
@@ -476,7 +477,7 @@ void function() {
     })
     .catch(function (err) {
       console.log(err);
-    });`, `72792370735259460000`)"
+    });`, `70867182511819030000`)"
             >
               <div
                 class="gatsby-code-button customButtonClass"
@@ -538,20 +539,20 @@ void function() {
 <p>上記最終に生成された html を再度 puppeteer を使って Pdf を生成させることで、目次付きの Pdf の作成が可能。</p>
 <h2 id="まとめ" style="position:relative;"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2>
 <p>Headless chrome puppeteer を使うことで、pdf 文書を簡単に生成できる。また、生成した Pdf の文書をメモリ上で解析することで、目次に必要なページ番号を抽出可能。抽出したページ番号を html に挿入し、Pdf を再作成すると、目次付きの文書が作れる。</p>
-<p>この事例を通じて、サーバーサイドで Pdf データまた html データを解析また操作する方法を覚えていただき、是非活用してください。</p></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t4fe7d47c-94db-4070-b47c-ce82f398ead4 place-top type-dark" id="t4fe7d47c-94db-4070-b47c-ce82f398ead4" data-id="tooltip"><style aria-hidden="true">
-  	.t4fe7d47c-94db-4070-b47c-ce82f398ead4 {
+<p>この事例を通じて、サーバーサイドで Pdf データまた html データを解析また操作する方法を覚えていただき、是非活用してください。</p></section><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip tb4cb6280-a0c7-4904-a6e4-900957053d8b place-top type-dark" id="tb4cb6280-a0c7-4904-a6e4-900957053d8b" data-id="tooltip"><style aria-hidden="true">
+  	.tb4cb6280-a0c7-4904-a6e4-900957053d8b {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-top {
+  	.tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-top {
         margin-top: -10px;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-top::before {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-top::after {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -562,13 +563,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-bottom {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-bottom {
         margin-top: 10px;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-bottom::before {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-bottom::after {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -579,13 +580,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-left {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-left {
         margin-left: -10px;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-left::before {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-left::after {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -596,13 +597,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-right {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-right {
         margin-left: 10px;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-right::before {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t4fe7d47c-94db-4070-b47c-ce82f398ead4.place-right::after {
+    .tb4cb6280-a0c7-4904-a6e4-900957053d8b.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -612,20 +613,20 @@ void function() {
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a place-top type-dark" id="t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a" data-id="tooltip"><style aria-hidden="true">
-  	.t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d place-top type-dark" id="tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d" data-id="tooltip"><style aria-hidden="true">
+  	.tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-top {
+  	.tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-top {
         margin-top: -10px;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-top::before {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-top::after {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -636,13 +637,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-bottom {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-bottom {
         margin-top: 10px;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-bottom::before {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-bottom::after {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -653,13 +654,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-left {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-left {
         margin-left: -10px;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-left::before {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-left::after {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -670,13 +671,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-right {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-right {
         margin-left: 10px;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-right::before {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t0cb7e89c-9e9e-4d7c-834c-97b35ab1004a.place-right::after {
+    .tdb38eba0-4a5d-44a6-a9ac-d1ef27bcc77d.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
