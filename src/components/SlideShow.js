@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 const SlideShow = ({images, interval, autoPlay, infiniteLoop}) => {
     return (
-      <div style={{width:'600px'}}>
+      <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
         <Carousel showThumbs={false} infiniteLoop={infiniteLoop} autoPlay={autoPlay} interval={interval}>
           {images.map(i => ( <div><GatsbyImage image={getImage(i)} /></div>))}
         </Carousel>
