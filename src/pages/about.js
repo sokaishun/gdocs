@@ -57,9 +57,7 @@ const Aboutpage = ({ data, location }) => {
               2002/10
             </time>
             <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              愛知県名古屋市の日本語学校に入学。 一年間半の日本語を勉強をした。
-              <br />
-              生活費を稼ぐために、アルバイトをしていた。
+              愛知県名古屋市の日本語学校に入学。 一年間半の日本語を勉強した。
             </p>
           </li>
           <li class="mb-10 ml-6">
@@ -85,9 +83,6 @@ const Aboutpage = ({ data, location }) => {
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
               愛知県の大学　情報工学科入学。
-              念願のコンピューターサイエンスの勉強を始めた。
-              <br />
-              入学テスト時の面接で、自動駐車システムの話をしていたのも覚えているぐらい。
             </p>
           </li>
           <li class="mb-10 ml-6">
@@ -112,10 +107,7 @@ const Aboutpage = ({ data, location }) => {
               2010/3
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              情報工学科研究科卒業　画像処理関係の研究。大学院の研究は苦労した。
-              <br />
-              最後のところの3ヶ月は必死であったのも覚えている。
-              Matlabのプログラムもいっぱい書いて、論文をまとめたところの一連の経験がよかったと今も感じている。
+              情報工学科研究科卒業　画像処理関係の研究。
             </p>
           </li>
           <li class="mb-10 ml-6">
@@ -143,7 +135,6 @@ const Aboutpage = ({ data, location }) => {
               2010/4
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              就職活動は経済危機の時期と重なって苦労した。自分の準備不足もあったと思う。
               入社後の仕事内容は自動検査設備の開発。
               <br />
               プログラム作成をはじめ、仕様検討を行い、実機の立ち上げなど一連の仕事を何回も経験した。
@@ -326,9 +317,9 @@ const Aboutpage = ({ data, location }) => {
               <div>Devops</div>
             </h5>
             <p class="font-normal text-gray-700 dark:text-gray-400">
-              CI/CD関係。
+              Continuous Integration（継続的インテグレーション）/Continuous Delivery（継続的デリバリー）関係。
               <br />
-              特にCD関係について、アプリケーションの自動配布を製造現場で実現できる仕組みをかんがえていきたい。
+              アプリケーションを含めたサービスを自動配布によって、はやく製造現場へ提供できる仕組みをかんがえていきたい。
               <br />
               工場の自動化にもつながることを実現したい。
             </p>
@@ -351,10 +342,7 @@ const Aboutpage = ({ data, location }) => {
               <FaQuestion />
               <div>自動化</div>
             </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">
-              CI/CDも自動化の一つ。
-              <br />
-              それ以外、業務の自動化、例えばGoogle
+            <p class="font-normal text-gray-700 dark:text-gray-400">業務の自動化、例えばGoogle
               Apiを使用したメールの自動記録やFAQシステムの自動返答のためのChatbotシステムなどを考えていきたい。
               <br />
               さまざまな記録を残すための自動化と再利用するための自動化を全面的に推進していきたい。
