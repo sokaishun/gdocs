@@ -3,6 +3,7 @@
         "char_id": 1,
         "name": "XXXXX",
         "birthday": "09-07-1958",
+        "body": "",
         "occupation": [
             "Housewife",
             "Clepto"
@@ -26,6 +27,7 @@
         "char_id": 2,
         "name": "Jesse Pinkman",
         "birthday": "09-24-1984",
+        "body": "",
         "occupation": [
             "High School Chemistry Teacher",
             "Meth King Pin"
@@ -49,6 +51,7 @@
         "char_id": 3,
         "name": "Jesse Pinkman",
         "birthday": "09-24-1984",
+        "body": "",
         "occupation": [
             "High School Chemistry Teacher",
             "Meth King Pin"
@@ -72,6 +75,7 @@
         "char_id": 4,
         "name": "Jesse Pinkman",
         "birthday": "09-24-1984",
+        "body": "",
         "occupation": [
             "High School Chemistry Teacher",
             "Meth King Pin"
