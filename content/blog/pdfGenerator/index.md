@@ -20,7 +20,7 @@ thumbnail: "puppeteer.png"
 
 特徴は、目次（Table of Contents）の部分も自動生成させて、長い文書の内容が一目瞭然になっていること。
 
-![Pdf画像例](pdfsample.png)
+![Pdf画像例](./pdfsample.png)
 
 ## Pdf自動生成の流れ
 
