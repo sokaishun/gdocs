@@ -44,6 +44,29 @@
         "portrayed": "Aaron Paul",
         "category": "Breaking Bad",
         "better_call_saul_appearance": []
+    },
+      {
+        "char_id": 3,
+        "name": "Jesse Pinkman",
+        "birthday": "09-24-1984",
+        "occupation": [
+            "High School Chemistry Teacher",
+            "Meth King Pin"
+        ],
+        "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/ssg/mkdocs-material.png",
+        "status": "Alive",
+        "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/ssg/index.md",
+        "nickname": "Cap n' Cook",
+        "appearance": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "portrayed": "Aaron Paul",
+        "category": "Breaking Bad",
+        "better_call_saul_appearance": []
     }
  
 ]
