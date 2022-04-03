@@ -26,8 +26,3 @@ Dockerコンテナ内のGithub認証、Docker認証で苦労した。
 
 今後順次にノウハウをこちらのブログに掲示していく。
 
-## コードテスト例
-
-```js:title=example-file.js
-alert('click to copy 💾');
-```
