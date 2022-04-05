@@ -1,6 +1,6 @@
 ---
 title: スマホアプリの作成について
-date: "2022-04-06"
+date: "2022-04-05"
 description: "FlutterとDartを使ってスマホアプリを作成しはじめた。"
 tags: ["Flutter", "Dart","Google login"]
 thumbnail: "flutter.png"
@@ -24,9 +24,14 @@ thumbnail: "flutter.png"
 
 ## 途中の画面のイメージ
 
+googleのログイン機能
+
 ![google login](./googlelogin.png)
+
+当ブログのデータをHttpでアクセスして、取得した後に整形し、Widget上で表示。
 
 ![blog list](./blog.png)
 
+各ListItemをクリックすると、Heroアニメーションで詳細画面が開く。
 
 ![google detail](./blogdetail.png)
