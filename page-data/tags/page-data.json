@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-tags-js",
     "path": "/tags/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Weblog"}},"allMdx":{"group":[{"fieldValue":"Docker","totalCount":1},{"fieldValue":"Image Processing","totalCount":1},{"fieldValue":"Markdown","totalCount":1},{"fieldValue":"Mkdocs","totalCount":1},{"fieldValue":"Python","totalCount":1},{"fieldValue":"Table of Contents","totalCount":1},{"fieldValue":"WSL","totalCount":1},{"fieldValue":"puppeteer","totalCount":1}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Weblog"}},"allMdx":{"group":[{"fieldValue":"Dart","totalCount":1},{"fieldValue":"Docker","totalCount":1},{"fieldValue":"Flutter","totalCount":1},{"fieldValue":"Google login","totalCount":1},{"fieldValue":"Image Processing","totalCount":1},{"fieldValue":"Markdown","totalCount":1},{"fieldValue":"Mkdocs","totalCount":1},{"fieldValue":"Python","totalCount":1},{"fieldValue":"Table of Contents","totalCount":1},{"fieldValue":"WSL","totalCount":1},{"fieldValue":"puppeteer","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": []}
