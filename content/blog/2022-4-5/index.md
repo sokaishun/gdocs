@@ -1,6 +1,6 @@
 ---
 title: スマホアプリの作成について
-date: "2022-04-5"
+date: "2022-04-06"
 description: "FlutterとDartを使ってスマホアプリを作成しはじめた。"
 tags: ["Flutter", "Dart","Google login"]
 thumbnail: "flutter.png"
