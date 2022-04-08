@@ -1,6 +1,6 @@
 [
   {
-    "char_id": 1,
+    "char_id": 5,
     "name": "XXXXX",
     "birthday": "09-07-1958",
     "body": "xx",
@@ -15,7 +15,7 @@
     "better_call_saul_appearance": []
   },
   {
-    "char_id": 2,
+    "char_id": 4,
     "name": "Jesse Pinkman",
     "birthday": "09-24-1984",
     "body": "xx",
@@ -45,7 +45,7 @@
     "better_call_saul_appearance": []
   },
   {
-    "char_id": 4,
+    "char_id": 2,
     "name": "Jesse Pinkman",
     "birthday": "09-24-1984",
     "body": "xx",
@@ -60,7 +60,7 @@
     "better_call_saul_appearance": []
   },
   {
-    "char_id": 5,
+    "char_id": 1,
     "name": "Jesse Pinkman",
     "birthday": "09-24-1984",
     "body": "xx",
