@@ -114,20 +114,20 @@ void function() {
 Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース。</p><p>Mkdocs を採用した１番理由は、<a href="https://squidfunk.github.io/mkdocs-material/">Mkdocs-Material</a>というパッケージがあったから。Mkdocs-Material ではメニューや目次また注意文書のような機能が事前に備えていて、非常に便利。</p><p>２番理由は拡張性。javascript の拡張や<a href="https://python-markdown.github.io/">Python-Markdown</a>の中に Python コードを追加したような拡張ができるので、初心者が拡張しやすいツールと感じている。</p><h3 id="javascript-の拡張性例" style="position:relative"><a href="#javascript-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B" aria-label="javascript の拡張性例 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>javascript の拡張性例</h3><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:630px">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:42.405063291139236%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcUlEQVQY022RSW+cMACF+f+/pNceo1aqlChV08mEaUggGRjCMniwAa9gY+OlSnOpqn7Xtxzei8JfYDrCEZxR9VTFj/U+6R4em11c/RSKhf8RMTm18K2GRQ7jrPvx/fXrdfolaeO0vC+KfQ5eq/5IF1SjA6JtT45SE7ZAqfF7eOAXhJth7CYIJlTNDIS33B+PIX1CL/tDFTfNNzJer1oywfuhFYpAWpH54pyLjNmss8bqSVzaIdvlt4fi7j6/jeu7I8yaodysclZ47533yyKD9yEE773SKuKSdaRCojuTAnKQVL/SKknL5+dTun/ZgaH7sIYQnLNwPDNOKefOB6lVZDajVvWu2c1o6jbtbXDWrAuym1PScFasK5VyVasUki9KTTgHzWdMT9GfShdCEAKVp6u2PUxYMAYBuMGYNfW5PH1CwwMXMxp6TLHetnkhaEjEgqJ/1jfGGuMY6xHKlJzN5rXWZO5mPV5wNvKaCEDn/uOq39sqvQGyYQ5nAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="Mermaid" title="Mermaid" src="/static/de9d5a47e0c93b19bffe2efd7246d591/f058b/mermaid.png" srcSet="/static/de9d5a47e0c93b19bffe2efd7246d591/c26ae/mermaid.png 158w,/static/de9d5a47e0c93b19bffe2efd7246d591/6bdcf/mermaid.png 315w,/static/de9d5a47e0c93b19bffe2efd7246d591/f058b/mermaid.png 630w,/static/de9d5a47e0c93b19bffe2efd7246d591/40601/mermaid.png 945w,/static/de9d5a47e0c93b19bffe2efd7246d591/105d8/mermaid.png 1170w" sizes="(max-width: 630px) 100vw, 630px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span></p><p><a href="https://mermaid-js.github.io/mermaid/#/">Mermaidjs</a>を使って、フローチャートを記述できたこと。仕様書の場合、フローチャートで信号のシーケンスを記録する場面が必要で、実装した。</p><h3 id="python-の拡張性例" style="position:relative"><a href="#python-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B" aria-label="python の拡張性例 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python の拡張性例</h3><p><a href="https://github.com/jreese/markdown-pp">Markdown-pp</a>を拡張して、<a href="https://github.com/miurahr/pykakasi">Pykakasi</a>を利用して、日本語の Heading をローマ字に変換して ahref リンクに反映するような拡張していた。</p><p>ちなみに Markdown-pp は複数の Markdown 文書を一つにまとめるパッケージで、TOC と Heading のナンバリングもしてくれるもの。１つの Markdown の文書を複数の文書に合体したい場合使えるツール。</p><h2 id="まとめ" style="position:relative"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2><p>Mkdocs の弱点としては、Mkdocs で作成したサイトだとすぐわかるところ。つまり、サイトのデザイン性のバリエーションが少ない。そして、開発時、毎回コンパイルでサイトを生成する動作しないといけないところ。Gatsby は動的にできているぽいので、比較してみると弱点と感じた。</p><p>それにしても、仕事用の仕様書類をまとめるツールとして、手軽に使える面で評価できる。Gatsby だと React を理解しないと拡張しにくいから。</p><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t6b458cfc-39a3-44fa-a143-5e44ea69c6f2 place-top type-dark" id="t6b458cfc-39a3-44fa-a143-5e44ea69c6f2" data-id="tooltip"><style aria-hidden="true">
-  	.t6b458cfc-39a3-44fa-a143-5e44ea69c6f2 {
+    </span></p><p><a href="https://mermaid-js.github.io/mermaid/#/">Mermaidjs</a>を使って、フローチャートを記述できたこと。仕様書の場合、フローチャートで信号のシーケンスを記録する場面が必要で、実装した。</p><h3 id="python-の拡張性例" style="position:relative"><a href="#python-%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%80%A7%E4%BE%8B" aria-label="python の拡張性例 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python の拡張性例</h3><p><a href="https://github.com/jreese/markdown-pp">Markdown-pp</a>を拡張して、<a href="https://github.com/miurahr/pykakasi">Pykakasi</a>を利用して、日本語の Heading をローマ字に変換して ahref リンクに反映するような拡張していた。</p><p>ちなみに Markdown-pp は複数の Markdown 文書を一つにまとめるパッケージで、TOC と Heading のナンバリングもしてくれるもの。１つの Markdown の文書を複数の文書に合体したい場合使えるツール。</p><h2 id="まとめ" style="position:relative"><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-label="まとめ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>まとめ</h2><p>Mkdocs の弱点としては、Mkdocs で作成したサイトだとすぐわかるところ。つまり、サイトのデザイン性のバリエーションが少ない。そして、開発時、毎回コンパイルでサイトを生成する動作しないといけないところ。Gatsby は動的にできているぽいので、比較してみると弱点と感じた。</p><p>それにしても、仕事用の仕様書類をまとめるツールとして、手軽に使える面で評価できる。Gatsby だと React を理解しないと拡張しにくいから。</p><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03 place-top type-dark" id="t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03" data-id="tooltip"><style aria-hidden="true">
+  	.t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-top {
+  	.t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-top {
         margin-top: -10px;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-top::before {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-top::after {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -138,13 +138,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-top-width: 6px;
     }
 
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-bottom {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-bottom {
         margin-top: 10px;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-bottom::before {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-bottom::after {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -155,13 +155,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-bottom-width: 6px;
     }
 
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-left {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-left {
         margin-left: -10px;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-left::before {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-left::after {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -172,13 +172,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-left-width: 6px;
     }
 
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-right {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-right {
         margin-left: 10px;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-right::before {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t6b458cfc-39a3-44fa-a143-5e44ea69c6f2.place-right::after {
+    .t7b94c88a-c5f1-4e96-9cc2-0fe999cd9a03.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -188,20 +188,20 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t6b98c724-a7f7-42b5-ab20-603648fd4d8c place-top type-dark" id="t6b98c724-a7f7-42b5-ab20-603648fd4d8c" data-id="tooltip"><style aria-hidden="true">
-  	.t6b98c724-a7f7-42b5-ab20-603648fd4d8c {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip tf6fb9b03-f3f0-439f-aa33-fbafa07114e6 place-top type-dark" id="tf6fb9b03-f3f0-439f-aa33-fbafa07114e6" data-id="tooltip"><style aria-hidden="true">
+  	.tf6fb9b03-f3f0-439f-aa33-fbafa07114e6 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-top {
+  	.tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-top {
         margin-top: -10px;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-top::before {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-top::after {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -212,13 +212,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-top-width: 6px;
     }
 
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-bottom {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-bottom {
         margin-top: 10px;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-bottom::before {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-bottom::after {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -229,13 +229,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-bottom-width: 6px;
     }
 
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-left {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-left {
         margin-left: -10px;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-left::before {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-left::after {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -246,13 +246,13 @@ Gatsby は javascript の Reactjs をベースで、Mkdocs は Python ベース�
         border-left-width: 6px;
     }
 
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-right {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-right {
         margin-left: 10px;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-right::before {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t6b98c724-a7f7-42b5-ab20-603648fd4d8c.place-right::after {
+    .tf6fb9b03-f3f0-439f-aa33-fbafa07114e6.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;

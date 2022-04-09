@@ -1,77 +1,22 @@
 [
   {
-    "char_id": 1,
-    "name": "XXXXX",
-    "birthday": "09-07-1958",
-    "body": "xx",
-    "occupation": ["Housewife", "Clepto"],
-    "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/second-topic/top.jpg",
-    "status": "Presumed dead",
-    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/second-topic/index.md",
-    "nickname": "Heisenberg",
-    "appearance": [1, 2, 3, 4, 5],
-    "portrayed": "Bryan Cranston",
-    "category": "Breaking Bad",
-    "better_call_saul_appearance": []
+    "id": 1,
+    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/second-topic/index.md"
   },
   {
-    "char_id": 4,
-    "name": "Jesse Pinkman",
-    "birthday": "09-24-1984",
-    "body": "xx",
-    "occupation": ["High School Chemistry Teacher", "Meth King Pin"],
-    "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/pdfGenerator/puppeteer.png",
-    "status": "Alive",
-    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/pdfGenerator/index.md",
-    "nickname": "Cap n' Cook",
-    "appearance": [1, 2, 3, 4, 5],
-    "portrayed": "Aaron Paul",
-    "category": "Breaking Bad",
-    "better_call_saul_appearance": []
+    "id": 4,
+    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/pdfGenerator/index.md"
   },
   {
-    "char_id": 3,
-    "name": "Jesse Pinkman",
-    "birthday": "09-24-1984",
-    "body": "xx",
-    "occupation": ["High School Chemistry Teacher", "Meth King Pin"],
-    "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/ssg/mkdocs-material.png",
-    "status": "Alive",
-    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/ssg/index.md",
-    "nickname": "Cap n' Cook",
-    "appearance": [1, 2, 3, 4, 5],
-    "portrayed": "Aaron Paul",
-    "category": "Breaking Bad",
-    "better_call_saul_appearance": []
+    "id": 3,
+    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/ssg/index.md"
   },
   {
-    "char_id": 2,
-    "name": "Jesse Pinkman",
-    "birthday": "09-24-1984",
-    "body": "xx",
-    "occupation": ["High School Chemistry Teacher", "Meth King Pin"],
-    "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/currentWork/1319229.png",
-    "status": "Alive",
-    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/currentWork/index.md",
-    "nickname": "Cap n' Cook",
-    "appearance": [1, 2, 3, 4, 5],
-    "portrayed": "Aaron Paul",
-    "category": "Breaking Bad",
-    "better_call_saul_appearance": []
+    "id": 2,
+    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/currentWork/index.md"
   },
   {
-    "char_id": 5,
-    "name": "Jesse Pinkman",
-    "birthday": "09-24-1984",
-    "body": "xx",
-    "occupation": ["High School Chemistry Teacher", "Meth King Pin"],
-    "img": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/2022-4-5/flutter.png",
-    "status": "Alive",
-    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/2022-4-5/index.md",
-    "nickname": "Cap n' Cook",
-    "appearance": [1, 2, 3, 4, 5],
-    "portrayed": "Aaron Paul",
-    "category": "Breaking Bad",
-    "better_call_saul_appearance": []
+    "id": 5,
+    "content": "https://raw.githubusercontent.com/sokaishun/sokaishun.github.io/master/content/blog/2022-4-5/index.md"
   }
 ]
