@@ -61,7 +61,13 @@ docker push dockerhubname/dockerreponame:latest
 
 ## 注意点
 
+### 最新のimageが反映されない問題
+
 パイプライン作成時、docker hub のimageデータは更新されたにもかかわらず、パイプラインを削除して再作成しても、最新のimageが反映されないことがあった。対応法としては、docker hub側に別のタグでimageをアップロードして、再度パイプライン作成したら、問題解決。
+
+### パイプラインのpod:`imagePullBackOff`状態
+
+docker hub にあるimageはpublicにすること。privateの場合、パイプライン用のimageがpullできず、`imagePullBackOff`状態になる。
 
 ## 今後について
 
