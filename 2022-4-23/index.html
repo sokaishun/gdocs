@@ -104,18 +104,18 @@ void function() {
 /static/69d7c0d372e47b2607ae229e4eeb96a4/f3dec/Pachyderm-Character_stacked--1200.png 640w,
 /static/69d7c0d372e47b2607ae229e4eeb96a4/f3583/Pachyderm-Character_stacked--1200.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" /><img loading="lazy" sizes="(max-width: 1200px) 100vw, 1200px" srcset="/static/69d7c0d372e47b2607ae229e4eeb96a4/dd5bb/Pachyderm-Character_stacked--1200.png 320w,
 /static/69d7c0d372e47b2607ae229e4eeb96a4/f3dec/Pachyderm-Character_stacked--1200.png 640w,
-/static/69d7c0d372e47b2607ae229e4eeb96a4/f3583/Pachyderm-Character_stacked--1200.png 1200w" src="/static/69d7c0d372e47b2607ae229e4eeb96a4/f3583/Pachyderm-Character_stacked--1200.png" alt="Thumbnail画像" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><h1 itemProp="headline">pachydermの使い方</h1><p>April 23, 2022</p><div class=" flex flex-row"><div class="tags-container"><ul class="taglist"><li class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="inline-flex mr-1 w-3 h-3 fill-blue-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg><a href="/tags/pachyderm/">pachyderm</a></li><li class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="inline-flex mr-1 w-3 h-3 fill-blue-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg><a href="/tags/opencv/">opencv</a></li></ul></div></div></header><h2 id="pachyderm-を使用する理由" style="position:relative"><a href="#pachyderm-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E7%90%86%E7%94%B1" aria-label="pachyderm を使用する理由 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pachyderm を使用する理由</h2><p>機械学習の場合、最初はモデルをどのものにするかで選定することが多い。しかし、モデルが決まった場合、学習のデータを正確にして、学習の精度を高めることが重要。</p><p>そのとき、どのような学習データを使用しているかを含めて、しかりと管理していくことが必要。この学習データのバージョン管理用で pachyderm を試すことにした。</p><h2 id="pachyderm-の仕組み" style="position:relative"><a href="#pachyderm-%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF" aria-label="pachyderm の仕組み permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pachyderm の仕組み</h2><p>学習のデータは Git に類似する管理コマンドを使用。ブランチの概念もある。</p><p>処理の流れについては、json また yml で定義したものを使用。その中で、処理するロジックの部分は docker image を使う。</p><p>docker image については、docker hub にアップロードしたものを標準に対応している。</p><p>docker image のビルドについては、wsl2 内ではメモリの制限などでエラー発生することが多い。私は opencv の cmake のビルドでエラーが発生していたので、諦めた。代わり既存の docker image を pull して、コンテナーで実行した後に、中のファイルを修正したりしていた。</p><p>docker コンテナーの中に入るために、下記コマンドを使用。</p><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="51801494381688970000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
+/static/69d7c0d372e47b2607ae229e4eeb96a4/f3583/Pachyderm-Character_stacked--1200.png 1200w" src="/static/69d7c0d372e47b2607ae229e4eeb96a4/f3583/Pachyderm-Character_stacked--1200.png" alt="Thumbnail画像" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><h1 itemProp="headline">pachydermの使い方</h1><p>April 23, 2022</p><div class=" flex flex-row"><div class="tags-container"><ul class="taglist"><li class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="inline-flex mr-1 w-3 h-3 fill-blue-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg><a href="/tags/pachyderm/">pachyderm</a></li><li class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-1.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="inline-flex mr-1 w-3 h-3 fill-blue-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg><a href="/tags/opencv/">opencv</a></li></ul></div></div></header><h2 id="pachyderm-を使用する理由" style="position:relative"><a href="#pachyderm-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E7%90%86%E7%94%B1" aria-label="pachyderm を使用する理由 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pachyderm を使用する理由</h2><p>機械学習の場合、最初はモデルをどのものにするかで選定することが多い。しかし、モデルが決まった場合、学習のデータを正確にして、学習の精度を高めることが重要。</p><p>そのとき、どのような学習データを使用しているかを含めて、しかりと管理していくことが必要。この学習データのバージョン管理用で pachyderm を試すことにした。</p><h2 id="pachyderm-の仕組み" style="position:relative"><a href="#pachyderm-%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF" aria-label="pachyderm の仕組み permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pachyderm の仕組み</h2><p>学習のデータは Git に類似する管理コマンドを使用。ブランチの概念もある。</p><p>処理の流れについては、json また yml で定義したものを使用。その中で、処理するロジックの部分は docker image を使う。</p><p>docker image については、docker hub にアップロードしたものを標準に対応している。</p><p>docker image のビルドについては、wsl2 内ではメモリの制限などでエラー発生することが多い。私は opencv の cmake のビルドでエラーが発生していたので、諦めた。代わり既存の docker image を pull して、コンテナーで実行した後に、中のファイルを修正したりしていた。</p><p>docker コンテナーの中に入るために、下記コマンドを使用。</p><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="36359267940225257000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
               <div class="gatsby-code-button customButtonClass" data-tooltip="コピー">
                 <svg class="gatsby-code-button-icon customSvgIconClass" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H2v16h2V3h12V1zm-1 4l6 6v12H6V5h9zm-1 7h5.5L14 6.5V12z"></path></svg>
               </div>
-            </div><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> run -it ****** <span class="token function">sh</span></code></pre></div><h3 id="pipeline-関連コマンド" style="position:relative"><a href="#pipeline-%E9%96%A2%E9%80%A3%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" aria-label="pipeline 関連コマンド permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pipeline 関連コマンド</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="46672044241254195000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
+            </div><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">docker</span> run -it ****** <span class="token function">sh</span></code></pre></div><h3 id="pipeline-関連コマンド" style="position:relative"><a href="#pipeline-%E9%96%A2%E9%80%A3%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" aria-label="pipeline 関連コマンド permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pipeline 関連コマンド</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="12839208298348880000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
               <div class="gatsby-code-button customButtonClass" data-tooltip="コピー">
                 <svg class="gatsby-code-button-icon customSvgIconClass" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H2v16h2V3h12V1zm-1 4l6 6v12H6V5h9zm-1 7h5.5L14 6.5V12z"></path></svg>
               </div>
             </div><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># パイプライン作成</span>
 pachctl create pipeline -f threshold.json
 <span class="token comment"># パイプラインの実行時のログ</span>
-pachctl logs --pipeline<span class="token operator">=</span>threshold</code></pre></div><h3 id="学習データ-repo-操作" style="position:relative"><a href="#%E5%AD%A6%E7%BF%92%E3%83%87%E3%83%BC%E3%82%BF-repo-%E6%93%8D%E4%BD%9C" aria-label="学習データ repo 操作 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>学習データ repo 操作</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="74992481438168740000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
+pachctl logs --pipeline<span class="token operator">=</span>threshold</code></pre></div><h3 id="学習データ-repo-操作" style="position:relative"><a href="#%E5%AD%A6%E7%BF%92%E3%83%87%E3%83%BC%E3%82%BF-repo-%E6%93%8D%E4%BD%9C" aria-label="学習データ repo 操作 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>学習データ repo 操作</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="10495965512513882000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
               <div class="gatsby-code-button customButtonClass" data-tooltip="コピー">
                 <svg class="gatsby-code-button-icon customSvgIconClass" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H2v16h2V3h12V1zm-1 4l6 6v12H6V5h9zm-1 7h5.5L14 6.5V12z"></path></svg>
               </div>
@@ -124,7 +124,7 @@ pachctl get <span class="token function">file</span> edges2@master:MVcakFW.png <
 
 <span class="token comment"># データをrepoに登録</span>
 pachctl put <span class="token function">file</span> images@master:liberty.png -f http://imgur.com/46Q8nDz.png
-</code></pre></div><h3 id="docker-image" style="position:relative"><a href="#docker-image" aria-label="docker image permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker image</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="28608161291991753000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
+</code></pre></div><h3 id="docker-image" style="position:relative"><a href="#docker-image" aria-label="docker image permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker image</h3><div class="gatsby-code-button-container customButtonContainerClass" data-toaster-id="68126089331041804000" data-toaster-class="gatsby-code-button-toaster customToasterClass" data-toaster-text-class="gatsby-code-button-toaster-text customToasterTextClass" data-toaster-text="コピー完了" data-toaster-duration="3500">
               <div class="gatsby-code-button customButtonClass" data-tooltip="コピー">
                 <svg class="gatsby-code-button-icon customSvgIconClass" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H2v16h2V3h12V1zm-1 4l6 6v12H6V5h9zm-1 7h5.5L14 6.5V12z"></path></svg>
               </div>
@@ -132,20 +132,20 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
 <span class="token function">docker</span> build -t dockerhubname/dockerreponame:latest <span class="token builtin class-name">.</span>
 
 <span class="token comment">#docker push to dockerhub</span>
-<span class="token function">docker</span> push dockerhubname/dockerreponame:latest</code></pre></div><h2 id="注意点" style="position:relative"><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9" aria-label="注意点 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>注意点</h2><h3 id="最新の-image-が反映されない問題" style="position:relative"><a href="#%E6%9C%80%E6%96%B0%E3%81%AE-image-%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C" aria-label="最新の image が反映されない問題 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最新の image が反映されない問題</h3><p>パイプライン作成時、docker hub の image データは更新されたにもかかわらず、パイプラインを削除して再作成しても、最新の image が反映されないことがあった。対応法としては、docker hub 側に別のタグで image をアップロードして、再度パイプライン作成したら、問題解決。</p><h3 id="パイプラインの-podimagepullbackoff状態" style="position:relative"><a href="#%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3%E3%81%AE-podimagepullbackoff%E7%8A%B6%E6%85%8B" aria-label="パイプラインの podimagepullbackoff状態 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>パイプラインの pod:<code class="language-text">imagePullBackOff</code>状態</h3><p>docker hub にある image は public にすること。private の場合、パイプライン用の image が pull できず、<code class="language-text">imagePullBackOff</code>状態になる。</p><h2 id="今後について" style="position:relative"><a href="#%E4%BB%8A%E5%BE%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-label="今後について permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>今後について</h2><ul><li>pachyderm を使って、画像だけではなく画像上のラベリング情報（マスク画像）を含めて管理または処理する例を作りたい。その中で、ラベリングツール系との連携を検討する。</li><li>docker image の理解を深めたい。処理の中で外部 api をウェブアクセス経由で実施した場合、docker でコンテナー化可能かを確認する。</li><li>機械学習の場合、学習の結果を webapi で公開するためのツール seldon などがあるが、どのように使うかを確認する。</li></ul><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip tcc443b88-5775-4b6e-98ca-395d0af99289 place-top type-dark" id="tcc443b88-5775-4b6e-98ca-395d0af99289" data-id="tooltip"><style aria-hidden="true">
-  	.tcc443b88-5775-4b6e-98ca-395d0af99289 {
+<span class="token function">docker</span> push dockerhubname/dockerreponame:latest</code></pre></div><h2 id="注意点" style="position:relative"><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9" aria-label="注意点 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>注意点</h2><h3 id="最新の-image-が反映されない問題" style="position:relative"><a href="#%E6%9C%80%E6%96%B0%E3%81%AE-image-%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C" aria-label="最新の image が反映されない問題 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最新の image が反映されない問題</h3><p>パイプライン作成時、docker hub の image データは更新されたにもかかわらず、パイプラインを削除して再作成しても、最新の image が反映されないことがあった。対応法としては、docker hub 側に別のタグで image をアップロードして、再度パイプライン作成したら、問題解決。</p><h3 id="パイプラインの-podimagepullbackoff状態" style="position:relative"><a href="#%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3%E3%81%AE-podimagepullbackoff%E7%8A%B6%E6%85%8B" aria-label="パイプラインの podimagepullbackoff状態 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>パイプラインの pod:<code class="language-text">imagePullBackOff</code>状態</h3><p>docker hub にある image は public にすること。private の場合、パイプライン用の image が pull できず、<code class="language-text">imagePullBackOff</code>状態になる。</p><h2 id="今後について" style="position:relative"><a href="#%E4%BB%8A%E5%BE%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-label="今後について permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>今後について</h2><ul><li>pachyderm を使って、画像だけではなく画像上のラベリング情報（マスク画像）を含めて管理または処理する例を作りたい。その中で、ラベリングツール系との連携を検討する。</li><li>docker image の理解を深めたい。処理の中で外部 api をウェブアクセス経由で実施した場合、docker でコンテナー化可能かを確認する。</li><li>機械学習の場合、学習の結果を webapi で公開するためのツール seldon などがあるが、どのように使うかを確認する。</li></ul><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip teda4b54c-23d3-465b-9f23-29ddd2ce8fc6 place-top type-dark" id="teda4b54c-23d3-465b-9f23-29ddd2ce8fc6" data-id="tooltip"><style aria-hidden="true">
+  	.teda4b54c-23d3-465b-9f23-29ddd2ce8fc6 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tcc443b88-5775-4b6e-98ca-395d0af99289.place-top {
+  	.teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-top {
         margin-top: -10px;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-top::before {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-top::after {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -156,13 +156,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-top-width: 6px;
     }
 
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-bottom {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-bottom {
         margin-top: 10px;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-bottom::before {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-bottom::after {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -173,13 +173,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-bottom-width: 6px;
     }
 
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-left {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-left {
         margin-left: -10px;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-left::before {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-left::after {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -190,13 +190,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-left-width: 6px;
     }
 
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-right {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-right {
         margin-left: 10px;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-right::before {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tcc443b88-5775-4b6e-98ca-395d0af99289.place-right::after {
+    .teda4b54c-23d3-465b-9f23-29ddd2ce8fc6.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -206,20 +206,20 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t25670bf7-c947-4522-b21d-2dc1e79e9d7f place-top type-dark" id="t25670bf7-c947-4522-b21d-2dc1e79e9d7f" data-id="tooltip"><style aria-hidden="true">
-  	.t25670bf7-c947-4522-b21d-2dc1e79e9d7f {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip tb148f4b6-fdb0-4b03-9182-b156c30b565d place-top type-dark" id="tb148f4b6-fdb0-4b03-9182-b156c30b565d" data-id="tooltip"><style aria-hidden="true">
+  	.tb148f4b6-fdb0-4b03-9182-b156c30b565d {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-top {
+  	.tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-top {
         margin-top: -10px;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-top::before {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-top::after {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -230,13 +230,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-top-width: 6px;
     }
 
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-bottom {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-bottom {
         margin-top: 10px;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-bottom::before {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-bottom::after {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -247,13 +247,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-bottom-width: 6px;
     }
 
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-left {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-left {
         margin-left: -10px;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-left::before {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-left::after {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -264,13 +264,13 @@ pachctl put <span class="token function">file</span> images@master:liberty.png -
         border-left-width: 6px;
     }
 
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-right {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-right {
         margin-left: 10px;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-right::before {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t25670bf7-c947-4522-b21d-2dc1e79e9d7f.place-right::after {
+    .tb148f4b6-fdb0-4b03-9182-b156c30b565d.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
