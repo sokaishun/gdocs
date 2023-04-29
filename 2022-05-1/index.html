@@ -108,20 +108,20 @@ void function() {
 理由としては、学習データの場合、データの被覆性と均一性などデータの性質を保つため、どのような学習データを使用していたかその正確性を確認できるために、バージョン管理のような仕組みが欠かせない。</p><p>学習モデルについては、実機にリリースしたものはどれなのかを追跡するためにバージョン管理していく必要がある。</p><h2 id="使用するツール" style="position:relative"><a href="#%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%83%84%E3%83%BC%E3%83%AB" aria-label="使用するツール permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用するツール</h2><h3 id="dvc" style="position:relative"><a href="#dvc" aria-label="dvc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DVC</h3><p>data version control のこと。Git に類似する形で学習データ類のようなバイナリーデータを管理していく。</p><p>Git を使用しない理由としては、バイナリーデータに不向きのため。</p><h3 id="nextcloud" style="position:relative"><a href="#nextcloud" aria-label="nextcloud permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nextcloud</h3><p>データの一元管理については、クラウドデータストレージのほうが望ましいが、社内インフラを整うのは手間。その代わりに、nextcloud というオンプレミスのデータサーバーを利用することにした。nextcloud の場合 webdav でリモートアクセスすることが便利。また、ウェブベースの画面でのデータの確認も可能。学習結果のデータを確認するツールとしても有用だと感じた。</p><h3 id="システムの構成案" style="position:relative"><a href="#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%A7%8B%E6%88%90%E6%A1%88" aria-label="システムの構成案 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>システムの構成案</h3><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:630px">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:62.0253164556962%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACeUlEQVQoz4WTTY8bRRCGR/wcfgc3rrlxRZFWQI4guCRcQHBDkeAUBEIiAgmJWwIYJMQuhGh3YzNe22vPjnfsXY8T73js7vnoz3mQZwkHJJSSXtVb3aVXVdXVQXJluNh45rkjlTBdKbqTBWfLkou1ZX5lmGeG2UpTaY/3jiiKGI1GDIdDut0unU6HPM/ZWSBygRhPEOOYxZM+68EEOY6QswuU9Sjj0cZTaYex14JxHDMYDEiShCzLCMOQNE0RQhDYqkbnGZfP/qI3/pnT6QGLyxFWbKBpeG476jxYa5nPZgwGJ5yc9ImiCdNpTD8MWVxeEqhK79IJf6u4e6Pil88rPAajNY2zNN7TeIdzrhUz1pJvBWVVI4uSrZAY69jKgrKqCGqpAMf9tww3Anj/ZYttcmTyBLU6w20SbH6OXp9TpyHx6orepuE4Ffw5z3iUrDhcbAm3nqRwzyt0nO47vnoDfr8Plhq5WVNKQZatKAuJUgrvHCeTKT/uH/LTwdG13z+kc3DEg18f0xudEeha4RuPdwV6GGPOZjhr2jatUVR1gTG6bW+1uuLTL75l772PufnOhy1ef/sD9t79iNdu3eaTe98QKFm1Q0/vPCAM3qQf3GLx9R9oHHJjKCooCs1yuWxnFE3nPDruc9w/5Sgctdjxx90B0fmcQJd1K1g8HDJ+5S7Rq59RhykOjXz6A+n0S7ZZj3Uu0VrzIrtu2bk2GEcT4iRuuZLnDDovcfx9wLPxXntmrcZ7j3Me5/8D59u7wNTqnz1rWGcZYrttY28K5NPvEMt76KLHbiOts//m/m+FZVmjqh0UYiOQQqJq1cbW796f1itj25/yIsG/ATVsdaSp107yAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="nextclouddvc" title="nextclouddvc" src="/static/f46b4edd3849780a2f458d91b69ac94e/f058b/nextclouddvc.png" srcSet="/static/f46b4edd3849780a2f458d91b69ac94e/c26ae/nextclouddvc.png 158w,/static/f46b4edd3849780a2f458d91b69ac94e/6bdcf/nextclouddvc.png 315w,/static/f46b4edd3849780a2f458d91b69ac94e/f058b/nextclouddvc.png 630w,/static/f46b4edd3849780a2f458d91b69ac94e/a8e5b/nextclouddvc.png 711w" sizes="(max-width: 630px) 100vw, 630px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span></p><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4 place-top type-dark" id="t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4" data-id="tooltip"><style aria-hidden="true">
-  	.t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4 {
+    </span></p><hr/><footer><div><a href="/about" class="flex items-center  bg-white rounded-lg border shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800  dark:hover:bg-gray-700"><div class="img-container"><div class="flex-none img-circle"></div></div><div class="flex flex-col justify-between pl-5"><div><h5 class="font-bold">Kaishun So<!-- --> </h5><div class="flex flex-row "><a data-tip="Github" href="https://github.com/sokaishun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><div class="__react_component_tooltip t821bb713-aa25-4d54-b5f6-c70090235c48 place-top type-dark" id="t821bb713-aa25-4d54-b5f6-c70090235c48" data-id="tooltip"><style aria-hidden="true">
+  	.t821bb713-aa25-4d54-b5f6-c70090235c48 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-top {
+  	.t821bb713-aa25-4d54-b5f6-c70090235c48.place-top {
         margin-top: -10px;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-top::before {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-top::after {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -132,13 +132,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-bottom {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-bottom {
         margin-top: 10px;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-bottom::before {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-bottom::after {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -149,13 +149,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-left {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-left {
         margin-left: -10px;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-left::before {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-left::after {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -166,13 +166,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-right {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-right {
         margin-left: 10px;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-right::before {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t8b3bdb3e-1b61-4cb7-a273-646fabf28ad4.place-right::after {
+    .t821bb713-aa25-4d54-b5f6-c70090235c48.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -182,20 +182,20 @@ void function() {
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip tb3cbb8d2-056b-41ff-b11d-18542dbfb93f place-top type-dark" id="tb3cbb8d2-056b-41ff-b11d-18542dbfb93f" data-id="tooltip"><style aria-hidden="true">
-  	.tb3cbb8d2-056b-41ff-b11d-18542dbfb93f {
+  </style></div></a><a data-tip="linkedin" class="pl-3" href="https://www.linkedin.com/in/songhaijun"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><div class="__react_component_tooltip t3dab1809-f538-44bf-b7ea-5b539832383f place-top type-dark" id="t3dab1809-f538-44bf-b7ea-5b539832383f" data-id="tooltip"><style aria-hidden="true">
+  	.t3dab1809-f538-44bf-b7ea-5b539832383f {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-top {
+  	.t3dab1809-f538-44bf-b7ea-5b539832383f.place-top {
         margin-top: -10px;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-top::before {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-top::after {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -206,13 +206,13 @@ void function() {
         border-top-width: 6px;
     }
 
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-bottom {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-bottom {
         margin-top: 10px;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-bottom::before {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-bottom::after {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -223,13 +223,13 @@ void function() {
         border-bottom-width: 6px;
     }
 
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-left {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-left {
         margin-left: -10px;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-left::before {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-left::after {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -240,13 +240,13 @@ void function() {
         border-left-width: 6px;
     }
 
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-right {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-right {
         margin-left: 10px;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-right::before {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tb3cbb8d2-056b-41ff-b11d-18542dbfb93f.place-right::after {
+    .t3dab1809-f538-44bf-b7ea-5b539832383f.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -256,4 +256,4 @@ void function() {
         border-right-style: solid;
         border-right-width: 6px;
     }
-  </style></div></a></div></div><p class="mt-3 mb-0">ウェブ技術、画像処理、機械学習、コンピュータビジョン、など。<!-- --> </p></div></a></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2022-4-23/">← <!-- -->pachydermの使い方</a></li><li><a rel="next" href="/2022-05-07/">データの一元管理<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2022<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2022-05-1/";window.___webpackCompilationHash="3835a83b4965902f7472";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5fdbab51f61e9338ed09.js"],"app":["/app-81ea636e825c9ec794ed.js"],"component---src-pages-404-js":["/component---src-pages-404-js-8b386e5b997b9826bb02.js"],"component---src-pages-about-js":["/component---src-pages-about-js-a8d795f6335af589e639.js"],"component---src-pages-index-js":["/component---src-pages-index-js-04fb03970e43a58a5282.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-c44be0f4c91b6eb9aa92.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-9757b78338f16790de7d.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-5b83f20c03daa5ebf2f7.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-e6c9cbea4c8311e356b4.js"]};/*]]>*/</script><script src="/polyfill-5fdbab51f61e9338ed09.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-5b83f20c03daa5ebf2f7.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-19b21e8659770c520598.js" async=""></script><script src="/dffd9eda1bde23af0ce146d568b45c289f422d0a-096c0d97be131377f0bf.js" async=""></script><script src="/8898d404f42c051a04e6d355569c09f07bfcb273-7152b629f820d198e8e5.js" async=""></script><script src="/commons-f454128d03a47fc14bc0.js" async=""></script><script src="/5e2a4920-51ce2d6dd980fb78d0cd.js" async=""></script><script src="/777cf710-5e4f9cdf5eec6f0d0ea6.js" async=""></script><script src="/1bfc9850-3a6b35284f4b9f4fdf02.js" async=""></script><script src="/app-81ea636e825c9ec794ed.js" async=""></script><script src="/framework-ecf19502b170ac2d657f.js" async=""></script><script src="/webpack-runtime-986304fccc3032ceed97.js" async=""></script></body></html>
+  </style></div></a></div></div><p class="mt-3 mb-0">ウェブ技術、画像処理、機械学習、コンピュータビジョン、など。<!-- --> </p></div></a></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2022-4-23/">← <!-- -->pachydermの使い方</a></li><li><a rel="next" href="/2022-05-07/">データの一元管理<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2023<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2022-05-1/";window.___webpackCompilationHash="3835a83b4965902f7472";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5fdbab51f61e9338ed09.js"],"app":["/app-81ea636e825c9ec794ed.js"],"component---src-pages-404-js":["/component---src-pages-404-js-8b386e5b997b9826bb02.js"],"component---src-pages-about-js":["/component---src-pages-about-js-a8d795f6335af589e639.js"],"component---src-pages-index-js":["/component---src-pages-index-js-04fb03970e43a58a5282.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-c44be0f4c91b6eb9aa92.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-9757b78338f16790de7d.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-5b83f20c03daa5ebf2f7.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-e6c9cbea4c8311e356b4.js"]};/*]]>*/</script><script src="/polyfill-5fdbab51f61e9338ed09.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-5b83f20c03daa5ebf2f7.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-19b21e8659770c520598.js" async=""></script><script src="/dffd9eda1bde23af0ce146d568b45c289f422d0a-096c0d97be131377f0bf.js" async=""></script><script src="/8898d404f42c051a04e6d355569c09f07bfcb273-7152b629f820d198e8e5.js" async=""></script><script src="/commons-f454128d03a47fc14bc0.js" async=""></script><script src="/5e2a4920-51ce2d6dd980fb78d0cd.js" async=""></script><script src="/777cf710-5e4f9cdf5eec6f0d0ea6.js" async=""></script><script src="/1bfc9850-3a6b35284f4b9f4fdf02.js" async=""></script><script src="/app-81ea636e825c9ec794ed.js" async=""></script><script src="/framework-ecf19502b170ac2d657f.js" async=""></script><script src="/webpack-runtime-986304fccc3032ceed97.js" async=""></script></body></html>
