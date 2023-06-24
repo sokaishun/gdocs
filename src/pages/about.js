@@ -21,6 +21,7 @@ import {
   SiAzuredevops,
   SiVisualstudio,
   SiAnsible,
+  SiMqtt,
 } from "react-icons/si";
 
 const Aboutpage = ({ data, location }) => {
@@ -303,6 +304,21 @@ const Aboutpage = ({ data, location }) => {
                 <p>パソコンのセットアップやソフトウェアの配布の自動化</p>
               </div>
             </li>
+            <li
+              className="techSkill flex items-center 
+          bg-white rounded-lg border shadow-md md:flex-row 
+          hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 
+          dark:hover:bg-gray-700"
+            >
+            <SiMqtt size={50} className="w-20 m-2 fill-stone-400" />
+            <div className="flex flex-col justify-between pl-5 w-4/5">
+              <p className="flex flex-row items-center mt-0 mb-0">
+                <FaCalendarAlt className="mr-1" />
+                2023年～
+              </p>
+              <p>各種デバイスからの情報収集</p>
+            </div>
+          </li>
           </Fade>
         </ul>
 
