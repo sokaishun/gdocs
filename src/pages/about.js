@@ -316,7 +316,7 @@ const Aboutpage = ({ data, location }) => {
                 <FaCalendarAlt className="mr-1" />
                 2023年～
               </p>
-              <p>MQTT：各種デバイスからの情報収集</p>
+              <p>MQTT：各種機器からの情報を収集し、配信する方法</p>
             </div>
           </li>
           </Fade>
