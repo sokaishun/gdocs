@@ -1,17 +1,57 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, useStaticQuery,graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Image from "gatsby-image";
+
 // Utilities
 import kebabCase from "lodash/kebabCase";
 import { FaTag } from "react-icons/fa";
 import { FaTags } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
+import {auth,provider } from './firebase';
+import {useAuthState} from "react-firebase-hooks/auth";
+import { signInWithPopup } from 'firebase/auth';
+import { useLocation } from "@reach/router" // ★追加
 
-const BlogIndex = ({ data, location }) => {
+const  BlogIndex = ({  }) => {
+  const location = useLocation()
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          tags
+          thumbnail {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `)
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const posts = data.allMdx.nodes;
 
@@ -31,7 +71,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+          <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
@@ -117,43 +157,64 @@ const BlogIndex = ({ data, location }) => {
           </li>
         ))}
       </ul>
+
     </Layout>
   );
 };
 
-export default BlogIndex;
+ function Home() {
+  const [user] = useAuthState(auth);
+  
+    return (
+      <>
+        {user ? (
+          <>
+            <SignOutButton />
+            <BlogIndex/>
+          </>
+        ) : (
+          <SignInButton />
+        )}
+      </>
+    );
+  // return (
+  //     <>
+  //       {user ? (
+  //         <>
+  //          <BlogIndex />
+  //         </>
+  //       ) : (
+  //         <SignInButton />
+  //       )}
+  //     </>
+  //   );
+};
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+
+
+function SignInButton (){
+    const signInWithGoogle = () => {
+      signInWithPopup(auth,provider);
+    };
+    return (
+        <button onClick={signInWithGoogle}>
+            <p>
+                Google SignIn
+            </p></button>
+    );
+    
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          tags
-          thumbnail {
-            childImageSharp {
-              fluid(maxWidth: 1280) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
+  function SignOutButton (){
+    return (
+        <button onClick={()=>auth.signOut()}>
+            <p>
+                Google SignOut
+            </p></button>
+    );
     }
-  }
-`;
+
+
+    
+
+
+export default Home;
